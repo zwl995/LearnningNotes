@@ -9,8 +9,8 @@
 |   Desk    |   31   |       31       |        31       |                    |
 |    fc     |   150  |       150      |        7        |                    |
 |  Indoor   |   153  |       152      |        147      |                    |
-|   oats    |   24   |        -       |        23       |          -         |
-|  Street   |   19   |        19      |        18       |         19         |
+|   oats    |   24   |       24       |        23       |          -         |
+|  Street   |   19   |       19       |        18       |         19         |
 
 ## 2. Visualization Comparison
 
