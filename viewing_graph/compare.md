@@ -4,13 +4,13 @@
 |  Dataset  | Images | COLMAP(Images) | OpenMVG(Images) |   ConMatch(Images) |
 | :-------- | :----- |     :----:     |      :----:     |        :----       |
 |   Books   |   21   |       21       |         21      |                    |
-|  Cereal   |   25   |       -        |      failure    |          -         |
-|    Cup    |   64   |       -        |        46       |                    |
+|  Cereal   |   25   |       25       |      failure    |          -         |
+|    Cup    |   64   |       64       |        46       |                    |
 |   Desk    |   31   |       31       |        31       |                    |
-|    fc     |   150  |       -        |        7        |                    |
+|    fc     |   150  |       150      |        7        |                    |
 |  Indoor   |   153  |       152      |        147      |                    |
 |   oats    |   24   |        -       |        23       |          -         |
-|  Street   |   19   |        -       |        18       |         19         |
+|  Street   |   19   |        19      |        18       |         19         |
 
 ## 2. Visualization Comparison
 
@@ -38,6 +38,10 @@ From top to bottom are repectively ```Cup```, ```Books```, ```Desk```, ```fc```,
 - Desk
 
 ![colmap_cup](compare/desk/desk_colmap.png)
+
+- fc
+
+![colmap_fc](compare/fc/fc_colmap.png)
 
 - Indoor
 
