@@ -152,15 +152,15 @@ From top to bottom are repectively ```Cup```, ```Books```, ```Desk```, ```fc```,
 
 **MST**
 
-![](compare/Desk/online_mst_graph.svg)
+![](compare/desk/online_mst_graph.svg)
 
 **Triplet Expansion**
 
-![](compare/Desk/triplet_expansion_graph.svg)
+![](compare/desk/triplet_expansion_graph.svg)
 
 **Graph Reinforcement**
 
-![](compare/Desk/graph_reinforcement_graph.svg)
+![](compare/desk/graph_reinforcement_graph.svg)
 
 
 - Oats
