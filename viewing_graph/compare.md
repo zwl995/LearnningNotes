@@ -162,6 +162,15 @@ From top to bottom are repectively ```Cup```, ```Books```, ```Desk```, ```fc```,
 
 ![](compare/desk/graph_reinforcement_graph.svg)
 
+- fc
+
+**Triplet Expansion**
+
+![](compare/fc/triplet_expansion_graph.svg)
+
+**Graph Reinforcement**
+
+![](compare/fc/graph_reinforcement_graph.svg)
 
 - Oats
 
