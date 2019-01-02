@@ -113,17 +113,21 @@ From top to bottom are repectively ```Cup```, ```Books```, ```Desk```, ```fc```,
 ![vg_street](compare/street/geometric_matches.svg)
 
 **Ours(with viewing graph)**
+
 - Books
 
 ![ours_vg_books](compare/books/books_ours_vg.png)
 
 **MST**
+
 ![](compare/books/online_mst_graph.svg)
 
 **Triplet Expansion**
+
 ![](compare/books/triplet_expansion_graph.svg)
 
 **Graph Reinforcement**
+
 ![](compare/books/graph_reinforcement_graph.svg)
 
 - Cereal
@@ -131,12 +135,15 @@ From top to bottom are repectively ```Cup```, ```Books```, ```Desk```, ```fc```,
 ![ours_vg_cereal](compare/cereal/cereal_ours_vg.png)
 
 **MST**
+
 ![](compare/cereal/online_mst_graph.svg)
 
 **Triplet Expansion**
+
 ![](compare/cereal/triplet_expansion_graph.svg)
 
 **Graph Reinforcement**
+
 ![](compare/cereal/graph_reinforcement_graph.svg)
 
 - Desk
@@ -144,12 +151,15 @@ From top to bottom are repectively ```Cup```, ```Books```, ```Desk```, ```fc```,
 ![ours_vg_desk](compare/desk/desk_ours_vg.png)
 
 **MST**
+
 ![](compare/Desk/online_mst_graph.svg)
 
 **Triplet Expansion**
+
 ![](compare/Desk/triplet_expansion_graph.svg)
 
 **Graph Reinforcement**
+
 ![](compare/Desk/graph_reinforcement_graph.svg)
 
 
@@ -158,12 +168,15 @@ From top to bottom are repectively ```Cup```, ```Books```, ```Desk```, ```fc```,
 ![ours_vg_oats](compare/oats/oats_ours_vg.png)
 
 **MST**
+
 ![](compare/oats/online_mst_graph.svg)
 
 **Triplet Expansion**
+
 ![](compare/oats/triplet_expansion_graph.svg)
 
 **Graph Reinforcement**
+
 ![](compare/oats/graph_reinforcement_graph.svg)
 
 - Street
@@ -171,12 +184,15 @@ From top to bottom are repectively ```Cup```, ```Books```, ```Desk```, ```fc```,
 ![ours_vg_street](compare/street/street_ours_vg.png)
 
 **MST**
+
 ![](compare/street/online_mst_graph.svg)
 
 **Triplet Expansion**
+
 ![](compare/street/triplet_expansion_graph.svg)
 
 **Graph Reinforcement**
+
 ![](compare/street/graph_reinforcement_graph.svg)
 
 
