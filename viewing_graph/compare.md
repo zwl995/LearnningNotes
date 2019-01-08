@@ -12,6 +12,126 @@
 |   oats    |   24   |       24       |        23       |          -         |        24        |
 |  Street   |   19   |       19       |        18       |         19         |        19        |
 
+**Vocabulary Tree VS Fisher Vector**
+|  Dataset  | Images | Vocabulary Tree |   Fisher Vector (cosine)  |   Baseline(Images) |  Ours-vg(Images) |
+
+
+<table>
+    <caption>Vocabulary Tree VS Fisher Vector</caption>
+    <tr>
+        <th rowspan="2">Dataset</th>
+        <th rowspan="2">Images</th>
+        <th colspan="4">Vocabulary Tree</th>
+        <th colspan="4">Fisher Vector (cosine)</th>
+    </tr>
+    <tr>
+        <th>Cam</th>
+        <th>Tried Matches</th>
+        <th>Passed Pairs</th>
+        <th>Final Matches</th>
+        <th>Cam</th>
+        <th>Tried Matches</th>
+        <th>Passed Pairs</th>
+        <th>Final Matches</th>
+    </tr>
+    <tr>
+        <td>Books</td>
+        <td>21</td>
+        <td>14</td>
+        <td>19</td>
+        <td>19</td>
+        <td>8513</td>
+        <td>16</td>
+        <td>23</td>
+        <td>19</td>
+        <td>3642</td>
+    </tr>
+    <tr>
+        <td>Cereal</td>
+        <td>25</td>
+        <td>8</td>
+        <td>21</td>
+        <td>21</td>
+        <td>10370</td>
+        <td>17</td>
+        <td>24</td>
+        <td>21</td>
+        <td>4323</td>
+    </tr>
+    <tr>
+        <td>Cup</td>
+        <td>64</td>
+        <td>10</td>
+        <td>64</td>
+        <td>62</td>
+        <td>12773</td>
+        <td>4</td>
+        <td>104</td>
+        <td>58</td>
+        <td>4890</td>
+    </tr>
+    <tr>
+        <td>Desk</td>
+        <td>31</td>
+        <td>12</td>
+        <td>29</td>
+        <td>28</td>
+        <td>16160</td>
+        <td>17</td>
+        <td>48</td>
+        <td>27</td>
+        <td>8409</td>
+    </tr>
+    <tr>
+        <td>Forbiden city</td>
+        <td>150</td>
+        <td>13</td>
+        <td>149</td>
+        <td>139</td>
+        <td>22456</td>
+        <td>5</td>
+        <td>715</td>
+        <td>126</td>
+        <td>7989</td>
+    </tr>
+    <tr>
+        <td>Indoor</td>
+        <td>153</td>
+        <td>15</td>
+        <td>150</td>
+        <td>143</td>
+        <td>53974</td>
+        <td>2</td>
+        <td>481</td>
+        <td>129</td>
+        <td>16864</td>
+    </tr>
+    <tr>
+        <td>oats</td>
+        <td>24</td>
+        <td>11</td>
+        <td>22</td>
+        <td>22</td>
+        <td>9347</td>
+        <td>14</td>
+        <td>26</td>
+        <td>22</td>
+        <td>3378</td>
+    </tr>
+    <tr>
+        <td>Street</td>
+        <td>19</td>
+        <td>5</td>
+        <td>20</td>
+        <td>18</td>
+        <td>3901</td>
+        <td>9</td>
+        <td>22</td>
+        <td>17</td>
+        <td>2007</td>
+    </tr>
+</table>
+
 ## 2. Visualization Comparison
 
 **ConMatch(Baseline)** 
