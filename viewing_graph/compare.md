@@ -269,8 +269,8 @@
         <th rowspan="2" colspan="2">Dataset</th>
         <th rowspan="2">Images</th>
         <th colspan="4">Full Match</th>
-        <th colspan="4">Vocabulary Tree</th>
-        <th colspan="4">Fisher Vector (cosine)</th>
+        <th colspan="4">Viewing Graph (BoW)</th>
+        <th colspan="4">Viewing Graph (fisher vector, cosine)</th>
     </tr>
     <tr>
         <th>Cam</th>
@@ -471,7 +471,7 @@
     <tr>
         <td>Graham Hall - Exterior</td>
         <td>562</td>
-        <td>21</td>
+        <td></td>
         <td></td>
         <td></td>
         <td></td>
@@ -487,7 +487,7 @@
     <tr>
         <td>Graham Hall - Interior</td>
         <td>711</td>
-        <td>21</td>
+        <td></td>
         <td></td>
         <td></td>
         <td></td>
