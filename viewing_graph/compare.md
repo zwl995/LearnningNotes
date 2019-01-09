@@ -12,7 +12,7 @@
 |   oats    |   24   |       24       |        23       |          -         |        24        |
 |  Street   |   19   |       19       |        18       |         19         |        19        |
 
-**Vocabulary Tree VS Fisher Vector**
+### **Vocabulary Tree VS Fisher Vector**
 
 **N_tm**: number of tried matches
 
@@ -20,6 +20,7 @@
 
 **N_fm**: number of final correspondences
 
+- ***Only tested at MST Building Stage!***
 <table>
     <tr>
         <th rowspan="2" colspan="2">Dataset</th>
@@ -50,10 +51,10 @@
         <td>Books</td>
         <td>21</td>
         <td>14</td>
-        <td>19/19</td>
-        <td>8513</td>
-        <td>20</td>
-        <td>19/19</td>
+        <td><b>19/19</b></td>
+        <td><b>8513</b></td>
+        <td> <b>20</b> </td>
+        <td><b>19/19</b></td>
         <td>5469</td>
         <td>15</td>
         <td>20/19</td>
@@ -66,9 +67,9 @@
         <td>Cereal</td>
         <td>25</td>
         <td>8</td>
-        <td>21/21</td>
-        <td>10370</td>
-        <td>17</td>
+        <td><b>21/21</b></td>
+        <td><b>10370</b></td>
+        <td><b>17</b></td>
         <td>32/23</td>
         <td>6150</td>        
         <td>16</td>
@@ -81,9 +82,9 @@
     <tr>
         <td>Cup</td>
         <td>64</td>
-        <td>10</td>
-        <td>64/62</td>
-        <td>12773</td>
+        <td><b>10</b></td>
+        <td><b>64/62</b></td>
+        <td><b>12773</b></td>
         <td>3</td>
         <td>96/56</td>
         <td>4041</td>
@@ -97,9 +98,9 @@
     <tr>
         <td>Desk</td>
         <td>31</td>
-        <td>12</td>
-        <td>29/28</td>
-        <td>16160</td>
+        <td><b>12</b></td>
+        <td><b>29/28</b></td>
+        <td><b>16160</b></td>
         <td>5</td>
         <td>42/27</td>
         <td>6510</td>
@@ -113,9 +114,9 @@
     <tr>
         <td>Forbiden city</td>
         <td>150</td>
-        <td>13</td>
-        <td>149/139</td>
-        <td>22456</td>
+        <td><b>13</b></td>
+        <td><b>149/139</b></td>
+        <td><b>22456</b></td>
         <td>8</td>
         <td>601/124</td>
         <td>8268</td>
@@ -129,9 +130,9 @@
     <tr>
         <td>Indoor</td>
         <td>153</td>
-        <td>15</td>
-        <td>150/143</td>
-        <td>53974</td>
+        <td><b>15</b></td>
+        <td><b>150/143</b></td>
+        <td><b>53974</b></td>
         <td>4</td>
         <td>491/128</td>
         <td>13813</td>
@@ -146,12 +147,12 @@
         <td>oats</td>
         <td>24</td>
         <td>11</td>
-        <td>22/22</td>
-        <td>9347</td>
+        <td><b>22/22</b></td>
+        <td><b>9347</b></td>
         <td>16</td>
         <td>24/22</td>
         <td>3840</td>
-        <td>19</td>
+        <td><b>19</b></td>
         <td>22/22</td>
         <td>4224</td>
         <td>15</td>
@@ -162,12 +163,12 @@
         <td>Street</td>
         <td>19</td>
         <td>5</td>
-        <td>20/18</td>
-        <td>3901</td>
+        <td><b>20/18</b></td>
+        <td><b>3901</b></td>
         <td>2</td>
         <td>21/17</td>
         <td>1958</td>
-        <td>8</td>
+        <td><b>8</b></td>
         <td>28/17</td>
         <td>1785</td>
         <td>3</td>
@@ -175,15 +176,15 @@
         <td>2315</td>
     </tr>
     <tr>
-        <td rowspan="5">COLMAP Dataset</td>
+        <td rowspan="6">COLMAP Dataset</td>
     </tr>
     <tr>
         <td>Gerrard Hall</td>
         <td>100</td>
         <td>20</td>
-        <td>116/92</td>
-        <td>1073104</td>
-        <td>27</td>
+        <td><b>116/92</b></td>
+        <td><b>1073104</b></td>
+        <td><b>27</b></td>
         <td>400/81</td>
         <td>343626</td>
         <td>-</td>
@@ -212,12 +213,28 @@
     <tr>
         <td>South Building</td>
         <td>128</td>
-        <td>24</td>
-        <td>119/117</td>
-        <td>483379</td>
+        <td><b>24</b></td>
+        <td><b>119/117</b></td>
+        <td><b>483379</b></td>
         <td>4</td>
         <td>435/106</td>
         <td>151727</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>Graham Hall - Exterior</td>
+        <td>562</td>
+        <td>15</td>
+        <td>482/461</td>
+        <td>3677348</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
         <td>-</td>
         <td>-</td>
         <td>-</td>
