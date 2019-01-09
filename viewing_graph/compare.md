@@ -260,6 +260,248 @@
     </tr>
 </table>
 
+- ***Tested on whole viewing graph pipeline!***
+
+**RE**: reprojection error
+
+<table>
+    <tr>
+        <th rowspan="2" colspan="2">Dataset</th>
+        <th rowspan="2">Images</th>
+        <th colspan="4">Full Match</th>
+        <th colspan="4">Vocabulary Tree</th>
+        <th colspan="4">Fisher Vector (cosine)</th>
+    </tr>
+    <tr>
+        <th>Cam</th>
+        <th>N_tm/N_pp</th>
+        <th>N_fm</th>
+        <th>RE</th>
+        <th>Cam</th>
+        <th>N_tm/N_pp</th>
+        <th>N_fm</th>
+        <th>RE</th>
+        <th>Cam</th>
+        <th>N_tm/N_pp</th>
+        <th>N_fm</th>
+        <th>RE</th>
+    </tr>
+    <tr>
+        <td rowspan="9">Ambiguous Datasets</td>
+    </tr>
+    <tr>
+        <td>Books</td>
+        <td>21</td>
+        <td><b>21</b></td>
+        <td>210/-</td>
+        <td>-</td>
+        <td>0.405</td>
+        <td><b>21</b></td>
+        <td><b>201/86</b></td>
+        <td>19778</td>
+        <td><b>0.381</b></td>
+        <td>18</td>
+        <td>193/57</td>
+        <td>12189</td>
+        <td>0.366</td>
+    </tr>
+    <tr>
+        <td>Cereal</td>
+        <td>25</td>
+        <td>Fail</td>
+        <td>300/-</td>
+        <td>-</td>
+        <td>-</td>
+        <td><b>25</b></td>
+        <td><b>282/62</b></td>
+        <td>24441</td>
+        <td><b>0.678</b></td>
+        <td>23</td>
+        <td>281/48</td>
+        <td>9777</td>
+        <td>0.736</td>
+    </tr>
+    <tr>
+        <td>Cup</td>
+        <td>64</td>
+        <td><b>46</b></td>
+        <td>2016/-</td>
+        <td>-</td>
+        <td>0.507</td>
+        <td>41</td>
+        <td><b>598/208</b></td>
+        <td>27717</td>
+        <td><b>0.466</b></td>
+        <td>12</td>
+        <td>1535/130</td>
+        <td>11046</td>
+        <td>0.485</td>
+    </tr>
+    <tr>
+        <td>Desk</td>
+        <td>31</td>
+        <td><b>31</b></td>
+        <td>465/-</td>
+        <td>-</td>
+        <td>0.493</td>
+        <td><b>31</b></td>
+        <td><b>446/75</b></td>
+        <td>33243</td>
+        <td></b>0.437</b></td>
+        <td>23</td>
+        <td>457/58</td>
+        <td></td>
+        <td>0.438</td>
+    </tr>
+    <tr>
+        <td>Forbiden city</td>
+        <td>150</td>
+        <td><b>7</b></td>
+        <td>11175/-</td>
+        <td>-</td>
+        <td>0.505</td>
+        <td><b>7</b></td>
+        <td><b>8481/431</b></td>
+        <td>50431</td>
+        <td><b>0.164</b></td>
+        <td>2</td>
+        <td>11614/318</td>
+        <td>18922</td>
+        <td>0.299</td>
+    </tr>
+    <tr>
+        <td>Indoor</td>
+        <td>153</td>
+        <td><b>147</b></td>
+        <td>11628/-</td>
+        <td>-</td>
+        <td>0.443</td>
+        <td>130</td>
+        <td><b>5163/338</b></td>
+        <td>94820</td>
+        <td><b>0.474</b></td>
+        <td>2</td>
+        <td>11445/256</td>
+        <td>31362</td>
+        <td>0.437</td>
+    </tr>
+    <tr>
+        <td>oats</td>
+        <td>24</td>
+        <td>23</td>
+        <td>276/-</td>
+        <td>-</td>
+        <td>0.343</td>
+        <td><b>24</b></td>
+        <td><b>244/75</b></td>
+        <td>23040</td>
+        <td><b>0.341</b></td>
+        <td>13</td>
+        <td>239/53</td>
+        <td>10729</td>
+        <td>0.306</td>
+    </tr>
+    <tr>
+        <td>Street</td>
+        <td>19</td>
+        <td>18</td>
+        <td>171/-</td>
+        <td>-</td>
+        <td>0.589</td>
+        <td><b>19</b></td>
+        <td><b>100/66</b></td>
+        <td>9535</td>
+        <td><b>0.483</b></td>
+        <td>17</td>
+        <td>170/61</td>
+        <td>7979</td>
+        <td>0.577</td>
+    </tr>
+    <tr>
+        <td rowspan="6">COLMAP Dataset</td>
+    </tr>
+    <tr>
+        <td>Gerrard Hall</td>
+        <td>100</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Person Hall</td>
+        <td>330</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>South Building</td>
+        <td>128</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Graham Hall - Exterior</td>
+        <td>562</td>
+        <td>21</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Graham Hall - Interior</td>
+        <td>711</td>
+        <td>21</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+
 ## 2. Visualization Comparison
 
 **ConMatch(Baseline)** 

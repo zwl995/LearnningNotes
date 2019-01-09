@@ -8,6 +8,10 @@ TODO:
 
 - [x] [[ICCV 2009] Build Rome in a Day](https://grail.cs.washington.edu/rome/rome_paper.pdf)
 
+- [x] [[ECCV 2010] Improving the fisher kernel for large-scale image classification](https://www.robots.ox.ac.uk/~vgg/rg/papers/peronnin_etal_ECCV10.pdf)
+
+- [x] [[IJCV 2013] Image Classification with the Fisher vector: theory and practice](https://hal.inria.fr/hal-00830491v2/document)
+
 - [x] [[ICCV 2015] Optimizing the Viewing Graph for Structure-from-Motion](http://cs.ucsb.edu/~holl/pubs/Sweeney-2015-ICCV.pdf) 
 **Brief Comment:** This approach has a strong geometric verification by enforcing loop consistency, while not efficiency and may more suitable for global SfM other than other SfM approaches. Besides, the implementation is trivially.
 
