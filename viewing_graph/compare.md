@@ -21,9 +21,8 @@
 **N_fm**: number of final correspondences
 
 <table>
-    <caption>Vocabulary Tree VS Fisher Vector</caption>
     <tr>
-        <th rowspan="2">Dataset</th>
+        <th rowspan="2" colspan="2">Dataset</th>
         <th rowspan="2">Images</th>
         <th colspan="3">Vocabulary Tree</th>
         <th colspan="3">Fisher Vector (cosine)</th>
@@ -43,6 +42,9 @@
         <th>Cam</th>
         <th>N_tm/N_pp</th>
         <th>N_fm</th>
+    </tr>
+    <tr>
+        <td rowspan="9">Ambiguous Datasets</td>
     </tr>
     <tr>
         <td>Books</td>
@@ -171,6 +173,73 @@
         <td>3</td>
         <td>20/17</td>
         <td>2315</td>
+    </tr>
+    <tr>
+        <td rowspan="5">COLMAP Dataset</td>
+    </tr>
+    <tr>
+        <td>Gerrard Hall</td>
+        <td>100</td>
+        <td>20</td>
+        <td>116/92</td>
+        <td>1073104</td>
+        <td>27</td>
+        <td>400/81</td>
+        <td>343626</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>Person Hall</td>
+        <td>330</td>
+        <td>18</td>
+        <td>299/279</td>
+        <td>4056988</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>South Building</td>
+        <td>128</td>
+        <td>24</td>
+        <td>119/117</td>
+        <td>483379</td>
+        <td>4</td>
+        <td>435/106</td>
+        <td>151727</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>Graham Hall - Interior</td>
+        <td>711</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>12</td>
+        <td>7187/466</td>
+        <td>128462</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
     </tr>
 </table>
 
