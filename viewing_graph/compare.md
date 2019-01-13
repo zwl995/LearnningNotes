@@ -12,7 +12,252 @@
 |   oats    |   24   |       24       |        23       |          -         |        24        |
 |  Street   |   19   |       19       |        18       |         19         |        19        |
 
-### **Vocabulary Tree VS Fisher Vector**
+
+### 1.1 Inner Viewing graph pipeline
+
+- **By Vocabulary Tree**
+<table>
+    <tr>
+        <th rowspan="2" colspan="2">Dataset</th>
+        <th rowspan="2">Images/Total Pairs</th>
+        <th colspan="2">Online MST</th>
+        <th colspan="2">Retain Singleton Nodes</th>
+        <th colspan="2">Triplet Expansion</th>
+        <th colspan="2">Graph Reinforcement</th>
+    </tr>
+    <tr>
+        <th>N_tm/N_pp</th>
+        <th>N_fm</th>
+        <th>N_tm/N_pp</th>
+        <th>N_fm</th>
+        <th>N_tm/N_pp</th>
+        <th>N_fm</th>
+        <th>N_tm/N_pp</th>
+        <th>N_fm</th>
+    </tr>
+    <tr>
+        <td rowspan="9">Ambiguous Datasets</td>
+    </tr>
+    <tr>
+        <td>Books</td>
+        <td>21/315</td>
+        <td>20/20</td>
+        <td>8453</td>
+        <td></td>
+        <td></td>
+        <td>87/73</td>
+        <td>19022</td>
+        <td>204/75</td>
+        <td>19500</td>
+    </tr>
+    <tr>
+        <td>Cereal</td>
+        <td>25/300</td>
+        <td>22/22</td>
+        <td>10679</td>
+        <td></td>
+        <td></td>
+        <td>47/42</td>
+        <td>20533</td>
+        <td>292/48</td>
+        <td>21321</td>
+    </tr>
+    <tr>
+        <td>Cup</td>
+        <td>64/2016</td>
+        <td>64/63</td>
+        <td>13317</td>
+        <td></td>
+        <td></td>
+        <td>297/221</td>
+        <td>30405</td>
+        <td>607/223</td>
+        <td>30498</td>
+    </tr>
+    <tr>
+        <td>Desk</td>
+        <td>31/465</td>
+        <td>29/28</td>
+        <td>16151</td>
+        <td></td>
+        <td></td>
+        <td>82/70</td>
+        <td>33603</td>
+        <td>450/74</td>
+        <td>35184</td>
+    </tr>
+    <tr>
+        <td>Forbiden city</td>
+        <td>150/11175</td>
+        <td>143/138</td>
+        <td>23159</td>
+        <td></td>
+        <td></td>
+        <td>463/397</td>
+        <td>49219</td>
+        <td>8224/439</td>
+        <td>50967</td>
+    </tr>
+    <tr>
+        <td>Indoor</td>
+        <td>153/11628</td>
+        <td>150/142</td>
+        <td>53018</td>
+        <td></td>
+        <td></td>
+        <td>366/290</td>
+        <td>87879</td>
+        <td>7107/310</td>
+        <td>89199</td>
+    </tr>
+    <tr>
+        <td>oats</td>
+        <td>24/276</td>
+        <td>23/21</td>
+        <td>9632</td>
+        <td></td>
+        <td></td>
+        <td>66/57</td>
+        <td>21327</td>
+        <td>279/72</td>
+        <td>24124</td>
+    </tr>
+    <tr>
+        <td>Street</td>
+        <td>19/171</td>
+        <td>18/18</td>
+        <td>3669</td>
+        <td></td>
+        <td></td>
+        <td>96/85</td>
+        <td>11370</td>
+        <td>127/85</td>
+        <td>11370</td>
+    </tr>
+</table>
+
+- **By MIRROR**
+<table>
+    <tr>
+        <th rowspan="2" colspan="2">Dataset</th>
+        <th rowspan="2">Images/Total Pairs</th>
+        <th colspan="2">Online MST</th>
+        <th colspan="2">Retain Singleton Nodes</th>
+        <th colspan="2">Triplet Expansion</th>
+        <th colspan="2">Graph Reinforcement</th>
+    </tr>
+    <tr>
+        <th>N_tm/N_pp</th>
+        <th>N_fm</th>
+        <th>N_tm/N_pp</th>
+        <th>N_fm</th>
+        <th>N_tm/N_pp</th>
+        <th>N_fm</th>
+        <th>N_tm/N_pp</th>
+        <th>N_fm</th>
+    </tr>
+    <tr>
+        <td rowspan="9">Ambiguous Datasets</td>
+    </tr>
+    <tr>
+        <td>Books</td>
+        <td>21/315</td>
+        <td>19/19</td>
+        <td>7301</td>
+        <td></td>
+        <td></td>
+        <td>56/51</td>
+        <td>15744</td>
+        <td>199/58</td>
+        <td>16522</td>
+    </tr>
+    <tr>
+        <td>Cereal</td>
+        <td>25/300</td>
+        <td>22/22</td>
+        <td>10856</td>
+        <td></td>
+        <td></td>
+        <td>56/49</td>
+        <td>20895</td>
+        <td>240/55</td>
+        <td>22072</td>
+    </tr>
+    <tr>
+        <td>Cup</td>
+        <td>64/2016</td>
+        <td>63/60</td>
+        <td>12646</td>
+        <td></td>
+        <td></td>
+        <td>175/138</td>
+        <td>21741</td>
+        <td>535/146</td>
+        <td>22288</td>
+    </tr>
+    <tr>
+        <td>Desk</td>
+        <td>31/465</td>
+        <td>30/29</td>
+        <td>16197</td>
+        <td></td>
+        <td></td>
+        <td>140/104</td>
+        <td>40274</td>
+        <td>318/110</td>
+        <td>40874</td>
+    </tr>
+    <tr>
+        <td>Forbiden city</td>
+        <td>150/11175</td>
+        <td>151/133</td>
+        <td>21412</td>
+        <td></td>
+        <td></td>
+        <td>377/344</td>
+        <td>44481</td>
+        <td>11151/391</td>
+        <td>46688</td>
+    </tr>
+    <tr>
+        <td>Indoor</td>
+        <td>153/11628</td>
+        <td>140/131</td>
+        <td>52164</td>
+        <td></td>
+        <td></td>
+        <td>381/341</td>
+        <td>104769</td>
+        <td>11612/379</td>
+        <td>107866</td>
+    </tr>
+    <tr>
+        <td>oats</td>
+        <td>24/276</td>
+        <td>21/21</td>
+        <td>9304</td>
+        <td></td>
+        <td></td>
+        <td>55/52</td>
+        <td>17493</td>
+        <td>277/66</td>
+        <td>19577</td>
+    </tr>
+    <tr>
+        <td>Street</td>
+        <td>19/171</td>
+        <td>18/17</td>
+        <td>3436</td>
+        <td></td>
+        <td></td>
+        <td>49/47</td>
+        <td>7933</td>
+        <td>173/59</td>
+        <td>9005</td>
+    </tr>
+</table>
+
+### 1.2 Vocabulary Tree VS Fisher Vector
 
 **N_tm**: number of tried matches
 
