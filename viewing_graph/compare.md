@@ -335,8 +335,8 @@
     <tr>
         <th rowspan="2" colspan="2">Dataset</th>
         <th rowspan="2">Images</th>
-        <th colspan="4">Vocabulary Tree</th>
-        <th colspan="4">MIRROR</th>
+        <th colspan="5">Vocabulary Tree</th>
+        <th colspan="5">MIRROR</th>
     </tr>
     <tr>
         <th>Cam</th>
@@ -527,6 +527,25 @@
         <td>-</td>
     </tr>
 </table>
+
+
+- **number of valid loop matches/invalid loop matches**
+![](img/all_bar.png)
+<!-- ![](img/books_bar.png)
+
+![](img/cereal_bar.png)
+
+![](img/cup_bar.png)
+
+![](img/desk_bar.png)
+
+![](img/fc_bar.png)
+
+![](img/indoor_bar.png)
+
+![](img/oats_bar.png)
+
+![](img/street_bar.png) -->
 
 ### 1.3 Vocabulary Tree VS Fisher Vector
 
