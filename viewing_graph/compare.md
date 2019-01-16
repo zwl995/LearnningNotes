@@ -1,16 +1,16 @@
 # Ambiguous Datasets Reconstruction compare
 
 ## 1. Statistics
-|  Dataset  | Images | COLMAP(Images) |   Ours(Images)  |   Baseline(Images) |  Ours-vg(Images) |
-| :-------- | :----- |     :----:     |      :----:     |        :----       |      :----       |
-|   Books   |   21   |       21       |         21      |                    |        21        |
-|  Cereal   |   25   |       25       |      failure    |          -         |        25        |
-|    Cup    |   64   |       64       |        46       |                    |        7         |
-|   Desk    |   31   |       31       |        31       |                    |        31        |
-|    fc     |   150  |       150      |        7        |                    |        -         |
-|  Indoor   |   153  |       152      |        147      |                    |        -         |
-|   oats    |   24   |       24       |        23       |          -         |        24        |
-|  Street   |   19   |       19       |        18       |         19         |        19        |
+|  Dataset  | Images | COLMAP(Cameras) |   Ours(Cameras) |    VG-BoW(Cameras)  |  Ours-MIRROR(Cameras) |
+| :-------- | :----- |     :----:      |      :----:     |        :----        |      :----            |
+|   Books   |   21   |       21        |         21      |          21         |        21             |
+|  Cereal   |   25   |       25        |      failure    |          25         |        25             |
+|    Cup    |   64   |       64        |        46       |          25         |        13             |
+|   Desk    |   31   |       31        |        31       |          31         |        31             |
+|    fc     |   150  |       150       |        7        |          21         |        12             |
+|  Indoor   |   153  |       152       |        147      |          14         |        72             |
+|   oats    |   24   |       24        |        23       |          24         |        24             |
+|  Street   |   19   |       19        |        18       |          19         |        19             |
 
 
 ### 1.1 Inner Viewing graph pipeline
@@ -21,18 +21,15 @@
         <th rowspan="2" colspan="2">Dataset</th>
         <th rowspan="2">Images/Total Pairs</th>
         <th colspan="2">Online MST</th>
-        <th colspan="2">Retain Singleton Nodes</th>
         <th colspan="2">Triplet Expansion</th>
         <th colspan="2">Graph Reinforcement</th>
     </tr>
     <tr>
-        <th>N_tm/N_pp</th>
+        <th>N_gv/N_tm</th>
         <th>N_fm</th>
-        <th>N_tm/N_pp</th>
+        <th>N_gv/N_tm</th>
         <th>N_fm</th>
-        <th>N_tm/N_pp</th>
-        <th>N_fm</th>
-        <th>N_tm/N_pp</th>
+        <th>N_gv/N_tm</th>
         <th>N_fm</th>
     </tr>
     <tr>
@@ -41,97 +38,81 @@
     <tr>
         <td>Books</td>
         <td>21/315</td>
-        <td>20/20</td>
+        <td>20/20(1.0)</td>
         <td>8453</td>
-        <td></td>
-        <td></td>
-        <td>87/73</td>
+        <td>73/87(0.839)</td>
         <td>19022</td>
-        <td>204/75</td>
+        <td>75/204(0.368)</td>
         <td>19500</td>
     </tr>
     <tr>
         <td>Cereal</td>
         <td>25/300</td>
-        <td>22/22</td>
+        <td>22/22(1.0)</td>
         <td>10679</td>
-        <td></td>
-        <td></td>
-        <td>47/42</td>
+        <td>42/47(0.894)</td>
         <td>20533</td>
-        <td>292/48</td>
+        <td>48/292(0.164)</td>
         <td>21321</td>
     </tr>
     <tr>
         <td>Cup</td>
         <td>64/2016</td>
-        <td>64/63</td>
+        <td>63/64(0.984)</td>
         <td>13317</td>
-        <td></td>
-        <td></td>
-        <td>297/221</td>
+        <td>221/297(0.744)</td>
         <td>30405</td>
-        <td>607/223</td>
+        <td>223/607(0.367)</td>
         <td>30498</td>
     </tr>
     <tr>
         <td>Desk</td>
         <td>31/465</td>
-        <td>29/28</td>
+        <td>28/29(0.966)</td>
         <td>16151</td>
-        <td></td>
-        <td></td>
-        <td>82/70</td>
+        <td>70/82(0.854)</td>
         <td>33603</td>
-        <td>450/74</td>
+        <td>74/450(0.164)</td>
         <td>35184</td>
     </tr>
     <tr>
         <td>Forbiden city</td>
         <td>150/11175</td>
-        <td>143/138</td>
+        <td>138/143(0.965)</td>
         <td>23159</td>
-        <td></td>
-        <td></td>
-        <td>463/397</td>
+        <td>397/463(0.857)</td>
         <td>49219</td>
-        <td>8224/439</td>
+        <td>439/8224(0.053)</td>
         <td>50967</td>
     </tr>
     <tr>
         <td>Indoor</td>
         <td>153/11628</td>
-        <td>150/142</td>
+        <td>142/150(0.947)</td>
         <td>53018</td>
-        <td></td>
-        <td></td>
-        <td>366/290</td>
+        <td>290/366(0.792)</td>
         <td>87879</td>
-        <td>7107/310</td>
+        <td>310/7107(0.044)</td>
         <td>89199</td>
     </tr>
     <tr>
         <td>oats</td>
         <td>24/276</td>
-        <td>23/21</td>
+        <td>21/23(0.913)</td>
         <td>9632</td>
-        <td></td>
-        <td></td>
-        <td>66/57</td>
+        <td>57/66(0.864)</td>
         <td>21327</td>
-        <td>279/72</td>
+        <td>72/279(0.258)</td>
         <td>24124</td>
     </tr>
     <tr>
         <td>Street</td>
         <td>19/171</td>
-        <td>18/18</td>
+        <td>18/18(1.0)</td>
         <td>3669</td>
-        <td></td>
-        <td></td>
-        <td>96/85</td>
+        <td>85/96(0.885)</td>
         <td>11370</td>
-        <td>127/85</td>
+        <td>85/127(0.669)</td>
         <td>11370</td>
     </tr>
 </table>
@@ -142,18 +123,15 @@
         <th rowspan="2" colspan="2">Dataset</th>
         <th rowspan="2">Images/Total Pairs</th>
         <th colspan="2">Online MST</th>
-        <th colspan="2">Retain Singleton Nodes</th>
         <th colspan="2">Triplet Expansion</th>
         <th colspan="2">Graph Reinforcement</th>
     </tr>
     <tr>
-        <th>N_tm/N_pp</th>
+        <th>N_gv/N_tm</th>
         <th>N_fm</th>
-        <th>N_tm/N_pp</th>
+        <th>N_gv/N_tm</th>
         <th>N_fm</th>
-        <th>N_tm/N_pp</th>
-        <th>N_fm</th>
-        <th>N_tm/N_pp</th>
+        <th>N_gv/N_tm</th>
         <th>N_fm</th>
     </tr>
     <tr>
@@ -162,119 +140,100 @@
     <tr>
         <td>Books</td>
         <td>21/315</td>
-        <td>20/20</td>
-        <td>8314</td>
-        <td></td>
-        <td></td>
-        <td>135/109</td>
-        <td>26527</td>
-        <td>224/118</td>
-        <td>27483</td>
+        <td>20/20(1.0)</td>
+        <td>8415</td>
+        <td>98/122(0.803)</td>
+        <td>22084</td>
+        <td>127/221(0.575)</td>
+        <td>25830</td>
     </tr>
     <tr>
         <td>Cereal</td>
         <td>25/300</td>
-        <td>22/22</td>
-        <td>11067</td>
-        <td></td>
-        <td></td>
-        <td>49/44</td>
-        <td>22123</td>
-        <td>294/61</td>
-        <td>24651</td>
+        <td>21/21(1.0)</td>
+        <td>10947</td>
+        <td>64/70(0.914)</td>
+        <td>24371</td>
+        <td>88/311(0.283)</td>
+        <td>28069</td>
     </tr>
     <tr>
         <td>Cup</td>
         <td>64/2016</td>
-        <td>63/61</td>
-        <td>13416</td>
-        <td></td>
-        <td></td>
-        <td>218/173</td>
-        <td>26560</td>
-        <td>683/180</td>
-        <td>27053</td>
+        <td>62/65(0.954)</td>
+        <td>12604</td>
+        <td>270/387(0.698)</td>
+        <td>31448</td>
+        <td>299/697(0.429)</td>
+        <td>33165</td>
     </tr>
     <tr>
         <td>Desk</td>
         <td>31/465</td>
-        <td>29/28</td>
-        <td>15822</td>
-        <td></td>
-        <td></td>
-        <td>99/86</td>
-        <td>38123</td>
-        <td>457/128</td>
-        <td>49624</td>
+        <td>28/28(1.0)</td>
+        <td>16293</td>
+        <td>90/94(0.957)</td>
+        <td>37134</td>
+        <td>167/461(0.362)</td>
+        <td>53958</td>
     </tr>
     <tr>
         <td>Forbiden city</td>
         <td>150/11175</td>
-        <td>143/139</td>
-        <td>22884</td>
-        <td></td>
-        <td></td>
-        <td>460/414</td>
-        <td>50371</td>
-        <td>7407/526</td>
-        <td>57651</td>
+        <td>139/146(0.952)</td>
+        <td>22413</td>
+        <td>522/614(0.850)</td>
+        <td>52952</td>
+        <td>677/7288(0.093)</td>
+        <td>61383</td>
     </tr>
     <tr>
         <td>Indoor</td>
         <td>153/11628</td>
-        <td>149/142</td>
-        <td>53305</td>
-        <td></td>
-        <td></td>
-        <td>416/326</td>
-        <td>99602</td>
-        <td>7370/374</td>
-        <td>105603</td>
+        <td>143/150(0.953)</td>
+        <td>53400</td>
+        <td>373/443(0.842)</td>
+        <td>104546</td>
+        <td>500/6333(0.079)</td>
+        <td>115991</td>
     </tr>
     <tr>
         <td>oats</td>
         <td>24/276</td>
-        <td>24/21</td>
-        <td>9519</td>
-        <td></td>
-        <td></td>
-        <td>66/58</td>
-        <td>21221</td>
-        <td>280/104</td>
-        <td>27897</td>
+        <td>21/23((0.913)</td>
+        <td>9716</td>
+        <td>64/66(0.970)</td>
+        <td>22863</td>
+        <td>165/278(0.594)</td>
+        <td>34536</td>
     </tr>
     <tr>
         <td>Street</td>
         <td>19/171</td>
-        <td>19/18</td>
-        <td>3833</td>
-        <td></td>
-        <td></td>
-        <td>80/73</td>
-        <td>10568</td>
-        <td>111/73</td>
-        <td>10568</td>
+        <td>17/19(0.895)</td>
+        <td>3533</td>
+        <td>38/45(0.844)</td>
+        <td>6924</td>
+        <td>48/162(0.296)</td>
+        <td>7662</td>
     </tr>
 </table>
 
-- **By MIRROR**
+- **By MIRROR [*after fixing bug*]**
 <table>
     <tr>
         <th rowspan="2" colspan="2">Dataset</th>
         <th rowspan="2">Images/Total Pairs</th>
         <th colspan="2">Online MST</th>
-        <th colspan="2">Retain Singleton Nodes</th>
         <th colspan="2">Triplet Expansion</th>
         <th colspan="2">Graph Reinforcement</th>
     </tr>
     <tr>
-        <th>N_tm/N_pp</th>
+        <th>N_gv/N_tm</th>
         <th>N_fm</th>
-        <th>N_tm/N_pp</th>
+        <th>N_gv/N_tm</th>
         <th>N_fm</th>
-        <th>N_tm/N_pp</th>
-        <th>N_fm</th>
-        <th>N_tm/N_pp</th>
+        <th>N_gv/N_tm</th>
         <th>N_fm</th>
     </tr>
     <tr>
@@ -283,102 +242,293 @@
     <tr>
         <td>Books</td>
         <td>21/315</td>
-        <td>19/19</td>
-        <td>7301</td>
-        <td></td>
-        <td></td>
-        <td>56/51</td>
-        <td>15744</td>
-        <td>199/58</td>
-        <td>16522</td>
+        <td>19/19(1.0)</td>
+        <td>7349</td>
+        <td>51/56(0.911)</td>
+        <td>15789</td>
+        <td>84/199(0.422)</td>
+        <td>22681</td>
     </tr>
     <tr>
         <td>Cereal</td>
         <td>25/300</td>
-        <td>22/22</td>
-        <td>10856</td>
-        <td></td>
-        <td></td>
-        <td>56/49</td>
-        <td>20895</td>
-        <td>240/55</td>
+        <td>22/22(1.0)</td>
+        <td>10826</td>
+        <td>72/80(0.900)</td>
+        <td>24825</td>
+        <td>97/254((0.382)</td>
         <td>22072</td>
     </tr>
     <tr>
         <td>Cup</td>
         <td>64/2016</td>
-        <td>63/60</td>
-        <td>12646</td>
-        <td></td>
-        <td></td>
-        <td>175/138</td>
-        <td>21741</td>
-        <td>535/146</td>
+        <td>60/63(0.952)</td>
+        <td>12696</td>
+        <td>170/194(0.876)</td>
+        <td>24116</td>
+        <td>209/573(0.365)</td>
         <td>22288</td>
     </tr>
     <tr>
         <td>Desk</td>
         <td>31/465</td>
-        <td>30/29</td>
-        <td>16197</td>
-        <td></td>
-        <td></td>
-        <td>140/104</td>
-        <td>40274</td>
-        <td>318/110</td>
-        <td>40874</td>
+        <td>29/30(0.967)</td>
+        <td>16164</td>
+        <td>119/151(0.788)</td>
+        <td>44081</td>
+        <td>145/326(0.445)</td>
+        <td>46656</td>
     </tr>
     <tr>
         <td>Forbiden city</td>
         <td>150/11175</td>
-        <td>151/133</td>
-        <td>21412</td>
-        <td></td>
-        <td></td>
-        <td>377/344</td>
-        <td>44481</td>
-        <td>11151/391</td>
-        <td>46688</td>
+        <td>133/152(0.875)</td>
+        <td>21310</td>
+        <td>364/391(0.931)</td>
+        <td>46506</td>
+        <td>650/10976(0.059)</td>
+        <td>63175</td>
     </tr>
     <tr>
         <td>Indoor</td>
         <td>153/11628</td>
-        <td>140/131</td>
+        <td>131/140(0.936)</td>
         <td>52164</td>
-        <td></td>
-        <td></td>
-        <td>381/341</td>
+        <td>341/381(0.895)</td>
         <td>104769</td>
-        <td>11612/379</td>
+        <td>379/11612(0.033)</td>
         <td>107866</td>
     </tr>
     <tr>
         <td>oats</td>
         <td>24/276</td>
-        <td>21/21</td>
+        <td>21/21(1.0)</td>
         <td>9304</td>
-        <td></td>
-        <td></td>
-        <td>55/52</td>
+        <td>52/55(0.945)</td>
         <td>17493</td>
-        <td>277/66</td>
+        <td>66/277(0.238)</td>
         <td>19577</td>
     </tr>
     <tr>
         <td>Street</td>
         <td>19/171</td>
-        <td>18/17</td>
+        <td>17/18(0.944)</td>
         <td>3436</td>
-        <td></td>
-        <td></td>
-        <td>49/47</td>
+        <td>47/49(0.959)</td>
         <td>7933</td>
-        <td>173/59</td>
+        <td>59/173(0.341)</td>
         <td>9005</td>
     </tr>
 </table>
 
-### 1.2 Vocabulary Tree VS Fisher Vector
+
+### 1.2 Vocabulary Tree VS MIRROR
+
+**R_mst**: ratio of tried matches/passed geometric verification in *OnlineMST* step
+
+**R_te**: ratio of tried matches/passed geometric verification in *TripletExpansion* step
+
+**R_gr**: ratio of tried matches/passed geometric verification in *GraphReinforcement* step
+
+**RE**: Reprojection error
+<table>
+    <tr>
+        <th rowspan="2" colspan="2">Dataset</th>
+        <th rowspan="2">Images</th>
+        <th colspan="4">Vocabulary Tree</th>
+        <th colspan="4">MIRROR</th>
+    </tr>
+    <tr>
+        <th>Cam</th>
+        <th>R_mst</th>
+        <th>R_te</th>
+        <th>R_gr</th>
+        <th>RE</th>
+        <th>Cam</th>
+        <th>R_mst</th>
+        <th>R_te</th>
+        <th>R_gr</th>
+        <th>RE</th>
+    </tr>
+    <tr>
+        <td rowspan="9">Ambiguous Datasets</td>
+    </tr>
+    <tr>
+        <td>Books</td>
+        <td>21</td>
+        <td><b>21</b></td>
+        <td><b>20/20(1.0)</b></td>
+        <td>98/122(0.803)</td>
+        <td><b>127/221(0.575)</b></td>
+        <td><b>0.396</b></td>
+        <td><b>21</b></td>
+        <td><b>19/19(1.0)</b></td>
+        <td><b>51/56(0.911)</b></td>
+        <td>84/199(0.422)</td>
+        <td>0.404</td>
+    </tr>
+    <tr>
+        <td>Cereal</td>
+        <td>25</td>
+        <td>24</td>
+        <td><b>21/21(1.0)</b></td>
+        <td><b>64/70(0.914)</b></td>
+        <td>88/311(0.283)</td>
+        <td>0.835</td>
+        <td><b>25</b></td>
+        <td><b>22/22(1.0)</b></td>
+        <td>72/80(0.900)</td>
+        <td><b>97/254((0.382)</b></td>
+        <td><b>0.576</b></td>
+    </tr>
+    <tr>
+        <td>Cup</td>
+        <td>64</td>
+        <td><b>64</b></td>
+        <td><b>62/65(0.954)</b></td>
+        <td>270/387(0.698)</td>
+        <td><b>299/697(0.429)</b></td>
+        <td>0.448</td>
+        <td>13</td>
+        <td>60/63(0.952)</td>
+        <td><b>170/194(0.876)</b></td>
+        <td>209/573(0.365)</td>
+        <td><b>0.436</b></td>
+    </tr>
+    <tr>
+        <td>Desk</td>
+        <td>31</td>
+        <td><b>31</b></td>
+        <td><b>28/28(1.0)</b></td>
+        <td><b>90/94(0.957)</b></td>
+        <td>167/461(0.362)</td>
+        <td>0.490</td>
+        <td><b>31</b></td>
+        <td>29/30(0.967)</td>
+        <td>119/151(0.788)</td>
+        <td><b>145/326(0.445)</b></td>
+        <td><b>0.476</b></td>
+    </tr>
+    <tr>
+        <td>Forbiden city</td>
+        <td>150</td>
+        <td><b>15</b></td>
+        <td><b>139/146(0.952)</b></td>
+        <td>522/614(0.850)</td>
+        <td><b>677/7288(0.093)</b></td>
+        <td><b>0.296</b></td>
+        <td>12</td>
+        <td>133/152(0.875)</td>
+        <td><b>364/391(0.931)</b></td>
+        <td>650/10976(0.059)</td>
+        <td>0.446</td>
+    </tr>
+    <tr>
+        <td>Indoor</td>
+        <td>153</td>
+        <td>38</td>
+        <td><b>143/150(0.953)<b></td>
+        <td>373/443(0.842)</td>
+        <td><b>500/6333(0.079)</b></td>
+        <td><b>0.427</b></td>
+        <td><b>72</b></td>
+        <td>131/140(0.936)</td>
+        <td><b>341/381(0.895)</b></td>
+        <td>379/11612(0.033)</td>
+        <td>0.448</td>
+    </tr>
+    <tr>
+        <td>oats</td>
+        <td>24</td>
+        <td><b>24</b></td>
+        <td>21/23(0.913)</td>
+        <td><b>64/66(0.970)</b></td>
+        <td><b>165/278(0.594)</b></td>
+        <td>0.379</td>
+        <td><b>24</b></td>
+        <td><b>21/21(1.0)</b></td>
+        <td>52/55(0.945)</td>
+        <td>66/277(0.238)</td>
+        <td><b>0.326</b></td>
+    </tr>
+    <tr>
+        <td>Street</td>
+        <td>19</td>
+        <td>6</td>
+        <td>17/19(0.895)</td>
+        <td>38/45(0.844)</td>
+        <td>48/162(0.296)</td>
+        <td><b>0.371</b></td>
+        <td><b>19</b></td>
+        <td><b>7/18(0.944)</b></td>
+        <td><b>47/49(0.959)</b></td>
+        <td><b>59/173(0.341)</b></td>
+        <td>0.560</td>
+    </tr>
+    <tr>
+        <td rowspan="5">COLMAP Dataset</td>
+    </tr>
+    <tr>
+        <td>Gerrard Hall</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>Person Hall</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>South Building</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>Graham Hall - Interior</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+</table>
+
+### 1.3 Vocabulary Tree VS Fisher Vector
 
 **N_tm**: number of tried matches
 
