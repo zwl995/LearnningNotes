@@ -136,6 +136,127 @@
     </tr>
 </table>
 
+- **By Vocabulary Tree [*After fixing bugs*]**
+<table>
+    <tr>
+        <th rowspan="2" colspan="2">Dataset</th>
+        <th rowspan="2">Images/Total Pairs</th>
+        <th colspan="2">Online MST</th>
+        <th colspan="2">Retain Singleton Nodes</th>
+        <th colspan="2">Triplet Expansion</th>
+        <th colspan="2">Graph Reinforcement</th>
+    </tr>
+    <tr>
+        <th>N_tm/N_pp</th>
+        <th>N_fm</th>
+        <th>N_tm/N_pp</th>
+        <th>N_fm</th>
+        <th>N_tm/N_pp</th>
+        <th>N_fm</th>
+        <th>N_tm/N_pp</th>
+        <th>N_fm</th>
+    </tr>
+    <tr>
+        <td rowspan="9">Ambiguous Datasets</td>
+    </tr>
+    <tr>
+        <td>Books</td>
+        <td>21/315</td>
+        <td>20/20</td>
+        <td>8314</td>
+        <td></td>
+        <td></td>
+        <td>135/109</td>
+        <td>26527</td>
+        <td>224/118</td>
+        <td>27483</td>
+    </tr>
+    <tr>
+        <td>Cereal</td>
+        <td>25/300</td>
+        <td>22/22</td>
+        <td>11067</td>
+        <td></td>
+        <td></td>
+        <td>49/44</td>
+        <td>22123</td>
+        <td>294/61</td>
+        <td>24651</td>
+    </tr>
+    <tr>
+        <td>Cup</td>
+        <td>64/2016</td>
+        <td>63/61</td>
+        <td>13416</td>
+        <td></td>
+        <td></td>
+        <td>218/173</td>
+        <td>26560</td>
+        <td>683/180</td>
+        <td>27053</td>
+    </tr>
+    <tr>
+        <td>Desk</td>
+        <td>31/465</td>
+        <td>29/28</td>
+        <td>15822</td>
+        <td></td>
+        <td></td>
+        <td>99/86</td>
+        <td>38123</td>
+        <td>457/128</td>
+        <td>49624</td>
+    </tr>
+    <tr>
+        <td>Forbiden city</td>
+        <td>150/11175</td>
+        <td>143/139</td>
+        <td>22884</td>
+        <td></td>
+        <td></td>
+        <td>460/414</td>
+        <td>50371</td>
+        <td>7407/526</td>
+        <td>57651</td>
+    </tr>
+    <tr>
+        <td>Indoor</td>
+        <td>153/11628</td>
+        <td>149/142</td>
+        <td>53305</td>
+        <td></td>
+        <td></td>
+        <td>416/326</td>
+        <td>99602</td>
+        <td>7370/374</td>
+        <td>105603</td>
+    </tr>
+    <tr>
+        <td>oats</td>
+        <td>24/276</td>
+        <td>24/21</td>
+        <td>9519</td>
+        <td></td>
+        <td></td>
+        <td>66/58</td>
+        <td>21221</td>
+        <td>280/104</td>
+        <td>27897</td>
+    </tr>
+    <tr>
+        <td>Street</td>
+        <td>19/171</td>
+        <td>19/18</td>
+        <td>3833</td>
+        <td></td>
+        <td></td>
+        <td>80/73</td>
+        <td>10568</td>
+        <td>111/73</td>
+        <td>10568</td>
+    </tr>
+</table>
+
 - **By MIRROR**
 <table>
     <tr>
