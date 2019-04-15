@@ -302,7 +302,16 @@ void AngleAxisRotatePoint(const T angle_axis[3], const T pt[3], T result[3]) {
 TODO:
 
 ### 7. 李代数求导与扰动模型
-TODO:
+
+#### 7.1 李代数求导
+
+#### 7.2 扰动模型
+设左扰动 $\nabla R$ 对应的李代数为 $\bold{a}$。对 $\bold{a}$ 求导，有
+$$
+\frac{\delta(R\bold{p})}{\delta \bold{a}} = {\lim_{\bold{a} \to 0}} \frac{exp([\bold{a}]_{\times}) exp([\bold{a}]_{\times})\bold{p} - exp([\bold{a}]_{\times})\bold{p}}{\bold{a}} \\
+= {\lim_{\bold{a} \to 0}} \frac{(1 + [\bold{a}]_{\times}) exp([\bold{a}]_{\times})\bold{p} - exp([\bold{a}]_{\times})\bold{p}}{\bold{a}}\\
+= {\lim_{\bold{a} \to 0}} \frac{[\bold{a}]_{\times}R\bold{p}}{\bold{a}} = {\lim_{\bold{a} \to 0}} \frac{-[R\bold{p}]_{\times}\bold{a}}{\bold{a}} = -[R\bold{p}]_{\times}
+$$
 
 ### References
 
