@@ -15,13 +15,13 @@
 
 - [x] [[ICCV 2013] Efficient and Robust Large-Scale Rotation Averaging](https://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Chatterjee_Efficient_and_Robust_2013_ICCV_paper.pdf) TODO: take notes
 
-- [ ] [[TPAMI 2017] Robust Relative Rotation Averaging](http://www.ee.iisc.ac.in/labs/cvl/papers/robustrelrotavg.pdf)
+- [x] [[TPAMI 2017] Robust Relative Rotation Averaging](http://www.ee.iisc.ac.in/labs/cvl/papers/robustrelrotavg.pdf)
 
 - [ ] [[CVPR 2018] Rotation Averaging and Strong Duality](http://openaccess.thecvf.com/content_cvpr_2018/papers/Eriksson_Rotation_Averaging_and_CVPR_2018_paper.pdf)
 
 ## 3. Translation Averaging
 
-- [ ] [[ECCV 2014] Robust Global Translations with 1dsfm]()
+- [x] [[ECCV 2014] Robust Global Translations with 1dsfm]()
 
 - [ ] [[CVPR 2018] Baseline Desensitizing In Translation Averaging](http://openaccess.thecvf.com/content_cvpr_2018/papers/Zhuang_Baseline_Desensitizing_in_CVPR_2018_paper.pdf)
 
