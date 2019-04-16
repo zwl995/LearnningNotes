@@ -1,4 +1,5 @@
 ## 旋转
+旋转在三维重建中是比较重要的，这里主要对旋转的性质及应用做一些总结。
 
 ### 1. 旋转矩阵
 设某个<u>单位正交基</u> $(e_1, e_2, e_3)$ 经过一次旋转变成了 $(e_1^{'}, e_2^{'}, e_3^{'})$ 。那么，对于同一个向量 $\bold{a}$ (注意该向量并没有随着坐标系的旋转而发生运动)，它在两个坐标系下的坐标为 $(a_1, a_2, a_3)^T$ 和 $(a_1^{'}, a_2^{'}, a_3^{'})^T$。由坐标的定义，有：
@@ -326,14 +327,18 @@ $$
 $$
 exp(\theta \bold{v}) = I + sin\theta\ [\bold{v}]_{\times} + (1-cos\theta)([\bold{v}]_{\times})^2
 $$
-具体来讲，令 $SR^T = exp(\theta \bold{v})$，由于
+具体来讲，令 $SR^T = exp(\theta \bold{v})$，由于 $[\bold{v}]_{\times}$ 和 $([\bold{v}]_{\times})^2$正交，且 $||[\bold{v}]_{\times}||^2_F = ||([\bold{v}]_{\times})^2||^2_F = 2$，因此，我们有
+$$
+d_{chord}(S, R)^2 = ||S - R||^2 = ||SR^T - I||^2 = 2(sin^2\theta + (1-cos\theta)^2) = 8sin^2\frac{\theta}{2}
+$$
+因此，
+$$
+d_{chord}(S, R) = 2\sqrt{2} sin\frac{\theta}{2} \tag{20}
+$$
 
 
-### 7. 李代数求导与扰动模型
+### 7. 扰动模型对旋转求导
 
-#### 7.1 李代数求导
-
-#### 7.2 扰动模型
 设左扰动 $\nabla R$ 对应的李代数为 $\bold{a}$。对 $\bold{a}$ 求导，有
 $$
 \frac{\delta(R\bold{p})}{\delta \bold{a}} = {\lim_{\bold{a} \to 0}} \frac{exp([\bold{a}]_{\times}) exp([\bold{a}]_{\times})\bold{p} - exp([\bold{a}]_{\times})\bold{p}}{\bold{a}} \\
@@ -343,6 +348,7 @@ $$
 
 ### References
 
-- [1] https://en.wikipedia.org/wiki/Rodrigues%27_rotation_formula
-- [2] https://en.wikipedia.org/wiki/Axis%E2%80%93angle_representation
-- [3] Rotation Averaging
+- [1] 视觉SLAM十四讲 从理论到实践
+- [2] https://en.wikipedia.org/wiki/Rodrigues%27_rotation_formula
+- [3] https://en.wikipedia.org/wiki/Axis%E2%80%93angle_representation
+- [4] Hartley, Richard, Trumpf, et al. Rotation Averaging[J]. International Journal of Computer Vision, 2013, 103(3):267-305.
