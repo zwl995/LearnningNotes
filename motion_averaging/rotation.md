@@ -298,8 +298,36 @@ void AngleAxisRotatePoint(const T angle_axis[3], const T pt[3], T result[3]) {
 }
 ```
 
-### 6. $SO(3)$ 上的误差计算 (Distance Measure)
-TODO:
+### 6. $SO(3)$ 上的距离测量 (Distance Measure)
+
+##### (1) Bi-invariant distance
+如果对于所有的 $S$ 和 $R_i$，我们有 : 
+$$
+d(SR_1, SR_2) = d(R_1, R_2) = d(R_1S, R_2S) \tag{17}
+$$
+那么这样的一个距离测量称为 `Bi-invariant`.
+
+##### (2) Angular Distance (Geodesic Distance)
+
+定义 R 和 S 之间的 `angular distance` 为旋转 $SR^T$ 的角度，并且处于区间 $[0, \pi]$ 里。因此，
+$$
+d(S, R) = d(SR^T, I) = ||log(SR^T)||_2 \tag{18}
+$$
+距离测量函数 $d(S, R)$ 和 $SR^T$ 的旋转角度相等。需要注意，我们可能会等价地写为 $R^TS$，$RS^T$，$S^TR$，因为这些都表示同一个旋转。
+
+##### (3) Chordal Distance
+旋转 $R$ 和 $S$ 之间的 `chordal distance` 定义为:
+$$
+d_{chord}(S, R) = ||S-R||_F \tag{19}
+$$
+其中，$||\cdot||_F$ 表示矩阵的 `Frobenius 范数`。
+
+`chordal distance` 和 `angular distance` 之间可以通过罗德里格斯公式关联起来:
+$$
+exp(\theta \bold{v}) = I + sin\theta\ [\bold{v}]_{\times} + (1-cos\theta)([\bold{v}]_{\times})^2
+$$
+具体来讲，令 $SR^T = exp(\theta \bold{v})$，由于
+
 
 ### 7. 李代数求导与扰动模型
 
