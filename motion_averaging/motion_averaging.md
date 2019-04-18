@@ -61,4 +61,19 @@ $$
 
 #### 估计平移
 
+### 1.2 Rotation Averaging 在李代数上的线性模型求解
+
+关于旋转的一些性质已经在 [三维重建中的旋转(Rotation)](rotation.md) 里提及，包括李代数等。
+现在由公式 (4.a)，我们重新考虑我们要求解的问题。给定参考系和一系列相对旋转 $R_{ij}$，我们希望求解 $R_{global} = {R_1, ..., R_N}$。我们希望最小化代价函数:
+$$
+arg\ min\ \sum_{(i,j)\in \varepsilon} d^2(R_{ij}, R_jR_i^{-1}) \tag{}
+$$
+现在我们考虑使用李代数来进行优化, $R_{ij} = exp([\boldsymbol{w_{ij}}]_{\times}), R_i = exp([\boldsymbol{w_{i}}]_{\times})$，其中 $\boldsymbol{w_{ij}}$ 和 $\boldsymbol{w_{i}}$ 分别为 $R_{ij}$ 和 $R_i$ 对应的李代数。 
+
+假设只考虑其中一对关系 $R_{ij} = R_jR_i^{-1}$。由 BCH 公式： $BCH(x, y) = x + y + \frac{1}{2}[x, y] + \frac{1}{12}[x - y, [x, y]] + o(|(x, y)|^4)$，若只采用BCH公式的一阶估计 $BCH(x, y) \approx x + y$，则
+
+$$
+\boldsymbol{w_{ij}} = BCH(\boldsymbol{w_{j}}, -\boldsymbol{w_{i}}) = \boldsymbol{w_{j}} - \boldsymbol{w_{i}}
+$$
+
 ## References
