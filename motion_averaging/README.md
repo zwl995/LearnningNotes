@@ -11,9 +11,9 @@
 
 ## 2. Rotation Averaging
 
-- [x] [[IJCV 2013] Rotation Averaging](http://users.cecs.anu.edu.au/~yuchao/files/rotationaveraging-IJCV13.pdf) TODO: take notes from my notebook
+- [x] [[IJCV 2013] Rotation Averaging](http://users.cecs.anu.edu.au/~yuchao/files/rotationaveraging-IJCV13.pdf)
 
-- [x] [[ICCV 2013] Efficient and Robust Large-Scale Rotation Averaging](https://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Chatterjee_Efficient_and_Robust_2013_ICCV_paper.pdf) TODO: take notes
+- [x] [[ICCV 2013] Efficient and Robust Large-Scale Rotation Averaging](https://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Chatterjee_Efficient_and_Robust_2013_ICCV_paper.pdf) 
 
 - [x] [[TPAMI 2017] Robust Relative Rotation Averaging](http://www.ee.iisc.ac.in/labs/cvl/papers/robustrelrotavg.pdf)
 
