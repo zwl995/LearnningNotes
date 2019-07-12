@@ -138,6 +138,47 @@ augmented Lagrangian 方法的优点是有更好的收敛性。但是，当 $f$ 
 
 ## 3. ADMM
 
+前面提到 dual ascent 的优点和 augmented Lagrangian 的优点分别是`可分性(decomposability)`和非常好的收敛性(superior convergence)。ADMM 就是融合了这两种算法的优点而成的。ADMM 通常可以用来求解如下形式的问题:
+
+$$
+minimize\ f(x) + g(z)\\
+subject\ to\ Ax + Bz = c \tag{3.1}
+$$
+
+其中，$x \in R^{n}, z\in R^{m}, A \in R^{p \times n}, B \in R^{p \times m}, c\in R^{p}$。这里假设 $f$ 和 $g$ 都是凸函数。(3.1) 的 augmented Lagrangian 为
+
+$$
+L_{\rho}(x, y, z) = f(x) + g(z) + y^T (Ax + Bz - c) + \frac{\rho}{2}||Ax + Bz - c||_2^2
+$$
+
+ADMM 则由以下的迭代步骤组成:
+
+$$
+x^{k+1} = \argmin_x L_{\rho}(x, z^k, y^k) \tag{3.2}
+$$
+
+$$
+z^{k+1} = \argmin_x L_{\rho}(x^{k+1}, z, y^k) \tag{3.3}
+$$
+
+$$
+y^{k+1} = y^k + \rho(Ax^{k+1} + Bz^{k+1} - c) \tag{3.4}
+$$
+
+其中 $\rho > 0$。这个算法和 dual ascent 以及 augmented Lagrangian 非常像：它包含一个 `x-minimization` 步骤(3.2)，一个 `z-minimization` 步骤(3.3)，以及 `dual variable update` 步骤(3.4)。和乘子法一样，dual variable 更新时的步长和 augmented Lagrangian 的惩罚参数 $\rho$ 相等。这个版本的迭代算法通常又被称为 `unscaled form of ADMM`。
+
+在 ADMM 中，$x$ 和 $z$ 交替(alternating) 更新 或者序列式(sequential)更新，这也是 `alternating direction` 的由来
+
+### 3.1 Scaled form of ADMM
+
+ADMM 可以被重写为一种更便捷的形式。定义残差 $r=Ax + Bz - c$，则有
+
+$$
+y^T(Ax + Bz - c) + \frac{\rho}{2} ||Ax + Bz - c||_2^2 \\
+= y^Tr + \frac{\rho}{2} ||r||_2^2\\
+= \frac{\rho}{2} ||r + \frac{\rho}{2}y||_2^2 - \frac{1}{2\rho} ||y||_2^2\\
+= \frac{\rho}{2} ||r + \mu||_2^2 - \frac{\rho1}{2}||\mu||_2^2
+$$
 
 ## 4. Consensus and Sharing
 
