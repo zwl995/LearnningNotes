@@ -175,10 +175,80 @@ ADMM 可以被重写为一种更便捷的形式。定义残差 $r=Ax + Bz - c$�
 
 $$
 y^T(Ax + Bz - c) + \frac{\rho}{2} ||Ax + Bz - c||_2^2 \\
-= y^Tr + \frac{\rho}{2} ||r||_2^2\\
-= \frac{\rho}{2} ||r + \frac{\rho}{2}y||_2^2 - \frac{1}{2\rho} ||y||_2^2\\
-= \frac{\rho}{2} ||r + \mu||_2^2 - \frac{\rho1}{2}||\mu||_2^2
+= y^Tr + \frac{\rho}{2} ||r||_2^2 \qquad\qquad\qquad\qquad\qquad\qquad \\
+= \frac{\rho}{2} ||r + \frac{1}{\rho}y||_2^2 - \frac{1}{2\rho} ||y||_2^2\qquad\qquad\qquad\qquad\\
+= \frac{\rho}{2} ||r + \mu||_2^2 - \frac{\rho1}{2}||\mu||_2^2 \qquad\qquad\qquad\qquad\quad
 $$
+
+其中，$\mu = \frac{1}{\rho} y$ 称作 scaled dual variable。此时，ADMM 迭代可以写为:
+
+$$
+x^{k + 1} = \argmin_x(f(x) + \frac{\rho}{2} ||Ax + Bz - c + \mu^k||_2^2 ) \tag{3.5}
+$$
+
+$$
+z^{k + 1} = \argmin_x (g(z) + \frac{\rho}{2}||Ax^{k+1} + Bz -c + \mu^k||_2^2) \tag{3.6}
+$$
+
+$$
+\mu^{k+1} = \mu^k + Ax^{k+1} + Bz^{k+1} - c \tag{3.7}
+$$
+
+(3.5) - (3.7) 又称作 ADMM 的 unscaled form。
+
+### 3.2 ADMM 的收敛性
+
+ADMM迭代满足以下收敛性质:
+- 残差收敛 (Residual convergence)。 当 $k \rightarrow \infty$ ，$r^k \rightarrow 0$
+
+- 目标函数收敛 (Objective convergence)。当 $ k \rightarrow \infty$，$f(x^k) + g(z^k) \rightarrow p^{*}$
+
+- 对偶变量收敛 (Dual variable convergence)。当 $k \rightarrow \infty$，$y^k \rightarrow y^{*}$
+
+有些简单的例子表明，要让ADMM 收敛到非常高的精度会非常慢。但是，ADMM 通常能够在几十次迭代之内收敛到一定的精度范围内。这个特性也让 ADMM 和 `共轭梯度(conjugate gradient)` 这中算法非常相似。然而，ADMM 收敛慢的特性也让它与`牛顿法(Newton's method)`或者`内点法(interior point methods)`区别开来。在某些场合，将 ADMM 与某些从低精度的初值收敛到高精度的解的方法相结合也是一种不错的选择。
+
+### 3.3 最优性条件和终止准则
+
+问题 (3.1) 的 ADMM 的充分必要最优性条件为:
+- primal feasibility
+$$
+Ax^{*} + Bz^{*} - c = 0 \tag{3.8}
+$$
+
+- dual feasibility
+$$
+0 \in \partial f(x^{*}) + A^Ty^{*} \tag{3.9}
+$$
+
+$$
+0 \in \partial g(z^{*}) + B^Ty^{*} \tag{3.10}
+$$
+
+其中，$\partial$ 表示`次微分操作符(subdifferential operator)`。
+由定义，$z^{k+1}$ 最小化 $L_{\rho}(x^{k+1},z,y^{k+1})$，因此，我们有
+$$
+0 \in \partial g(z^{k+1}) + B^Ty^{k} + \rho B^T(Ax^{k + 1} + Bz^{k + 1} - c)\\
+= \partial g(z^{k+1}) + B^Ty^k + \rho b^Tr^{k+1} \qquad\qquad\qquad\quad\\
+= \partial g(z^{k+1}) + B^Ty^{k+1} \qquad\qquad\qquad\qquad\qquad\quad
+$$
+这意味着 $z^{k+1}$ 和 $y^{k+1}$ 总满足 (3.10)。
+
+由定义，$x^{k+1}$ 最小化 $L_{\rho}(x, z^k, y^k)$，因此我们有
+$$
+0 \in \partial f(x^{k+1}) + A^Ty^k + \rho A^T(Ax^{k+1} + Bz^k - c)\\
+= \partial f(x^{k+1}) + A^T(y^k + \rho r^{k+1} + \rho B(z^k - z^{k+1}))\\
+= \partial f(x^{k+1} + A^Ty^{k+1} + \rho A^TB(z^k - z^{k+1})) \qquad
+$$
+或者等价于
+$$
+\rho A^T B(z^{k+1} - z^k) \in \partial f(x^{k+1}) + A^Ty^{k+1}
+$$
+
+这意味着
+$$
+s^{k+1} = \rho A^TB(z^{k+1} - z^k)
+$$
+可以当做 dual feasibility (3.9) 的残差。在 ADMM中，$s^{k+1}$ 称作在第 $k+1$ 次迭代中的 `dual residual`，$r^{k+1} = Ax^{k+1} + Bz^{k+1} - c$ 称作第 $k+1$ 次迭代中的 $primal residual$。 
 
 ## 4. Consensus and Sharing
 
