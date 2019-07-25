@@ -207,7 +207,7 @@ ADMM迭代满足以下收敛性质:
 
 有些简单的例子表明，要让ADMM 收敛到非常高的精度会非常慢。但是，ADMM 通常能够在几十次迭代之内收敛到一定的精度范围内。这个特性也让 ADMM 和 `共轭梯度(conjugate gradient)` 这中算法非常相似。然而，ADMM 收敛慢的特性也让它与`牛顿法(Newton's method)`或者`内点法(interior point methods)`区别开来。在某些场合，将 ADMM 与某些从低精度的初值收敛到高精度的解的方法相结合也是一种不错的选择。
 
-### 3.3 最优性条件和终止准则
+### 3.3 最优性条件
 
 问题 (3.1) 的 ADMM 的充分必要最优性条件为:
 - primal feasibility
@@ -249,6 +249,46 @@ $$
 s^{k+1} = \rho A^TB(z^{k+1} - z^k)
 $$
 可以当做 dual feasibility (3.9) 的残差。在 ADMM中，$s^{k+1}$ 称作在第 $k+1$ 次迭代中的 `dual residual`，$r^{k+1} = Ax^{k+1} + Bz^{k+1} - c$ 称作第 $k+1$ 次迭代中的 $primal residual$。 
+
+### 3.4 终止准则
+
+一个较为可靠的终止准则是 primal residual 和 dual residual 都必须非常小：
+
+$$
+||r||_2 \leq \epsilon^{pri} \ and\ ||s^k||_2 \leq \epsilon^{dual} \tag{3.11}
+$$
+
+### 3.5 ADMM 的一些扩展和变种
+
+经典的ADMM已经有了很多变种，其中的一些方法相比标准的ADMM具有更好的收敛性。
+
+#### 3.5.1 varying penalty parameter
+为了提高收敛性，一个标准的扩展就是在每步迭代中使用不同的 penalty parameter $\rho^{k}$。尽管当 $\rho$ 在每一步都改变的时候收敛性是难以证明的，当 $\rho$ 固定时的收敛性理论也能够应用在这里(假设$\rho$ 在几次有限的迭代之后固定)。
+
+一个简单的模式可以是:
+
+$$
+\rho^{k+1} = \tau^{incr}\rho^k,\qquad if\ ||r^k||_2 > \mu||s^k||_2\\
+\rho^{k+1} = \frac{\rho^k}{\tau^{decr}},\qquad if\ ||s^k||_2 > \mu ||r^k||_2\\
+\rho^{k+1} = \rho^k,\qquad otherwise \qquad\qquad\quad \tag{3.12}
+$$
+
+其中 $\mu > 1, \tau^{incr} > 1, \tau^{decr} > 1$ 是参数。一个典型的选择可能是 $\mu = 10, \tau^{incr} = \tau{decr} = 2$。
+
+#### 3.5.2 Over-relaxation
+
+在 $z-$updates 和 $y-$updates，$Ax^{k+1}$ 可以取代为
+$$
+\alpha^{k}Ax^{k+1} - (1 - \alpha^{k})(Bz^k - c)
+$$
+
+其中 $\alpha \in (0, 2)$ 是 `relaxation parameter`。当 $\alpha^k > 1$时，这个技巧称作 `over-relaxation`；当 $\alpha^{k} < 1$时，称作 `under relaxation`。一些实验证明，当 $\alpha^k \in [1.5, 1.8]$ 可以提高收敛性。
+
+#### 3.5.3 非精确最小化
+
+ADMM 也会收敛即使当 x-minimization 和 z-minimization 没有精确地求解。这个技巧在某些情形下是重要的，当 $x-$ 和 $z-$updates 使用迭代方法来求解时。它允许我们在刚开始的几步粗略地求解，并在之后的迭代步骤里更精确地求解。
+
+其他技巧还包括 `update ordering`、`more general augmenting terms`等。具体见论文[1] 3.4一节。
 
 ## 4. Consensus and Sharing
 
