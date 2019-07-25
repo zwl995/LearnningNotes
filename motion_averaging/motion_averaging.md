@@ -80,7 +80,7 @@ $$
 $$
 \boldsymbol{w_{ij}} = \boldsymbol{w_{j}} - \boldsymbol{w_{i}} = 
 \left[
-\begin{array}{}
+\begin{array}{cccc}
 \cdots & -I & \cdots & I & \cdots
 \end{array}
 \right]
