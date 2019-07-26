@@ -26,12 +26,12 @@ $$
 ![convex_function](img/convex_function.png)
 </div>
 
-以及更高维空间中的凸函数
+<!-- 以及更高维空间中的凸函数
 <div align="center">
 
 ![3d_convex_function](img/3d_convex_function.jpg)
 
-</div>
+</div> -->
 
 但是实际中，要验证一个函数是否是凸函数，这个定义很不好用。因此，存在一些其他方法判断是否是凸函数。
 
@@ -65,29 +65,26 @@ $$
 
 对于非凸优化问题，当优化算法收敛的时候，不利用其他信息，很难判断是否收敛到全局最优。因而非凸优化问题的求解要想尽可能的逼近全局最优，需要有较为可靠的初始值。很不幸的是，我们面临的大多数问题都是非凸优化问题。
 
-## 2. 梯度法求解数值优化问题
 
-
-
-## 3. $l_1$-范数 VS $l_2$-范数
+## 2. $l_1$-范数 VS $l_2$-范数
 
 对于优化问题，我们通常想要最小化估计值 $f(x)$ 和目标值 $y$ 之间的残差(residual)
 
 $$
-\mathop{min} d(y, f(x))^p　\tag{}
+\mathop{min} d(y, f(x))^p　\tag{3}
 $$
 
 其中，$d(,)^p$ 表示误差度量的范数。对于向量来说，常见的有 $l_1$-范数、$l_2$-范数。
 如果是 $l_1$-范数，残差是目标值和估计值之差的绝对值之和:
 
 $$
-S = \sum_{i=1}^n |y_i - f(x_i)| \tag{}
+S = \sum_{i=1}^n |y_i - f(x_i)| \tag{4}
 $$
 
 如果是 $l_2$-范数，残差是目标值和估计值之差的平方和:
 
 $$
-S = \sum_{i=1}^n (y_i - f(x_i))^2 \tag{}
+S = \sum_{i=1}^n (y_i - f(x_i))^2 \tag{5}
 $$
 
 那么 使用　$l_1$-范数做优化和 $l_2$-范数来做优化有什么区别呢？
@@ -97,106 +94,138 @@ $$
 - $l_1$-范数比 $l_2$-范数更鲁棒
 - $l_2$-范数比 $l_1$-范数更稳定
 
-## 4. 最小二乘法
+## 3. 最小二乘法
 
-最小二乘是优化问题中比较常见的
+### 3.1 最小二乘问题
+
+最小二乘问题的定义是
 
 $$
-\mathop{\arg\min}_x \sum_{i=1}^n ||y_i - f(x_i)||_2^2 \tag{}
+\mathop{\min} f(x) = \frac{1}{2} \sum_{i=1}^m r_i^2(x) = \frac{1}{2}r(x)^Tr(x), x \in \mathbb{R}^n, m \geq n \tag{6}
+$$
+
+这里 $r(x) = [r_1(x), r_2(x), \cdots, r_m(x)]^T$ 称作剩余函数(残差）。若 $r_i(x)$ 均为线性函数，则问题为`线性最小二乘问题`；若至少有一个 $r_i(x)$ 为非线性函数，则问题为`非线性最小二乘问题`。
+
+下面我们来看最小二乘问题的目标函数 $f(x)$ 的一、二阶导数的形式。设 $J(x)$ 是 $r(x)$ 的 Jacobi 矩阵:
+
+$$
+J(x) = [\nabla r_1(x), \cdots, \nabla r_m(x)]^T \in \mathbb{R}^{m \times n}
+$$
+
+则 $f(x)$ 的梯度为
+
+$$
+g(x) = \sum_{i=1}^m r_i(x) \nabla r_i(x) = J(x)^T r(x) \tag{7}
+$$
+
+$f(x)$ 的 Hessian 矩阵为
+
+$$
+G(x) = \sum_{i=1}^m \nabla r_i(x) \nabla r_i(x)^T + \sum_{i=1}^m r_i(x)\nabla^2 r_i(x) = J(x)^T J(x) + S(x) \tag{8}
+$$
+
+其中，$S(x) = \sum_{i=1}^m r_i(x) \nabla^2 r_i(x)$。
+
+### 3.2 最小二乘的来源
+
+最小二乘问题大量产生于数据拟合问题: 给定一组实验数据 $(x_i, y_i)$ 和函数模型 $f(x)$，要确定 $x$，使得 $f(x)$ 在残差的平方和意义下尽可能地拟合给定的数据。即
+
+$$
+\mathop{\arg\min}_x \sum_{i=1}^n ||y_i - f(x_i)||_2^2 \tag{9}
 $$
 
 最小二乘问题和极大似然估计之间存在联系。我们通常假定误差遵循高斯(正态)分布。具体来讲，我们假定目标值和观测值之间都具有零均值和标准差为 $\sigma$ 的高斯噪声。若真值为 $y_i$，估计值为 $f(x_i)$，那么每个估计值的概率密度函数是
 
 $$
-Pr(x_i) = \frac{1}{2\pi \sigma^2} e^{-\frac{(y_i - f(x_i))^2}{2\sigma^2}} \tag{}
+Pr(x_i) = \frac{1}{2\pi \sigma^2} e^{-\frac{(y_i - f(x_i))^2}{2\sigma^2}} \tag{10}
 $$
 
 假设误差独立同分布，那么联合概率密度函数为
 
 $$
-Pr(x) = \prod_i Pr(x_i) = \prod_i \frac{1}{2\pi \sigma^2} e^{-\frac{(y_i - f(x_i))^2}{2\sigma^2}} \tag{}
+Pr(x) = \prod_i Pr(x_i) = \prod_i \frac{1}{2\pi \sigma^2} e^{-\frac{(y_i - f(x_i))^2}{2\sigma^2}} \tag{11}
 $$
 
 对应的对数似然函数为:
 
 $$
-log Pr(x) = -\frac{1}{2\pi \sigma^2} \sum_i (y_i - f(x_i))^2 + c \tag{}
+log Pr(x) = -\frac{1}{2\pi \sigma^2} \sum_i (y_i - f(x_i))^2 + c \tag{12}
 $$
 
 最大似然估计最大化这个对数似然函数，也即最小化
 
 $$
-\sum_i (y_i - f(x_i))^2 \Leftrightarrow \sum_i ||y_i - f(x_i)||_2^2 \tag{}
+\sum_i (y_i - f(x_i))^2 \Leftrightarrow \sum_i ||y_i - f(x_i)||_2^2 \tag{13}
 $$
 
-### 4.1 鲁棒最小二乘和迭代重加权(IRLS) 问题
+### 3.3 鲁棒最小二乘和迭代重加权(IRLS) 问题
 常规的最小二乘对其中噪声符合高斯分布的观测值来说是一个合适的选择，然而在存在外点的时，需要更鲁棒的最小二乘。这种情况下，最好用M-估计(M-estimator)，它对残差施加一个鲁棒惩罚函数 $\rho (r) $ (也称为 `loss function`)
 $$
-E_{RLS(\triangle \boldsymbol{x})} = \sum_{i} \rho(||\boldsymbol{r}_i||) \tag{10}
+E_{RLS(\triangle \boldsymbol{x})} = \sum_{i} \rho(||\boldsymbol{r}_i||) \tag{14}
 $$
 来代替它们的平方
 
 $$
-E_{LS(\triangle \boldsymbol{x})} = \sum_{i} ||\boldsymbol{r}_i||_2^2 \tag{11}
+E_{LS(\triangle \boldsymbol{x})} = \sum_{i} ||\boldsymbol{r}_i||_2^2 \tag{15}
 $$
 
-其中 $\boldsymbol{r}_i = y_i - f(x_i)$ 。公式(10)对$\boldsymbol{x}$求偏导，则有
+其中 $\boldsymbol{r}_i = y_i - f(x_i)$ 。公式(14)对$\boldsymbol{x}$求偏导，则有
 
 $$
 \sum_{i} \frac{\partial \rho (||\boldsymbol{r}_i||)}{\partial ||\boldsymbol{r_i}||} \cdot\frac{\partial ||\boldsymbol{r}_i||}{\partial \boldsymbol{x}}\\
 = \sum_i \frac{\partial \rho (||\boldsymbol{r}_i||)}{\partial ||\boldsymbol{r_i}|| \cdot ||\boldsymbol{r}_i||} \cdot \boldsymbol{r}_i^T \frac{\partial ||\boldsymbol{r}_i||}{\partial \boldsymbol{x}}\\
 = \sum_i \frac{\Psi (||\boldsymbol{r}_i||)}{||\boldsymbol{r}_i||} \cdot \boldsymbol{r}_i^T \frac{\partial ||\boldsymbol{r}_i||}{\partial \boldsymbol{x}} \ \ \ \ \ \ \ \\
-= \sum_i w(||\boldsymbol{r}_i||) \cdot \boldsymbol{r}_i^T \frac{\partial ||\boldsymbol{r}_i||}{\partial \boldsymbol{x}} = 0 \ \ \tag{12}
+= \sum_i w(||\boldsymbol{r}_i||) \cdot \boldsymbol{r}_i^T \frac{\partial ||\boldsymbol{r}_i||}{\partial \boldsymbol{x}} = 0 \ \ \tag{16}
 $$
 
 其中 $\Psi (||\boldsymbol{r}_i||) = \frac{\partial \rho (||\boldsymbol{r}_i||)}{\partial ||\boldsymbol{r_i}||}$，称为`影响函数 (influence function)`，$w(r) = \frac{\Psi(r)}{r}$ 称为`加权函数(weight function)`。可以看出用公式(12)求解 (10)的极小值等于最小化`迭代重加权最小二乘 (Iteratively Reweighted Least Squares, IRLS)问题`
 
 $$
-E_{IRLS} = \sum_i w(||\boldsymbol{r}_i||)||\boldsymbol{r}_i||^2 \tag{13}
+E_{IRLS} = \sum_i w(||\boldsymbol{r}_i||)||\boldsymbol{r}_i||^2 \tag{17}
 $$
 
 其中 $w(||\boldsymbol{r}_i||)$ 起着局部加权作用。IRLS 算法在计算影响函数 $w(||\boldsymbol{r}_i||)$ 和求解得到的加权最小二乘问题(固定的 $w$ 值) 之间交替。M-estimator 一定能够减少外点的影响，但是在一些情况中，从太多外点起步的话会使得 IRLS(或者其他梯度下降算法) 不能收敛到全局最优。
 
-## 5. 优化问题在三维视觉中的应用
+## 4. 优化问题在三维视觉中的应用
 
-### 5.1 Rotation Averaging
+### 4.1 Rotation Averaging
 
-#### 5.1.1 相对运动和全局姿态的约束关系
+#### 4.1.1 相对运动和全局姿态的约束关系
 
 Rotation Averaging 是 Structure from Motion (SfM) 的一个子问题，现在在SLAM方面也有应用。无论是SfM还是SLAM，都需要估计摄像机的姿态 (pose)，摄像机的姿态由旋转 (rotation，或是朝向 orientation) 和平移 (translation，也可以说是摄像机位置)构成。
 
-问题描述为: 给定 $N$ 张图片，全局运动可以用 $N-1$ 个运动模型描述。两个相机之间的相对运动关系可以通过对极几何估计`本质矩阵(Essential Matrix)`，再进行矩阵分解(对本质矩阵的奇异值分解)得到。由公式(4)，我们可以通过相对相机运动来估计全局相机运动模型。如果每对图片之间都有足够的重叠，那么我们可以得到 $\frac{N(N-1)}{2}$ 对约束(虽然实际上不可能存在这么多对，但一般也存在远多于 $N$ 的约束)。
+问题描述为: 给定 $N$ 张图片，全局运动可以用 $N-1$ 个运动模型描述。两个相机之间的相对运动关系可以通过对极几何估计`本质矩阵(Essential Matrix)`，再进行矩阵分解(对本质矩阵的奇异值分解)得到。我们可以通过相对相机运动来估计全局相机运动模型。如果每对图片之间都有足够的重叠，那么我们可以得到 $\frac{N(N-1)}{2}$ 对约束(虽然实际上不可能存在这么多对，但一般也存在远多于 $N$ 的约束)。
 
 为了求解 RA 问题，首先来推几个公式。假设已知两个相机在全局坐标系下的运动，那么这两个相机之间的相对运动是怎样的关系呢？
 
 已知点 $P$ 在世界坐标系中的坐标，记为 $P_0$。对于两个不同的相机 $i$ 和 $j$，对应于全局坐标系中的旋转和平移分别为 $R_i, t_i, R_j, t_j$ 。将点 $P_0$ 分别投影到相机 $i$ 和 $j$ 的坐标系，那么有
 
 $$
-P_i = R_iP_0 + t_j\ (1.a) \\ 
-P_j = R_jP_0 + t_j\ (1.b)
+P_i = R_iP_0 + t_j\ (18.a) \\ 
+P_j = R_jP_0 + t_j\ (18.b)
 $$
 
-由公式(1.a)我们可以得到
+由公式(18.a)我们可以得到
 
-$$P_0 = R_i^{-1}(P_i - t_i)\ \tag{2} $$
+$$P_0 = R_i^{-1}(P_i - t_i)\ \tag{18} $$
 
-将公式(2)代入(1.b)中，有
+将公式(19)代入(18.b)中，有
 $$
 P_j = R_j(R_i^{-1}(P_i - t_i)) + t_j\\
-\ = R_jR_i^{-1}P_i + (t_j - R_jR_i^{-1}t_i)\ \tag{3}
+\ = R_jR_i^{-1}P_i + (t_j - R_jR_i^{-1}t_i)\ \tag{20}
 $$
-由公式(3)我们可以得到相机 $i$ 到相机 $j$ 的相对运动关系:
+由公式(19)我们可以得到相机 $i$ 到相机 $j$ 的相对运动关系:
 $$
-R_{ij} = R_jR_i^{-1} = R_jR_i^{T}\ (4.a)\\
-t_{ij} = t_j - R_jR_i^{-1}t_i = t_j - R_{ij}t_i\ (4.b)
+R_{ij} = R_jR_i^{-1} = R_jR_i^{T}\ (21.a)\\
+t_{ij} = t_j - R_jR_i^{-1}t_i = t_j - R_{ij}t_i\ (21.b)
 $$
 这里需要注意的是 ***$R_{ij}$ 和 $t_{ij}$是相机 $i$ 相对于 $j$ 的运动*** 。
 
-#### 5.1.2 RA 问题的优化求解
+#### 4.1.2 RA 问题的优化求解
 
 给定参考系和一系列相对旋转 $\{R_{ij}\}$，我们希望求解 $R_{global} = \{R_1, \cdots, R_N\}$。我们希望最小化代价函数:
 $$
-\mathop{\arg\min}_{R_i} \sum_{(i,j)\in \mathcal{E}} d^2(R_{ij}, R_jR_i^{-1}) \tag{6}
+\mathop{\arg\min}_{R_i} \sum_{(i,j)\in \mathcal{E}} d^2(R_{ij}, R_jR_i^{-1}) \tag{22}
 $$
 现在我们考虑使用李代数来进行优化, $R_{ij} = exp([\boldsymbol{w_{ij}}]_{\times}), R_i = exp([\boldsymbol{w_{i}}]_{\times})$，其中 $\boldsymbol{w_{ij}}$ 和 $\boldsymbol{w_{i}}$ 分别为 $R_{ij}$ 和 $R_i$ 对应的李代数。 
 
@@ -216,12 +245,12 @@ $$
 \end{array}
 \right]
 \boldsymbol{w_{global}}
-= A_{ij}\boldsymbol{w_{global}} \tag{7}
+= A_{ij}\boldsymbol{w_{global}} \tag{23}
 $$
 
 在 $A_{ij}$ 中，$I$ 和 $_I$ 为在 $i$ 和 $j$ 处的 $3\times 3$ 的块矩阵。把所有的相对运动关系拼合起来，我们有
 $$
-A\boldsymbol{w_{global}} = \boldsymbol{w_{rel}} \tag{8}
+A\boldsymbol{w_{global}} = \boldsymbol{w_{rel}} \tag{24}
 $$
 
 现在，我们要做的就是如何求解这个非齐次线性方程组了。
@@ -231,7 +260,7 @@ $$
 考虑非齐次线性方程组 $A\boldsymbol{x} = \boldsymbol{b}$，其中 $\boldsymbol{x} \in \mathbb{R}^n, \boldsymbol{b} \in \mathbb{R}^m$，并且 $m > n$。这个方程的求解难度由于噪声和外点的存在发生了改变，比如 $\boldsymbol{b} = A\boldsymbol{x} + \boldsymbol{e} $。在压缩感知方向的一些研究表明，在外点存在的情况下，$\boldsymbol{x}$ 可以通过以下公式高效精确地求解:
 
 $$
-\mathop{\arg\min}_x ||A\boldsymbol{x} - \boldsymbol{b}||_{l_1} \tag{9}
+\mathop{\arg\min}_x ||A\boldsymbol{x} - \boldsymbol{b}||_{l_1} \tag{25}
 $$ 
 
 ##### (2) IRLS Rotation Averaging
@@ -239,53 +268,59 @@ $$
 $l_1$优化得到的结果还能进一步提升。现在考虑使用 IRLS 算法来求解 Rotation Averaging 问题，令残差为 $\boldsymbol{e} = A\boldsymbol{x} - \boldsymbol{b}$，我们希望最小化鲁棒代价函数
 
 $$
-E_{RLS} = \sum_i \rho(||\boldsymbol{e}_i||) \tag{14}
+E_{RLS} = \sum_i \rho(||\boldsymbol{e}_i||) \tag{26}
 $$
 
 这里，loss function 选则 Huber-like loss function: $\rho(x) = \frac{x^2}{x^2 + \sigma^2}$。因此，
 
 $$
-min\ E_{RLS} = min\ \sum_i \rho(||\boldsymbol{e}_i||) = min\ \sum_i \frac{\boldsymbol{e}_i^2}{\boldsymbol{e}_i^2 + \sigma^2} \tag{15}
+min\ E_{RLS} = min\ \sum_i \rho(||\boldsymbol{e}_i||) = min\ \sum_i \frac{\boldsymbol{e}_i^2}{\boldsymbol{e}_i^2 + \sigma^2} \tag{27}
 $$
 
-公式(15)对 $\boldsymbol{x}$ 求偏导，有
+公式(27)对 $\boldsymbol{x}$ 求偏导，有
 
 $$
 \frac{\partial E_{RLS}}{\partial \boldsymbol{x}} = \frac{\partial E_{RLS}}{\partial \bold{e}} \cdot \frac{\partial \boldsymbol{e}}{\partial \boldsymbol{x}} \qquad \qquad \qquad \qquad \ \\
 = \frac{2||\boldsymbol{e}_i||(||\boldsymbol{e}_i||^2 + \sigma^2) - 2||\boldsymbol{e}_i||\cdot ||\boldsymbol{e}_i||^2}{(||\boldsymbol{e}_i||^2 + \sigma^2)^2} \cdot A^T\\
 = \frac{2||\boldsymbol{e}_i||\sigma^2}{(||\boldsymbol{e}_i||^2 + \sigma^2)^2} \cdot A^T \qquad \qquad \qquad \qquad \quad \\
 = \frac{2(A\boldsymbol{x}-b)\sigma^2 A^T}{(||\boldsymbol{e}_i||^2 + \sigma^2)^2} \qquad \qquad \qquad \qquad \qquad \\
-= 2 \cdot \frac{A^T \sigma^2A\boldsymbol{x}- A^T\sigma^2b}{(||\boldsymbol{e}_i||^2 + \sigma^2)^2} = 0 \qquad \qquad \qquad\  \tag{16}
+= 2 \cdot \frac{A^T \sigma^2A\boldsymbol{x}- A^T\sigma^2b}{(||\boldsymbol{e}_i||^2 + \sigma^2)^2} = 0 \qquad \qquad \qquad\  \tag{28}
 $$
 
 因此，有
 
 $$
 A^T\Phi(\boldsymbol{e})A\boldsymbol{x} - A^T\Phi(\boldsymbol{e}) \boldsymbol{b} = 0\ \Rightarrow \\
-A^T\Phi(\boldsymbol{e})A\boldsymbol{x} = A^T\Phi(\boldsymbol{e}) \boldsymbol{b} \tag{17}
+A^T\Phi(\boldsymbol{e})A\boldsymbol{x} = A^T\Phi(\boldsymbol{e}) \boldsymbol{b} \tag{29}
 $$
 
 其中，$\Phi(\boldsymbol{e})$ 是对角阵并且 $\Phi(i, i) = \frac{\sigma^2}{(\boldsymbol{e}_i^2 + \sigma^2)^2}$ 。
 
-由公式 (13), RLS 问题可以转变为求解 IRLS 问题： $min\ (A\boldsymbol{x} - \boldsymbol{b})^T\Phi(A\boldsymbol{x} - \boldsymbol{b})$，由公式 (17) 知，其最优点为 
+由公式 (17), RLS 问题可以转变为求解 IRLS 问题： $min\ (A\boldsymbol{x} - \boldsymbol{b})^T\Phi(A\boldsymbol{x} - \boldsymbol{b})$，由公式 (29) 知，其最优点为 
 
-$$\boldsymbol{x} = (A^T \Phi A)^{-1} A^T \Phi \boldsymbol{b} \tag{18}$$ 
+$$\boldsymbol{x} = (A^T \Phi A)^{-1} A^T \Phi \boldsymbol{b} \tag{30}$$ 
 
-在 IRLS 中，我们先固定$\boldsymbol{x}$，然后计算 $\Phi$；接着固定 $\Phi$ (由公式 (18) 计算得到)。通过这样一个交替的方式直到收敛。
+在 IRLS 中，我们先固定$\boldsymbol{x}$，然后计算 $\Phi$；接着固定 $\Phi$ (由公式 (30) 计算得到)。通过这样一个交替的方式直到收敛。
 
 如果没有一个好的初值的话，`IRLS` 算法很有可能不能收敛到全局最优，而由于 `L1RA` 算法对于 $R_{gobal}$ 来说足够提供一个好的初值，因此 `L1RA` 算法的输出可以作为 `IRLS` 算法的输入。到这里，我们可以直到，整个使用 $l_1$-范数求解 Rotion Averaging 问题的算法(L1-IRLS)可以分为两步: (1) `L1RA`算法求解 $R_{global}$ 的初值；（2）$R_{global}$ 的初值作为 `IRLS` 的输入，使用算法2求解得到最终的 $R_{global}$ 。
 
-### 5.2 Bundle Adjustment
+### 4.2 光束平差法 (Bundle Adjustment)
 
-#### 5.2.1 相机投影模型
+#### 4.2.1 相机投影模型
 
-#### 5.2.2 BA 求解
+为了理解 Bundle Adjustment，首先需要了解空间中的三维点重投影回图像平面的过程。如下图所示，$p$ 是空间中的三维点，$o-xyz$ 是相机坐标系，$o‘-x’y‘$ 是成像平面，成像平面内的蓝色区域是像素平面(图像平面)，$f$ 是焦距。对于世界坐标系中的三维点，首先要通过相机在世界坐标系中的旋转和平移变换到相机坐标系 ($x = RX + t$)，进行归一化后，对归一化后的点进行去畸变，最后通过内参矩阵 $K$ 投影到图像平面。这一过程通过函数 $\pi(C_j, X_i)$ 描述。
+
+![reprojection](img/pinhole_camera_model1.jpg)
+
+#### 4.2.2 BA 求解
 
 BA 最小化重投影误差
 
 $$
-min\ \sum_{i=1}^{n} \sum_{j=1}^m (u_{ij} - \pi(C_j, X_i))^2 \tag{}
+min\ \sum_{i=1}^{n} \sum_{j=1}^m ||u_{ij} - \pi(C_j, X_i)||_2^2 \tag{31}
 $$
+
+其中 $n$ 为三维点的个数，$m$ 为相机个数。
 
 <div align="center">
 
@@ -293,20 +328,240 @@ $$
 
 </div>
 
+令残差 $r_{ij} = u_{ij} - \pi(C_j, X_i)$，公式 (31) 可重写为
+
+$$
+\mathop{min}\ r^Tr \tag{32}
+$$
+
+对 $r$ 进行泰勒展开
+
+$$
+r(x + \delta x) = r(x) + g^T \delta x + \frac{1}{2}\delta x^T H \delta x + o(||\delta x||^2)\tag{33}
+$$
+
+(33) 右边对 $\delta x$ 求导，并令其等于０，可以得到
+
+$$
+H\delta x = -g \tag{34}
+$$
+
+公式 (34) 其实就是`牛顿方程 (Newton Equation)`。对于最小二乘问题来说， $H = J^T J + S, g = J^Tr$，其中 $S = \sum_{i=1}^n \sum_{j=1}^m r_{ij}\nabla^2 r_{ij}$。如果残差足够小，那么我们可以忽略 $S$。这个时候我们就可以得到高斯牛顿  (Gauss-Newton) 方程
+
+$$
+J^TJ \delta x = -J^Tr \tag{35}
+$$
+
+由 (35) 可知，当 $J$ 满秩，$g$ 不为0 的时候，$\delta x$ 一定是下降方向，因为 $(\delta x)^T g = (\delta x)^T J^T r = -(\delta x)^T J^T J \delta x = -||J \delta x||^2 < 0$。但是当 $J^TJ$ 奇异的时候，高斯牛顿法在数值上会变得不稳定。这个时候，我们可以用 Levenberg-Marquardt 方法来代替
+
+$$
+(J^TJ + \lambda I)\delta x = -J^T r \tag{36}
+$$
+
+对于 Bundle Adjustment 问题，似乎我们只需要用线性代数的知识，就能够很容易地求解 (35) 和 (36) 了。但事实上真的是这样吗？
+
+在三维重建中，我们可能需要优化非常多的相机和三维点，SfM 里优化几千个相机以及几百万甚至上千万个三维点的情形不在少数。这种情况下，Jacobian 矩阵的存储就是一大问题，除此之外，解这么大的一个方程组也会变得非常耗时。有没有什么方法能够让求解变得更快呢？我们先来分析分析Jocobian矩阵的结构。
+
+令 $\hat{u}_{ij} = \pi(C_j, X_i)$，其中需要优化的变量 $x$ 由相机参数 $C_j$ 和 三维点 $X_i$ 组成，因此我们把 $x$ 分成相机参数块 $c$ 和三维结构参数块 $p$
+
+$$
+x = [c\ p] \tag{37}
+$$
+
+由于 
+
+$$
+J_{ij} = \frac{\partial r_{ij}}{\partial x_k} = \frac{\partial \hat{u}_{ij}}{\partial x_k}
+$$
+
+我们很容易发现:
+
+$$
+\frac{\partial \hat{u}_{ij}}{\partial c_k} = 0, \forall j \neq k, 
+\frac{\partial \hat{u}_{ij}}{\partial p_k} = 0, \forall i \neq k
+$$
+
+为了方便起见，现在我们考虑上图只有3个相机和4个三维点的情况，其中每个相机都能观测到这4个三维点。令 $A_{ij} = \frac{\partial \hat{u}_{ij}}{\partial c_j}, B_{ij} = \frac{\partial \hat{u}_{ij}}{\partial p_j}$，我们可以求得 Jacobian 矩阵:
+
+$$
+J = 
+\left[
+    \begin{array}{ccccccc}
+        A_{11} & 0 & 0 & B_{11} & 0 & 0 & 0\\
+        0 & A_{12} & 0 & B_{12} & 0 & 0 & 0\\
+        0 & 0 & A_{13} & B_{13} & 0 & 0 & 0\\
+        A_{21} & 0 & 0 & 0 & B_{21} & 0 & 0\\
+        0 & A_{22} & 0 & 0 & B_{22} & 0 & 0\\
+        0 & 0 & A_{23} & 0 & B_{23} & 0 & 0\\
+        A_{31} & 0 & 0 & 0 & 0 & B_{31} & 0\\
+        0 & A_{32} & 0 & 0 & 0 & B_{32} & 0\\
+        0 & 0 & A_{33} & 0 & 0 & B_{33} & 0\\
+        A_{41} & 0 & 0 & 0 & 0 & 0 & B_{41}\\
+        0 & A_{42} & 0 & 0 & 0 & 0 & B_{42}\\
+        0 & 0 & A_{43} & 0 & 0 & 0 & B_{43}
+    \end{array}
+\right] \tag{38}
+$$
+
+现在我们可以发现，BA 中的 Jacobian 是一个稀疏的矩阵，它包含了大量的零元素。那么，对于高斯牛顿方程和LM方法里的 $J^TJ$，我们也不难发现它的稀疏性。令
+
+$$
+U_j = \sum_{i=1}^4 A_{ij}^T A_{ij}, V_i = \sum_{j=1} B_{ij}^T B_{ij}, W_{ij} = A_{ij}^T B_{ij} \tag{39}
+$$
+
+$$
+J^T J = 
+\left[
+    \begin{array}{ccccccc}
+    U_1 & 0 & 0 & W_{11} & W_{21} & W_{31} & W_{41}\\
+    0 & U_2 & 0 & W_{12} & W_{22} & W_{32} & W_{42}\\
+    0 & 0 & U_3 & W_{13} & W_{23} & W_{33} & W_{43}\\
+    W_{11}^T & W_{12}^T & W_{13}^T & V_1 & 0 & 0 & 0\\
+    W_{21}^T & W_{22}^T & W_{23}^T & 0 & V_2 & 0 & 0\\
+    W_{31}^T & W_{32}^T & W_{33}^T & 0 & 0 & V_3 & 0\\
+    W_{41}^T & W_{42}^T & W_{43}^T & 0 & 0 & 0 & V_4
+    \end{array}
+\right]
+\tag{40}
+$$
+
+现在，我们可以看到 Ba 中 Hessian 的近似 $J^TJ$ 也是一个稀疏的矩阵。对于更大规模的情况，Hessian的稀疏性如下图所示(注意这张图里的相机和三维点的顺序不一样):
+
+<div align="center">
+
+![hessian](img/hessian.png)
+
+</div>
+
+对于 (36) 的右边，有
+
+$$
+J^T r = 
+\left(
+    \begin{array}{c}
+    \sum_{i=1}^4(A_{i1}^T \Lambda_{u_{i1}} r_{i1})\\  
+    \sum_{i=1}^4(A_{i2}^T \Lambda_{u_{i2}} r_{i2})\\ 
+    \sum_{i=1}^4(A_{i3}^T \Lambda_{u_{i3}} r_{i3})\\ 
+    \sum_{j=1}^3 (B_{ij}^T \Lambda_{u_{1j}} r_{ij})\\ 
+    \sum_{j=1}^3 (B_{ij}^T \Lambda_{u_{2j}} r_{2j})\\ 
+    \sum_{j=1}^3 (B_{ij}^T \Lambda_{u_{3j}} r_{3j})\\ 
+    \sum_{j=1}^3 (B_{ij}^T \Lambda_{u_{4j}} r_{4j})
+    \end{array}
+\right)
+\tag{41}
+$$
+
+令
+
+$$
+r_{c_j} = \sum_{i=1}^4(A_{ij}^T r_{ij})^T, r_{p_i} = \sum_{j=1}^3(B_{ij}^T r_{ij})^T,
+r_{ij} = u_{ij} - \hat{u_{ij}}
+\tag{42}
+$$
+
+并且
+
+$$
+U = diag\{U_1, U_2, U_3\}, 
+V = diag\{V_1, V_2, V_3, V_4\}, 
+\tag{43}
+$$
+
+$$
+W = \left[ 
+\begin{array}{cccc}
+     W_{11} & W_{21} & W_{31} & W_{41} \\
+     W_{12} & W_{22} & W_{32} & W_{42} \\
+     W_{13} & W_{23} & W_{33} & W_{43} 
+\end{array}
+\right]
+\tag{44}
+$$
+
+我们把 (42)、(43)、(44) 代入 (35) 中，并且令 $\delta x = (\delta c\ \delta p)^T$，可以得到
+
+$$
+\left[
+    \begin{array}{cc}
+        U & W  \\
+        W^T & V
+    \end{array}
+    \right]
+    \left[
+    \begin{array}{c}
+         \delta c \\
+         \delta p 
+    \end{array}
+    \right] = 
+    \left[
+    \begin{array}{c}
+         r_c \\
+         r_p 
+    \end{array}
+\right]
+\tag{45}
+$$
+
+现在，直接求解(45)在时间和空间上肯定是不可行的。注意到，(45) 中 $U, \delta c$ 是和相机相关的参数，$V,\delta p$ 是和三维点相关的参数，实际中的相机数远小于三维点的数量。因此，我们可以考虑先消去和三维点相关的参数，求得相机之后再代回求解三维点。现在，我们对 (45) 的左右两边同乘 $[I -WV^{-1}]^T$，可以得到
+
+$$
+\left[
+    \begin{array}{cc}
+         U-WV^{-1}W^T & 0 
+    \end{array}
+\right]
+    \left[
+    \begin{array}{c}
+         \delta c \\
+         \delta p 
+    \end{array}
+    \right] =
+\left[
+    \begin{array}{cc}
+         I & -WV^{-1}  \\
+    \end{array}
+\right]
+\left[
+    \begin{array}{c}
+         r_c \\
+         r_p
+    \end{array}
+\right]
+\tag{46}
+$$
+进一步我们可以得到
+$$
+(U - WV^{-1}W^T)\delta c = r_c - WV^{-1}r_p \tag{47}
+$$
+
+BA中，(47) 称作`Reduced Camera System`，$S = U - WV^{-1}W^T$ 称作 $V$ 的 `Schur Complement` 。可以证明，对称正定矩阵的 Schur Complement 是一个对称正定矩阵。因此，(47) 可以通过`乔里斯基分解 (Cholesky Decomposition)` 进行求解。由 (46)，我们有
+
+$$
+W^T\delta c + V\delta p = r_c \tag{48}
+$$
+
+在求解得到相机之后，由 (48)，我们有
+
+$$
+\delta p = V^{-1}(r_p - W^T\delta c) \tag{49}
+$$
+
+到这里，BA 的求解基本上可以结束了。不过，为了加速BA，还有一些求解技巧，像 `Preconditioned Conjugate Gradient`。对这些感兴趣的可以参考相关文献 [9,10,11]。
+
 ## 参考文献
 
 [1] Boyd. Convex Optimization.
 
-[2] http://www.chioka.in/differences-between-l1-and-l2-as-loss-function-and-regularization/
+[2] Govindu V M . Combining two-view constraints for motion estimation[C]// Computer Vision and Pattern Recognition, 2001. CVPR 2001. Proceedings of the 2001 IEEE Computer Society Conference on. IEEE, 2001.
 
-[3] https://www.kaggle.com/residentmario/l1-norms-versus-l2-norms
+[3] Govindu V M . Lie-Algebraic Averaging for Globally Consistent Motion Estimation[C]// null. IEEE Computer Society, 2004.
 
-[4] https://www.zhihu.com/question/334515180/answer/748981244?utm_source=wechat_session&utm_medium=social&utm_oi=74040681168896&hb_wx_block=0
+[4] Chatterjee A , Govindu V M . Efficient and Robust Large-Scale Rotation Averaging[C]// 2013 IEEE International Conference on Computer Vision (ICCV). IEEE Computer Society, 2013.
 
-[5] Govindu V M . Combining two-view constraints for motion estimation[C]// Computer Vision and Pattern Recognition, 2001. CVPR 2001. Proceedings of the 2001 IEEE Computer Society Conference on. IEEE, 2001.
+[5] Chatterjee A, Govindu V. Robust Relative Rotation Averaging[J]. IEEE Transactions on Pattern Analysis & Machine Intelligence, 2017, PP(99):1-1.
 
-[6] Govindu V M . Lie-Algebraic Averaging for Globally Consistent Motion Estimation[C]// null. IEEE Computer Society, 2004.
+[6] Lourakis M I A, Argyros A A. SBA: a software package for generic sparse bundle adjustment[J]. Acm Trans.math.softw, 2009, 36(1):2.
 
-[7] Chatterjee A , Govindu V M . Efficient and Robust Large-Scale Rotation Averaging[C]// 2013 IEEE International Conference on Computer Vision (ICCV). IEEE Computer Society, 2013.
+[7] Triggs B, Mclauchlan P F, Hartley R I, et al. Bundle Adjustment — A Modern Synthesis[C]// International Workshop on Vision Algorithms: Theory and Practice. Springer-Verlag, 1999:298-372.
 
-[8] Chatterjee A, Govindu V. Robust Relative Rotation Averaging[J]. IEEE Transactions on Pattern Analysis & Machine Intelligence, 2017, PP(99):1-1.
+[8] Jeong Y, Nistér D, Steedly D, et al. Pushing the envelope of modern methods for bundle adjustment.[J]. IEEE Trans Pattern Anal Mach Intell, 2012, 34(8):1605-1617.
