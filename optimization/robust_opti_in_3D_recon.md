@@ -1,4 +1,4 @@
-# Robust Optimization in 3D Vision
+# Optimization in 3D Vision
 
 ## 1. 凸优化和非凸优化
 
