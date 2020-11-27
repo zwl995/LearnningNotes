@@ -66,17 +66,4 @@ TODO:
 ## 3. Semantic Reconstruction
 
 
-## 4. My Pulications
 
-- [PRCV 2018] Yu Chen, Yao Wang, Youkun Wu, Peng Lu, Yisong Chen and Guoping Wang. Large-Scale Structure from Motion with Semantic Constraints of Aerial Images
-
-## 5. My Open-source Code
-- [GraphSfM](https://github.com/AIBluefisher/GraphSfM)
-
-- [Graph Cluster](https://github.com/AIBluefisher/GraphCluster)
-
-- [ComputerVisionDatasets](https://github.com/AIBluefisher/ComputerVisionDatasets)
-
-- [MyCodeSnippet](https://github.com/AIBluefisher/MyCodeSnippet)
-
-- [Code Practice](https://github.com/AIBluefisher/CodePractice)
