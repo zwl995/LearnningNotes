@@ -288,7 +288,7 @@ $$
 
 ADMM 也会收敛即使当 x-minimization 和 z-minimization 没有精确地求解。这个技巧在某些情形下是重要的，当 $x-$ 和 $z-$updates 使用迭代方法来求解时。它允许我们在刚开始的几步粗略地求解，并在之后的迭代步骤里更精确地求解。
 
-其他技巧还包括 `update ordering`、`more general augmenting terms`等。具体见论文[1] 3.4一节。
+其他技巧还包括 `update ordering`、`more general augmenting terms`等。具体见论文[1] 3.4一节。-
 
 ## 4. Consensus and Sharing
 
