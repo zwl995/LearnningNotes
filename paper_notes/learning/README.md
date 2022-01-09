@@ -7,13 +7,21 @@ Polosukhin. Attention is all you need. In I. Guyon, U. V. Luxburg, S. Bengio, H.
 
 - [ ] **Adam** Diederik P. Kingma and Jimmy Ba. Adam: A method for stochastic optimization, 2014
 
+- [ ] [**CVPR 2016**] [Deep Residual Learning for Image Recognition](https://arxiv.org/pdf/1512.03385.pdf)
+
 - [ ] [**ECCV 2020** | **[Github](https://github.com/princeton-vl/RAFT)**] [RAFT: Recurrent All Pairs Field Transforms for Optical Flow](https://arxiv.org/pdf/2003.12039.pdf)
+
+- [ ] [**ICML 2020** | **[Github](https://github.com/princeton-vl/DeepV2D)**] [Deepv2d: Video to depth with differentiable structure from motion](https://arxiv.org/pdf/1812.04605.pdf)
 
 - [ ] [**ICLR 2019** | **[Github](https://github.com/frobelbest/BANet)**] [BA-NET: DENSE BUNDLE ADJUSTMENT NETWORKS](https://arxiv.org/pdf/1806.04807.pdf)
 
 - [ ] [**ECCV 2020 oral** | **[Github](https://github.com/weixk2015/DeepSFM)**] [DeepSFM: Structure From Motion Via Deep Bundle Adjustment](https://arxiv.org/pdf/1912.09697.pdf)
 
-- [ ] [**arXiv 2021** | **[Github](https://github.com/aliyun/dro-sfm)**] [DRO: Deep Recurrent Optimizer for Structure-from-Motion](https://arxiv.org/pdf/2103.13201.pdf)
+- [x] [**arXiv 2021** | **[Github](https://github.com/aliyun/dro-sfm)**] [DRO: Deep Recurrent Optimizer for Structure-from-Motion](https://arxiv.org/pdf/2103.13201.pdf)
+
+> This work deals with the image depth and pose estimation problem by recurrent neural network. The neural optimizer optimizes the image depth and image pose alternatively. At first, DRO uses ResNet-16 to extract the feature maps, the cost is defined so as to minimize the alignment errors between the predicted feature maps. Then, the small update w.r.t. depth $\Delta \mathbf{D}_i$ and pose $\Delta \mathbf{P}_i$ is computed by the ***gated recurrent unit (See RAFT)*** , which are used for alternatively updating the image depth and pose. DRO also used two different loss functions for supervised training and unsupervised training. DRO is superior to ***DeepV2D (See ICML 2020 Deng et, al)*** in memory occupation and computation efficiency.
+
+- [ ] [**ECCV 2020** | **[Github](https://github.com/svip-lab/Indoor-SfMLearner)**] [Patch-match and Plane-regularization for Unsupervised Indoor Depth Estimation](https://arxiv.org/pdf/2007.07696.pdf)
 
 - [x] [**CVPR 2021** | **[Github](https://github.com/hjwdzh/DeepLM)**] [DeepLM: Large-scale Nonlinear Least Squares on Deep Learning Frameworks using Stochastic Domain Decomposition](https://openaccess.thecvf.com/content/CVPR2021/papers/Huang_DeepLM_Large-Scale_Nonlinear_Least_Squares_on_Deep_Learning_Frameworks_Using_CVPR_2021_paper.pdf)
 
