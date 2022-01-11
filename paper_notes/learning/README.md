@@ -2,29 +2,22 @@
 
 ## Papers to Read
 
+### 1. Backbone/Classical NN architectures
+
 - [ ] **Transformer** Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N Gomez, Ł ukasz Kaiser, and Illia
 Polosukhin. Attention is all you need. In I. Guyon, U. V. Luxburg, S. Bengio, H. Wallach, R. Fergus, S. Vishwanathan
 
-- [ ] **Adam** Diederik P. Kingma and Jimmy Ba. Adam: A method for stochastic optimization, 2014
-
 - [ ] [**IEEE 1998** | **LeNet**] [GradientBased Learning Applied to Document Recognition](http://vision.stanford.edu/cs598_spring07/papers/Lecun98.pdf)
+
 - [ ] [**CVPR 2016** | **ResNet**] [Deep Residual Learning for Image Recognition](https://arxiv.org/pdf/1512.03385.pdf)
+
+- [ ] [**ECCV 2020** | **[Github](https://github.com/bmild/nerf)**] [NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis](https://arxiv.org/pdf/2003.08934.pdf)
 
 - [ ] [**ECCV 2020** | **[Github](https://github.com/princeton-vl/RAFT)**] [RAFT: Recurrent All Pairs Field Transforms for Optical Flow](https://arxiv.org/pdf/2003.12039.pdf)
 
-- [ ] [**ICML 2020** | **[Github](https://github.com/princeton-vl/DeepV2D)**] [Deepv2d: Video to depth with differentiable structure from motion](https://arxiv.org/pdf/1812.04605.pdf)
+### 2. Optimizers
 
-- [ ] [**CVPR 2017** | **[Github](https://github.com/lmb-freiburg/demon)**] [DeMoN: Depth and Motion Network for Learning Monocular Stereo](https://arxiv.org/pdf/1612.02401.pdf)
-
-- [ ] [**ICLR 2019** | **[Github](https://github.com/frobelbest/BANet)**] [BA-NET: DENSE BUNDLE ADJUSTMENT NETWORKS](https://arxiv.org/pdf/1806.04807.pdf)
-
-- [ ] [**ECCV 2020 oral** | **[Github](https://github.com/weixk2015/DeepSFM)**] [DeepSFM: Structure From Motion Via Deep Bundle Adjustment](https://arxiv.org/pdf/1912.09697.pdf)
-
-- [x] [**arXiv 2021** | **[Github](https://github.com/aliyun/dro-sfm)**] [DRO: Deep Recurrent Optimizer for Structure-from-Motion](https://arxiv.org/pdf/2103.13201.pdf)
-
-> This work deals with the image depth and pose estimation problem by recurrent neural network. The neural optimizer optimizes the image depth and image pose alternatively. At first, DRO uses ResNet-16 to extract the feature maps, the cost is defined so as to minimize the alignment errors between the predicted feature maps. Then, the small update w.r.t. depth $\Delta \mathbf{D}_i$ and pose $\Delta \mathbf{P}_i$ is computed by the ***gated recurrent unit (See RAFT)*** , which are used for alternatively updating the image depth and pose. DRO also used two different loss functions for supervised training and unsupervised training. DRO is superior to ***DeepV2D (See ICML 2020 Deng et, al)*** in memory occupation and computation efficiency.
-
-- [ ] [**ECCV 2020** | **[Github](https://github.com/svip-lab/Indoor-SfMLearner)**] [Patch-match and Plane-regularization for Unsupervised Indoor Depth Estimation](https://arxiv.org/pdf/2007.07696.pdf)
+- [ ] **Adam** Diederik P. Kingma and Jimmy Ba. Adam: A method for stochastic optimization, 2014
 
 - [x] [**CVPR 2021** | **[Github](https://github.com/hjwdzh/DeepLM)**] [DeepLM: Large-scale Nonlinear Least Squares on Deep Learning Frameworks using Stochastic Domain Decomposition](https://openaccess.thecvf.com/content/CVPR2021/papers/Huang_DeepLM_Large-Scale_Nonlinear_Least_Squares_on_Deep_Learning_Frameworks_Using_CVPR_2021_paper.pdf)
 
@@ -37,11 +30,33 @@ the stochastic domain decomposition method seems simply adopted the stochastic c
 
 - [ ] [**CVPR 2021** | **[Github](https://github.com/princeton-vl/lietorch)**] [Tangent Space Backpropagation for 3D Transformation Groups](https://openaccess.thecvf.com/content/CVPR2021/papers/Teed_Tangent_Space_Backpropagation_for_3D_Transformation_Groups_CVPR_2021_paper.pdf)
 
+
+### 3. Deep SfM Methods
+
+- [ ] [**CVPR 2017** | **[Github](https://github.com/lmb-freiburg/demon)**] [DeMoN: Depth and Motion Network for Learning Monocular Stereo](https://arxiv.org/pdf/1612.02401.pdf)
+
+- [ ] [**ICLR 2019** | **[Github](https://github.com/frobelbest/BANet)**] [BA-NET: DENSE BUNDLE ADJUSTMENT NETWORKS](https://arxiv.org/pdf/1806.04807.pdf)
+
+- [ ] [**ICML 2020** | **[Github](https://github.com/princeton-vl/DeepV2D)**] [Deepv2d: Video to depth with differentiable structure from motion](https://arxiv.org/pdf/1812.04605.pdf)
+
+- [ ] [**ECCV 2020 oral** | **[Github](https://github.com/weixk2015/DeepSFM)**] [DeepSFM: Structure From Motion Via Deep Bundle Adjustment](https://arxiv.org/pdf/1912.09697.pdf)
+
+- [x] [**arXiv 2021** | **[Github](https://github.com/aliyun/dro-sfm)**] [DRO: Deep Recurrent Optimizer for Structure-from-Motion](https://arxiv.org/pdf/2103.13201.pdf)
+
+> This work deals with the image depth and pose estimation problem by recurrent neural network. The neural optimizer optimizes the image depth and image pose alternatively. At first, DRO uses ResNet-16 to extract the feature maps, the cost is defined so as to minimize the alignment errors between the predicted feature maps. Then, the small update w.r.t. depth $\Delta \mathbf{D}_i$ and pose $\Delta \mathbf{P}_i$ is computed by the ***gated recurrent unit (See RAFT)*** , which are used for alternatively updating the image depth and pose. DRO also used two different loss functions for supervised training and unsupervised training. DRO is superior to ***DeepV2D (See ICML 2020 Deng et, al)*** in memory occupation and computation efficiency.
+
+- [ ] [**ECCV 2020** | **[Github](https://github.com/svip-lab/Indoor-SfMLearner)**] [Patch-match and Plane-regularization for Unsupervised Indoor Depth Estimation](https://arxiv.org/pdf/2007.07696.pdf)
+
 - [ ] [**ICCV 2021 Best Student Paper** | **[Github](https://github.com/cvg/pixel-perfect-sfm)**] [Pixel-Perfect Structure-from-Motion](https://arxiv.org/pdf/2108.08291.pdf)
 
 - [ ] [**3DV 2021** | **[Github](https://github.com/JingwenWang95/DSP-SLAM)**] [DSP-SLAM: Object Oriented SLAM with Deep Shape Priors](https://arxiv.org/pdf/2108.09481.pdf)
 
+
+### 4. Implicit Surface Reconstruction
+
 - [ ] [**arXiv 2021** | **[Github]()**] [Gradient-SDF: A Semi-Implicit Surface Representation for 3D Reconstruction](https://arxiv.org/pdf/2111.13652.pdf)
+
+- [ ] [**ICCV 2021 oral** | **[Github](https://github.com/autonomousvision/unisurf)**] [UNISURF: Unifying Neural Implicit Surfaces and Radiance Fields for Multi-View Reconstruction](http://www.cvlibs.net/publications/Oechsle2021ICCV.pdf)
 
 ## Weekly Papers
 ----------------------------------------------------
