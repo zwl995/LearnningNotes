@@ -33,13 +33,14 @@ the stochastic domain decomposition method seems simply adopted the stochastic c
 
 ### 3. Deep SfM Methods
 
-- [ ] [**CVPR 2017** | **[Github](https://github.com/lmb-freiburg/demon)**] [DeMoN: Depth and Motion Network for Learning Monocular Stereo](https://arxiv.org/pdf/1612.02401.pdf)
+- [x] [**CVPR 2017** | **[Github](https://github.com/lmb-freiburg/demon)**] [DeMoN: Depth and Motion Network for Learning Monocular Stereo](https://arxiv.org/pdf/1612.02401.pdf)
 
-- [ ] [**ICLR 2019** | **[Github](https://github.com/frobelbest/BANet)**] [BA-NET: DENSE BUNDLE ADJUSTMENT NETWORKS](https://arxiv.org/pdf/1806.04807.pdf)
+- [x] [**ICLR 2019** | **[Github](https://github.com/frobelbest/BANet)**] [BA-NET: DENSE BUNDLE ADJUSTMENT NETWORKS](https://arxiv.org/pdf/1806.04807.pdf)
+> The key ideas of `BANet` is to use represent depth map as a linear combination of depth maps at different scales, and to use a `BALayer` to predict the damping factor of the classical LM algorithm, which makes $\mathcal{X}$ differentiable to feature maps.
 
 - [ ] [**ICML 2020** | **[Github](https://github.com/princeton-vl/DeepV2D)**] [Deepv2d: Video to depth with differentiable structure from motion](https://arxiv.org/pdf/1812.04605.pdf)
 
-- [ ] [**ECCV 2020 oral** | **[Github](https://github.com/weixk2015/DeepSFM)**] [DeepSFM: Structure From Motion Via Deep Bundle Adjustment](https://arxiv.org/pdf/1912.09697.pdf)
+- [x] [**ECCV 2020 oral** | **[Github](https://github.com/weixk2015/DeepSFM)**] [DeepSFM: Structure From Motion Via Deep Bundle Adjustment](https://arxiv.org/pdf/1912.09697.pdf)
 
 - [x] [**arXiv 2021** | **[Github](https://github.com/aliyun/dro-sfm)**] [DRO: Deep Recurrent Optimizer for Structure-from-Motion](https://arxiv.org/pdf/2103.13201.pdf)
 
@@ -83,5 +84,12 @@ A: Not enough training data for long sequences.
 
 - [x] [**ICCV 2021 oral** | **[Github](https://github.com/autonomousvision/unisurf)**] [UNISURF: Unifying Neural Implicit Surfaces and Radiance Fields for Multi-View Reconstruction](http://www.cvlibs.net/publications/Oechsle2021ICCV.pdf)
 
-> The rendering technique of ***neural implicit multi-view reconstruction*** has two mainstream catagories: *surface rendering technique* and *volume rendering technique*. Surface rendering technique can estimate surface geometry accurately, while requires per-pixel object masks and appropriate network initialization, which is limited to small scenes. Volume rendering techniques like NeRF require no input masks, while can only extract surface as level sets of the underlying volume density, which are usually non-smooth and contain artifacts.
+> This work deals with the neural implicit rendering problem.
+The rendering technique of ***neural implicit multi-view reconstruction*** has two mainstream catagories: *surface rendering technique* and *volume rendering technique*. Surface rendering technique can estimate surface geometry accurately, while requires per-pixel object masks and appropriate network initialization, which is limited to small scenes. Volume rendering techniques like NeRF require no input masks, while can only extract surface as level sets of the underlying volume density, which are usually non-smooth and contain artifacts.
 UNISURF proposed an unified formulation which combines both the advantages of surface rendering and volume rendering, enabling the reconstruction of accurate geometry from multi-view images without masks. And it adopted a $l_1$ reconstruction loss with a $l_2$ surface regularization term. During optimization, the sampling interval for drawing samples during volume rendering is monotonically decreased. UNISURF is evaluated on the DTU, blended MVS datasets and SceneNet dataset, and achieves state-of-the-art. However, this work is limited on solid and non-transparent surfaces. Besides, the overexposed and texture-less areas can also limit UNISURF's performance, and the reconstructions are less accurate at rarely visible regions in the images. (My question: can this method adapts to larger areas, i.e, city-scale aerial images?)
+
+- [x] [**ECCV 2020**] [Unsupervised Shape and Pose Disentanglement
+for 3D Meshes](https://arxiv.org/pdf/2007.11341.pdf)
+
+> The paper addresses the problem of unsupervised disentanglement of
+pose and shape for 3D meshes. It used an auto-encoder neural network to auto-encode a mesh in *pose* code and *shape* code. Built upon the cross-consistency and self-consistency. To achieve the cross-consistency constraints, this work generates pairs of different shapes with the exact same pose on the fly during training with our disentangling network. The self-consistency is achieved by generating a proxy mesh $\tilde{X}^t$ with the pose of mesh $X^s_1$ and the shape of mesh $X_t$ within the training loop from two meshes with different shapes and poses $X^s_1$ and $X^t$. An effective disentanglement should recover the original pose code from the proxy mesh. Accordingly, the cross-consistency loss and self-consistency loss are proposed to train the network. At last, this work used the *as-rigid-as-possible Deformation* algorithm to deform $X^t$ to match the pose of the network prediction $\tilde{X}^t$ while preserving the original shape as much as possible.
