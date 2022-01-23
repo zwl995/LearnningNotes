@@ -9,7 +9,14 @@ Polosukhin. Attention is all you need. In I. Guyon, U. V. Luxburg, S. Bengio, H.
 
 - [ ] [**IEEE 1998** | **LeNet**] [GradientBased Learning Applied to Document Recognition](http://vision.stanford.edu/cs598_spring07/papers/Lecun98.pdf)
 
+- [ ] [**ECCV 2014** | **SPP-Net**] [Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition](https://arxiv.org/pdf/1406.4729.pdf)
+
+- [x] [**ICLR 2015** | **VGG**] [VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE-SCALE IMAGE RECOGNITION](https://arxiv.org/pdf/1409.1556.pdf)
+> This paper is really helpful in understanding how deep convolution neural network helps to increase the classification performance, especially in terms of the depth of neural network and data augmentation when training. **Should write a detailed notes later.**
+
 - [ ] [**CVPR 2016** | **ResNet**] [Deep Residual Learning for Image Recognition](https://arxiv.org/pdf/1512.03385.pdf)
+
+- [ ] [**NeuIPS 2017**] | **Transformer**] [Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf)
 
 - [ ] [**ECCV 2020** | **[Github](https://github.com/bmild/nerf)**] [NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis](https://arxiv.org/pdf/2003.08934.pdf)
 
@@ -33,6 +40,8 @@ the stochastic domain decomposition method seems simply adopted the stochastic c
 
 ### 3. Deep SfM Methods
 
+***Should write a detailed review later.***
+
 - [x] [**CVPR 2017** | **[Github](https://github.com/lmb-freiburg/demon)**] [DeMoN: Depth and Motion Network for Learning Monocular Stereo](https://arxiv.org/pdf/1612.02401.pdf)
 
 - [x] [**ICLR 2019** | **[Github](https://github.com/frobelbest/BANet)**] [BA-NET: DENSE BUNDLE ADJUSTMENT NETWORKS](https://arxiv.org/pdf/1806.04807.pdf)
@@ -41,6 +50,8 @@ the stochastic domain decomposition method seems simply adopted the stochastic c
 - [ ] [**ICML 2020** | **[Github](https://github.com/princeton-vl/DeepV2D)**] [Deepv2d: Video to depth with differentiable structure from motion](https://arxiv.org/pdf/1812.04605.pdf)
 
 - [x] [**ECCV 2020 oral** | **[Github](https://github.com/weixk2015/DeepSFM)**] [DeepSFM: Structure From Motion Via Deep Bundle Adjustment](https://arxiv.org/pdf/1912.09697.pdf)
+
+- [ ] [**CVPR 2021** | **[Github](https://github.com/jytime/Deep-SfM-Revisited)**] [Deep Two-View Structure-from-Motion Revisited](https://arxiv.org/pdf/2104.00556.pdf)
 
 - [x] [**arXiv 2021** | **[Github](https://github.com/aliyun/dro-sfm)**] [DRO: Deep Recurrent Optimizer for Structure-from-Motion](https://arxiv.org/pdf/2103.13201.pdf)
 
@@ -92,4 +103,6 @@ UNISURF proposed an unified formulation which combines both the advantages of su
 for 3D Meshes](https://arxiv.org/pdf/2007.11341.pdf)
 
 > The paper addresses the problem of unsupervised disentanglement of
-pose and shape for 3D meshes. It used an auto-encoder neural network to auto-encode a mesh in *pose* code and *shape* code. Built upon the cross-consistency and self-consistency. To achieve the cross-consistency constraints, this work generates pairs of different shapes with the exact same pose on the fly during training with our disentangling network. The self-consistency is achieved by generating a proxy mesh $\tilde{X}^t$ with the pose of mesh $X^s_1$ and the shape of mesh $X_t$ within the training loop from two meshes with different shapes and poses $X^s_1$ and $X^t$. An effective disentanglement should recover the original pose code from the proxy mesh. Accordingly, the cross-consistency loss and self-consistency loss are proposed to train the network. At last, this work used the *as-rigid-as-possible Deformation* algorithm to deform $X^t$ to match the pose of the network prediction $\tilde{X}^t$ while preserving the original shape as much as possible.
+pose and shape for 3D meshes. It used an auto-encoder neural network to auto-encode a mesh in *pose* code and *shape* code. Built upon the cross-consistency and self-consistency. To achieve the cross-consistency constraints, this work generates pairs of different shapes with the exact same pose on the fly during training with our disentangling network. The self-consistency is achieved by generating a proxy mesh $\tilde{X}^t$ with the pose of mesh $X^s_1$ and the shape of mesh $X_t$ within the training loop from two meshes with different shapes and poses $X^s_1$ and $X^t$. An effective disentanglement should recover the original pose code from the proxy mesh. Accordingly, the cross-consistency loss and self-consistency loss are proposed to train the network. At last, this work used the *as-rigid-as-possible Deformation* algorithm to deform $X^t$ to match the pose of the network prediction $\tilde{X}^t$ while preserving the original shape as much as possible. Their model is straightforward to train and it generalizes well across various datasets.
+The limitation is that they have no control over specific parts of the mesh with their pose code.
+And also the interpolation of large torso rotations squeezes the meshes.
