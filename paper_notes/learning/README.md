@@ -76,6 +76,7 @@ the stochastic domain decomposition method seems simply adopted the stochastic c
 
 - [ ] [**arXiv 2021** | **[Github](https://github.com/city-super/citynerf)**] [CityNeRF: Building NeRF at City Scale](https://arxiv.org/pdf/2112.05504.pdf)
 
+- [ ] [**arXiv 2022** | **[Official Site](http://waymo.com/research/block-nerf)**] [Block-NeRF: Scalable Large Scene Neural View Synthesis](https://arxiv.org/pdf/2202.05263.pdf)
 
 ## Weekly Papers
 ----------------------------------------------------
