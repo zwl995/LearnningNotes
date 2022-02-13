@@ -10,7 +10,7 @@
 
 - [ ] [**CVPR 2015** | **GoogleNet**] [Going deeper with convolutions](https://arxiv.org/pdf/1409.4842.pdf)
 
-- [x] [**ICLR 2015** | **VGG**] [VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE-SCALE IMAGE RECOGNITION](https://arxiv.org/pdf/1409.1556.pdf) ([**Reading Note**]: [VGG](backbones/VGG.md))
+- [x] [**ICLR 2015** | **VGG**] [VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE-SCALE IMAGE RECOGNITION](https://arxiv.org/pdf/1409.1556.pdf) ([**[Reading Note](backbones/VGG.md) | [Implementation(Up-to-date)]()**])
 
 - [ ] [**CVPR 2016** | **ResNet**] [Deep Residual Learning for Image Recognition](https://arxiv.org/pdf/1512.03385.pdf)
 
@@ -35,6 +35,8 @@
 
 - [ ] [**EMNLP 2014** | **GRU**] [On the Properties of Neural Machine Translation: Encoder–Decoder Approaches](https://arxiv.org/pdf/1409.1259.pdf)
 
+- [ ] [**CoRR 2014** | **GRU**] [Empirical Evaluation of Gated Recurrent Neural Networks on Sequence Modeling](https://arxiv.org/pdf/1412.3555.pdf)
+
 ### 2. Optimizers
 
 - [ ] [**JMLR 2011** | **AdaGrad**] [Adaptive subgradient methods for online learning and stochastic optimization](https://www.jmlr.org/papers/volume12/duchi11a/duchi11a.pdf)
@@ -55,9 +57,11 @@ the stochastic domain decomposition method seems simply adopted the stochastic c
 - [ ] [**CVPR 2021** | **[Github](https://github.com/princeton-vl/lietorch)**] [Tangent Space Backpropagation for 3D Transformation Groups](https://openaccess.thecvf.com/content/CVPR2021/papers/Teed_Tangent_Space_Backpropagation_for_3D_Transformation_Groups_CVPR_2021_paper.pdf)
 
 
-### 3. Deep SfM Methods
+### 3. Deep Structure from Motion
 
 ***Should write a detailed review later.***
+
+#### 3.1 Multi View methods
 
 - [x] [**CVPR 2017** | **[Github](https://github.com/lmb-freiburg/demon)**] [DeMoN: Depth and Motion Network for Learning Monocular Stereo](https://arxiv.org/pdf/1612.02401.pdf)
 
@@ -70,9 +74,7 @@ the stochastic domain decomposition method seems simply adopted the stochastic c
 
 - [x] [**CVPR 2021** | **[Github](https://github.com/jytime/Deep-SfM-Revisited)**] [Deep Two-View Structure-from-Motion Revisited](https://arxiv.org/pdf/2104.00556.pdf)
 
-- [x] [**arXiv 2021** | **[Github](https://github.com/aliyun/dro-sfm)**] [DRO: Deep Recurrent Optimizer for Structure-from-Motion](https://arxiv.org/pdf/2103.13201.pdf)
-
-> This work deals with the image depth and pose estimation problem by recurrent neural network. The neural optimizer optimizes the image depth and image pose alternatively. At first, DRO uses ResNet-16 to extract the feature maps, the cost is defined so as to minimize the alignment errors between the predicted feature maps. Then, the small update w.r.t. depth $\Delta \mathbf{D}_i$ and pose $\Delta \mathbf{P}_i$ is computed by the ***gated recurrent unit (See RAFT)*** , which are used for alternatively updating the image depth and pose. DRO also used two different loss functions for supervised training and unsupervised training. DRO is superior to ***DeepV2D (See ICML 2020 Deng et, al)*** in memory occupation and computation efficiency.
+- [x] [**arXiv 2021** | **[Github](https://github.com/aliyun/dro-sfm)**] [DRO: Deep Recurrent Optimizer for Structure-from-Motion](https://arxiv.org/pdf/2103.13201.pdf) [**[Reading Note](deep_sfm/dro.md)**]
 
 - [ ] [**ECCV 2020** | **[Github](https://github.com/svip-lab/Indoor-SfMLearner)**] [Patch-match and Plane-regularization for Unsupervised Indoor Depth Estimation](https://arxiv.org/pdf/2007.07696.pdf)
 
@@ -82,8 +84,19 @@ the stochastic domain decomposition method seems simply adopted the stochastic c
 
 - [ ] [**3DV 2021** | **[Github](https://github.com/JingwenWang95/DSP-SLAM)**] [DSP-SLAM: Object Oriented SLAM with Deep Shape Priors](https://arxiv.org/pdf/2108.09481.pdf)
 
+#### 3.2 Single View
 
-### 4. Implicit Surface Reconstruction / View Synthesis
+***Up-to-date***
+
+### 4. Deep Multi-View Stereo
+
+- [ ] [**ECCV 2018** | **[Github](https://github.com/YoYo000/MVSNet)**] [MVSNet: Depth Inference for Unstructured Multi-view Stereo](https://arxiv.org/pdf/1804.02505.pdf)
+
+- [ ] [**CVPR 2019** | **[Github](https://github.com/YoYo000/MVSNet)**] [Recurrent MVSNet for High-resolution Multi-view Stereo Depth Inference](https://arxiv.org/pdf/1902.10556.pdf)
+
+- [ ] [**CVPR 2020** | **[Github](https://github.com/alibaba/cascade-stereo)**] [Cascade Cost Volume for High-Resolution Multi-View Stereo and Stereo Matching](https://arxiv.org/pdf/1912.06378.pdf)
+
+### 5. Implicit Surface Reconstruction / View Synthesis
 
 - [ ] [**arXiv 2021** | **[Github]()**] [Gradient-SDF: A Semi-Implicit Surface Representation for 3D Reconstruction](https://arxiv.org/pdf/2111.13652.pdf)
 
