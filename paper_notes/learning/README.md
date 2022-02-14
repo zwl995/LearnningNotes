@@ -22,14 +22,27 @@
 
 #### 1.1. Vanishing/Exploding gradients
 
+[My Notes on What is Gradients Vanishing/Exploding & How to Solve it?](backbones/vanish_explode_gradients.md)
+
 - [ ] [**TNN 1994**] [learning long-term dependencies with gradient descent is difficult](http://www.comp.hkbu.edu.hk/~markus/teaching/comp7650/tnn-94-gradient.pdf)
 
-- [ ] [**AISTATS 2010**] [Understanding the difficulty of training deep feedforward neural networks](https://proceedings.mlr.press/v9/glorot10a/glorot10a.pdf)
+- [x] [**AISTATS 2010**] [Understanding the difficulty of training deep feedforward neural networks](https://proceedings.mlr.press/v9/glorot10a/glorot10a.pdf)
 
-- [ ] [**ICML 2015**] [Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift](https://arxiv.org/pdf/1502.03167.pdf)
+- [x] [**ICML 2015**] [Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift](https://arxiv.org/pdf/1502.03167.pdf) [[Reading Note](backbones/batch_norm.md)]
 
+#### 1.2 Optimization techniques
 
-#### 1.2 Recurrent Neural Network
+- [ ] [**JMLR 2011** | **AdaGrad**] [Adaptive subgradient methods for online learning and stochastic optimization](https://www.jmlr.org/papers/volume12/duchi11a/duchi11a.pdf)
+
+- [ ] [**COURSERA Neural networks for machine learning, 2012** | **RMSProp**] [rmsprop: Divide the gradient by a running average of its recent magnitude](https://www.cs.toronto.edu/~tijmen/csc321/slides/lecture_slides_lec6.pdf)
+
+- [ ] [**ICML 2013** | **Momentum**] [On the importance of initialization and momentum in deep learning](http://proceedings.mlr.press/v28/sutskever13.pdf)
+
+- [ ] [**JMLR 2014** | **Dropout**] [Dropout: A Simple Way to Prevent Neural Networks from Overfitting](https://www.cs.toronto.edu/~rsalakhu/papers/srivastava14a.pdf)
+
+- [ ] [**ICLR 2015** | **Adam**] [Adam: A method for stochastic optimization](https://arxiv.org/pdf/1412.6980.pdf)
+
+#### 1.3 Recurrent Neural Network
 
 - [ ] [**Neural Computation 1997** | **LSTM**] [Long short-term memory](http://www.bioinf.at/publications/older/2604.pdf)
 
@@ -37,20 +50,9 @@
 
 - [ ] [**CoRR 2014** | **GRU**] [Empirical Evaluation of Gated Recurrent Neural Networks on Sequence Modeling](https://arxiv.org/pdf/1412.3555.pdf)
 
-### 2. Optimizers
-
-- [ ] [**JMLR 2011** | **AdaGrad**] [Adaptive subgradient methods for online learning and stochastic optimization](https://www.jmlr.org/papers/volume12/duchi11a/duchi11a.pdf)
-
-- [ ] [**COURSERA Neural networks for machine learning, 2012** | **RMSProp**] [rmsprop: Divide the gradient by a running average of its recent magnitude](https://www.cs.toronto.edu/~tijmen/csc321/slides/lecture_slides_lec6.pdf)
-
-- [ ] [**ICLR 2015** | **Adam**] [Adam: A method for stochastic optimization](https://arxiv.org/pdf/1412.6980.pdf)
+### 2. Optimization in 3D Vision
 
 - [x] [**CVPR 2021** | **[Github](https://github.com/hjwdzh/DeepLM)**] [DeepLM: Large-scale Nonlinear Least Squares on Deep Learning Frameworks using Stochastic Domain Decomposition](https://openaccess.thecvf.com/content/CVPR2021/papers/Huang_DeepLM_Large-Scale_Nonlinear_Least_Squares_on_Deep_Learning_Frameworks_Using_CVPR_2021_paper.pdf)
-
-> This paper is not actually using neural network to do the LM method. Instead, it used a method that can gather derivatives for all 
-variables to a full jacobian efficiently, which can be analogized with the backpropagation. The main contribution of this work comes 
-from this efficient jacobian collection method, which I would rather say it's more an backend architecture than a neural network. Besides, 
-the stochastic domain decomposition method seems simply adopted the stochastic clustering method in STBA.
 
 - [ ] [**ICML 2021** | **[Github](https://github.com/johannesbrust/SNLLS)**] [Nonlinear Least Squares for Large-Scale Machine Learning using Stochastic Jacobian Estimates](https://arxiv.org/pdf/2107.05598.pdf)
 
