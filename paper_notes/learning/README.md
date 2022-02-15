@@ -28,7 +28,7 @@
 
 - [x] [**AISTATS 2010**] [Understanding the difficulty of training deep feedforward neural networks](https://proceedings.mlr.press/v9/glorot10a/glorot10a.pdf)
 
-- [x] [**ICML 2015**] [Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift](https://arxiv.org/pdf/1502.03167.pdf) [[Reading Note](backbones/batch_norm.md)]
+- [x] [**ICML 2015**] [Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift](https://arxiv.org/pdf/1502.03167.pdf) [[Reading Note](backbones/batch_norm.ipynb)]
 
 #### 1.2 Optimization techniques
 
