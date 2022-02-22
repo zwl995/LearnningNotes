@@ -85,6 +85,10 @@
 
 - [ ] [**3DV 2021** | **[Github](https://github.com/JingwenWang95/DSP-SLAM)**] [DSP-SLAM: Object Oriented SLAM with Deep Shape Priors](https://arxiv.org/pdf/2108.09481.pdf)
 
+- [ ] [**NeurlIPS 2021** | **[Github](https://github.com/AljazBozic/TransformerFusion)**] [TransformerFusion: Monocular RGB Scene Reconstruction using Transformers](https://arxiv.org/pdf/2107.02191.pdf)
+
+- [ ] [**CVPR 2021** | **[Github](https://github.com/zju3dv/NeuralRecon)**] [NeuralRecon: Real-Time Coherent 3D Reconstruction from Monocular Video](https://arxiv.org/pdf/2104.00681.pdf)
+
 #### 3.2 Single View
 
 ***Up-to-date***
