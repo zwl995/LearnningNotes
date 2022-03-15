@@ -14,7 +14,13 @@
 
 - [ ] [**CVPR 2016** | **ResNet**] [Deep Residual Learning for Image Recognition](https://arxiv.org/pdf/1512.03385.pdf)
 
-- [ ] [**NeuIPS 2017**] | **Transformer**] [Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf)
+- [ ] [**2016**] [Layer normalization]()
+
+- [ ] [**NeuIPS 2017** | **Transformer**] [Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf)
+
+- [ ] [**ICCV 2021 Best Paper** | **[Github](https://github.com/microsoft/Swin-Transformer)**] [Swin Transformer: Hierarchical Vision Transformer using Shifted Windows](https://arxiv.org/pdf/2103.14030.pdf)
+
+- [ ] [**CVPR 2022** | **[Github](https://github.com/microsoft/unilm)**] [DeepNet: Scaling Transformers to 1,000 Layers](https://arxiv.org/pdf/2203.00555.pdf)
 
 - [ ] [**ECCV 2020** | **[Github](https://github.com/bmild/nerf)**] [NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis](https://arxiv.org/pdf/2003.08934.pdf)
 
@@ -31,6 +37,7 @@
 - [x] [**ICML 2015**] [Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift](https://arxiv.org/pdf/1502.03167.pdf) [[Reading Note](backbones/batch_norm.ipynb)]
 
 #### 1.2 Optimization techniques
+[Loss Functions](backbones/loss_funcs.md)
 
 - [ ] [**JMLR 2011** | **AdaGrad**] [Adaptive subgradient methods for online learning and stochastic optimization](https://www.jmlr.org/papers/volume12/duchi11a/duchi11a.pdf)
 
@@ -88,6 +95,8 @@
 - [ ] [**NeurlIPS 2021** | **[Github](https://github.com/AljazBozic/TransformerFusion)**] [TransformerFusion: Monocular RGB Scene Reconstruction using Transformers](https://arxiv.org/pdf/2107.02191.pdf)
 
 - [ ] [**CVPR 2021** | **[Github](https://github.com/zju3dv/NeuralRecon)**] [NeuralRecon: Real-Time Coherent 3D Reconstruction from Monocular Video](https://arxiv.org/pdf/2104.00681.pdf)
+
+- [ ] [**CVPR 2022** | **[Github](https://github.com/facebookresearch/banmo)**] [BANMo: Building Animatable 3D Neural Models from Many Casual Videos](https://arxiv.org/pdf/2112.12761.pdf)
 
 #### 3.2 Single View
 
