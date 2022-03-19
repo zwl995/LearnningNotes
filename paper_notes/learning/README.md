@@ -4,7 +4,7 @@
 
 ### 1. Backbone/Classical NN architectures
 
-- [ ] [**IEEE 1998** | **LeNet**] [GradientBased Learning Applied to Document Recognition](http://vision.stanford.edu/cs598_spring07/papers/Lecun98.pdf)
+- [x] [**IEEE 1998** | **LeNet**] [GradientBased Learning Applied to Document Recognition](http://vision.stanford.edu/cs598_spring07/papers/Lecun98.pdf)
 
 - [ ] [**ECCV 2014** | **SPP-Net**] [Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition](https://arxiv.org/pdf/1406.4729.pdf)
 
@@ -12,7 +12,9 @@
 
 - [x] [**ICLR 2015** | **VGG**] [VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE-SCALE IMAGE RECOGNITION](https://arxiv.org/pdf/1409.1556.pdf) ([**[Reading Note](backbones/VGG.md) | [Implementation(Up-to-date)]()**])
 
-- [ ] [**CVPR 2016** | **ResNet**] [Deep Residual Learning for Image Recognition](https://arxiv.org/pdf/1512.03385.pdf)
+- [x] [**CVPR 2016** | **ResNet**] [Deep Residual Learning for Image Recognition](https://arxiv.org/pdf/1512.03385.pdf) ([**[Reading Note](backbones/resnet.md) | [Implementation](backbones/src/resnet.py)**])
+
+- [ ] [**ECCV 2016** | **Follow-up of ResNet**] [Identity mappings in deep residual networks](https://arxiv.org/pdf/1603.05027.pdf)
 
 - [ ] [**2016**] [Layer normalization]()
 
