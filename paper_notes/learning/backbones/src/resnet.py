@@ -9,13 +9,13 @@ class ShallowResidualBlock(nn.Module):
   def __init__(self, in_channels, out_channels, use_conv1D=False, strides=1) -> None:
     super(ShallowResidualBlock, self).__init__()
     if use_conv1D:
-      self.conv1D = nn.Conv1D(in_channels, out_channels, 1)
+      self.conv1D = nn.Conv2d(in_channels, out_channels, 1)
     else:
       self.conv1D = None
     self.conv1 = nn.Conv2d(in_channels, out_channels, 3, stride=strides)
     self.conv2 = nn.Conv2d(out_channels, out_channels, 3)
     
-    self.bn1 = nn.BatchNorm2d(in_channels)
+    self.bn1 = nn.BatchNorm2d(out_channels)
     self.bn2 = nn.BatchNorm2d(out_channels)
     self.relu = nn.ReLU()
 
@@ -30,7 +30,7 @@ class ShallowResidualBlock(nn.Module):
 
 
 class DeepResidualBlock(nn.Module):
-  def __init__(self, in_channels, out_channels, use_conv1D=False, strides=2) -> None:
+  def __init__(self, in_channels, out_channels, use_conv1D=False, strides=1) -> None:
     super(DeepResidualBlock, self).__init__()
     self.conv1 = nn.Conv2d(in_channels, out_channels, kernel_size=1, stride=strides)
     self.conv2 = nn.Conv2d(out_channels, out_channels, kernel_size=3)
@@ -94,7 +94,7 @@ class ShallowResNet(nn.Module):
                                  nn.BatchNorm2d(64),
                                  nn.ReLU(),
                                  nn.MaxPool2d(kernel_size=3, stride=2, padding=1)])
-    self.res_block1 = nn.Sequential(*resnet_block(in_channels, 64, res_block_nums[0], 'shallow', True))
+    self.res_block1 = nn.Sequential(*resnet_block(64, 64, res_block_nums[0], 'shallow', True))
     self.res_block2 = nn.Sequential(*resnet_block(64, 128,  'shallow', res_block_nums[1]))
     self.res_block3 = nn.Sequential(*resnet_block(128, 256, 'shallow', res_block_nums[2]))
     self.res_block4 = nn.Sequential(*resnet_block(256, 512, 'shallow', res_block_nums[3]))
@@ -115,8 +115,6 @@ class ShallowResNet(nn.Module):
     return X
 
 
-
-
 class DeepResNet(nn.Module):
   def __init__(self, in_channels, out_channels, depth=50) -> None:
     super(DeepResNet, self).__init__()
@@ -134,7 +132,7 @@ class DeepResNet(nn.Module):
                                  nn.BatchNorm2d(64),
                                  nn.ReLU(),
                                  nn.MaxPool2d(kernel_size=3, stride=2, padding=1)])
-    self.res_block1 = nn.Sequential(*resnet_block(in_channels, 64, res_block_nums[0], 'deep', True))
+    self.res_block1 = nn.Sequential(*resnet_block( 64, 64, res_block_nums[0], 'deep', True))
     self.res_block2 = nn.Sequential(*resnet_block( 64, 128, 'deep', res_block_nums[1]))
     self.res_block3 = nn.Sequential(*resnet_block(128, 256, 'deep', res_block_nums[2]))
     self.res_block4 = nn.Sequential(*resnet_block(256, 512, 'deep', res_block_nums[3]))
