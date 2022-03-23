@@ -24,8 +24,6 @@
 
 - [ ] [**CVPR 2022** | **[Github](https://github.com/microsoft/unilm)**] [DeepNet: Scaling Transformers to 1,000 Layers](https://arxiv.org/pdf/2203.00555.pdf)
 
-- [ ] [**ECCV 2020** | **[Github](https://github.com/bmild/nerf)**] [NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis](https://arxiv.org/pdf/2003.08934.pdf)
-
 - [ ] [**ECCV 2020** | **[Github](https://github.com/princeton-vl/RAFT)**] [RAFT: Recurrent All Pairs Field Transforms for Optical Flow](https://arxiv.org/pdf/2003.12039.pdf)
 
 #### 1.1. Vanishing/Exploding gradients
@@ -113,6 +111,8 @@
 - [ ] [**CVPR 2020** | **[Github](https://github.com/alibaba/cascade-stereo)**] [Cascade Cost Volume for High-Resolution Multi-View Stereo and Stereo Matching](https://arxiv.org/pdf/1912.06378.pdf)
 
 ### 5. Implicit Surface Reconstruction / View Synthesis
+
+- [x] [**ECCV 2020** | **[Github](https://github.com/bmild/nerf)**] [NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis](https://arxiv.org/pdf/2003.08934.pdf) [**[Reading Notes(coming soon)]()** | **[Implementation(coming soon)]()**]
 
 - [ ] [**arXiv 2021** | **[Github]()**] [Gradient-SDF: A Semi-Implicit Surface Representation for 3D Reconstruction](https://arxiv.org/pdf/2111.13652.pdf)
 
