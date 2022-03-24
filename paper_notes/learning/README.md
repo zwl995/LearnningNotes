@@ -116,13 +116,17 @@
 
 - [ ] [**arXiv 2021** | **[Github]()**] [Gradient-SDF: A Semi-Implicit Surface Representation for 3D Reconstruction](https://arxiv.org/pdf/2111.13652.pdf)
 
+- [ ] [**CVPR 2021** | **[Github](https://github.com/sxyu/pixel-nerf)**] [pixelNeRF: Neural Radiance Fields from One or Few Images](https://arxiv.org/pdf/2012.02190.pdf)
+
 - [x] [**CVPR 2021** | **[Github](https://github.com/princeton-computational-imaging/neural-scene-graphs)**] [Neural Scene Graphs for Dynamic Scenes](http://light.princeton.edu/neural-scene-graphs)
 
 - [x] [**ICCV 2021 oral** | **[Github](https://github.com/autonomousvision/unisurf)**] [UNISURF: Unifying Neural Implicit Surfaces and Radiance Fields for Multi-View Reconstruction](http://www.cvlibs.net/publications/Oechsle2021ICCV.pdf)
+
+- [ ] [**ICCV 2021** | **[Github](https://github.com/apchenstu/mvsnerf)**] [MVSNeRF: Fast Generalizable Radiance Field Reconstruction from Multi-View Stereo](https://arxiv.org/pdf/2103.15595.pdf)
 
 - [ ] [**ICCV 2021 oral** | **[Github](https://github.com/google-research/google-research/tree/master/snerg)**] [Baking Neural Radiance Fields for Real-Time View Synthesis](https://openaccess.thecvf.com/content/ICCV2021/papers/Hedman_Baking_Neural_Radiance_Fields_for_Real-Time_View_Synthesis_ICCV_2021_paper.pdf)
 
 - [ ] [**arXiv 2021** | **[Github](https://github.com/city-super/citynerf)**] [CityNeRF: Building NeRF at City Scale](https://arxiv.org/pdf/2112.05504.pdf)
 
-- [ ] [**arXiv 2022** | **[Official Site](http://waymo.com/research/block-nerf)**] [Block-NeRF: Scalable Large Scene Neural View Synthesis](https://arxiv.org/pdf/2202.05263.pdf)
+- [ ] [**CVPR 2022** | **[Official Site](http://waymo.com/research/block-nerf)**] [Block-NeRF: Scalable Large Scene Neural View Synthesis](https://arxiv.org/pdf/2202.05263.pdf)
 
