@@ -53,7 +53,9 @@
 
 - [ ] [**Neural Computation 1997** | **LSTM**] [Long short-term memory](http://www.bioinf.at/publications/older/2604.pdf)
 
-- [ ] [**EMNLP 2014** | **GRU**] [On the Properties of Neural Machine Translation: Encoder–Decoder Approaches](https://arxiv.org/pdf/1409.1259.pdf)
+- [x] [**EMNLP 2014** | **GRU**] [Learning Phrase Representations using RNN Encoder–Decoder for Statistical Machine Translation](https://arxiv.org/pdf/1406.1078.pdf)
+
+- [x] [**EMNLP 2014** | **GRU**] [On the Properties of Neural Machine Translation: Encoder–Decoder Approaches](https://arxiv.org/pdf/1409.1259.pdf)
 
 - [ ] [**CoRR 2014** | **GRU**] [Empirical Evaluation of Gated Recurrent Neural Networks on Sequence Modeling](https://arxiv.org/pdf/1412.3555.pdf)
 
@@ -127,6 +129,8 @@
 - [ ] [**ICCV 2021 oral** | **[Github](https://github.com/google-research/google-research/tree/master/snerg)**] [Baking Neural Radiance Fields for Real-Time View Synthesis](https://openaccess.thecvf.com/content/ICCV2021/papers/Hedman_Baking_Neural_Radiance_Fields_for_Real-Time_View_Synthesis_ICCV_2021_paper.pdf)
 
 - [ ] [**arXiv 2021** | **[Github](https://github.com/city-super/citynerf)**] [CityNeRF: Building NeRF at City Scale](https://arxiv.org/pdf/2112.05504.pdf)
+
+- [ ] [**CVPR 2022** | **[Github](https://github.com/Xharlie/pointnerf)**] [Point-NeRF: Point-based Neural Radiance Fields](https://arxiv.org/pdf/2201.08845.pdf)
 
 - [ ] [**CVPR 2022** | **[Official Site](http://waymo.com/research/block-nerf)**] [Block-NeRF: Scalable Large Scene Neural View Synthesis](https://arxiv.org/pdf/2202.05263.pdf)
 
