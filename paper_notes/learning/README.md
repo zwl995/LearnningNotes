@@ -130,8 +130,8 @@
 - [ ] [**ICCV 2021** | **[Github](https://github.com/apchenstu/mvsnerf)**] [MVSNeRF: Fast Generalizable Radiance Field Reconstruction from Multi-View Stereo](https://arxiv.org/pdf/2103.15595.pdf)
 
 - [ ] [**ICCV 2021 oral** | **[Github](https://github.com/google-research/google-research/tree/master/snerg)**] [Baking Neural Radiance Fields for Real-Time View Synthesis](https://openaccess.thecvf.com/content/ICCV2021/papers/Hedman_Baking_Neural_Radiance_Fields_for_Real-Time_View_Synthesis_ICCV_2021_paper.pdf)
-*
-- [ ] [**2021** | **[Github](https://github.com/creiser/kilonerf)**] [KiloNeRF: Speeding up Neural Radiance Fields with Thousands of Tiny MLPs](https://arxiv.org/abs/2103.13744.pdf)
+
+- [ ] [**ICCV 2021** | **[Github](https://github.com/creiser/kilonerf)**] [KiloNeRF: Speeding up Neural Radiance Fields with Thousands of Tiny MLPs](https://arxiv.org/abs/2103.13744.pdf)
 
 - [ ] [**arXiv 2021** | **[Github](https://github.com/city-super/citynerf)**] [CityNeRF: Building NeRF at City Scale](https://arxiv.org/pdf/2112.05504.pdf)
 
