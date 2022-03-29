@@ -127,6 +127,8 @@
 
 - [x] [**ICCV 2021 oral** | **[Github](https://github.com/autonomousvision/unisurf)**] [UNISURF: Unifying Neural Implicit Surfaces and Radiance Fields for Multi-View Reconstruction](http://www.cvlibs.net/publications/Oechsle2021ICCV.pdf)
 
+- [ ] [**ICCV 2021** | **[Github](https://github.com/google/mipnerf)**] [Mip-NeRF: A Multiscale Representation for Anti-Aliasing Neural Radiance Fields](https://openaccess.thecvf.com/content/ICCV2021/papers/Barron_Mip-NeRF_A_Multiscale_Representation_for_Anti-Aliasing_Neural_Radiance_Fields_ICCV_2021_paper.pdf)
+
 - [ ] [**ICCV 2021** | **[Github](https://github.com/apchenstu/mvsnerf)**] [MVSNeRF: Fast Generalizable Radiance Field Reconstruction from Multi-View Stereo](https://arxiv.org/pdf/2103.15595.pdf)
 
 - [ ] [**ICCV 2021 oral** | **[Github](https://github.com/google-research/google-research/tree/master/snerg)**] [Baking Neural Radiance Fields for Real-Time View Synthesis](https://openaccess.thecvf.com/content/ICCV2021/papers/Hedman_Baking_Neural_Radiance_Fields_for_Real-Time_View_Synthesis_ICCV_2021_paper.pdf)
@@ -141,3 +143,14 @@
 
 - [ ] [**CVPR 2022** | **[Github](https://github.com/cmusatyalab/mega-nerf)**] [Mega-NeRF: Scalable Construction of Large-Scale NeRFs for Virtual Fly-Throughs](https://arxiv.org/pdf/2112.10703.pdf)
 
+- [ ] [**CVPR 2022 oral** | **[Github](https://jonbarron.info/mipnerf360/)**] [Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields](https://arxiv.org/pdf/2111.12077.pdf)
+
+- [ ] [**CVPR 2022 oral** | **[Github](https://bmild.github.io/rawnerf/index.html)**] [NeRF in the Dark: High Dynamic Range View Synthesis from Noisy Raw Images](https://arxiv.org/pdf/2111.13679.pdf)
+
+- [ ] [**CVPR 2022 oral** | **[Github](https://dorverbin.github.io/refnerf/index.html)**] [Ref-NeRF: Structured View-Dependent Appearance for Neural Radiance Fields](https://arxiv.org/pdf/2112.03907.pdf)
+
+- [ ] [**CVPR 2022 oral** | **[Github](https://github.com/google-research/google-research/tree/master/regnerf)**] [RegNeRF: Regularizing Neural Radiance Fields for View Synthesis from Sparse Inputs](https://drive.google.com/file/d/1S_NnmhypZjyMfwqcHg-YbWSSYNWdqqlo/view)
+
+- [ ] [**CVPR 2022** | **[Github]()**] [Dense Depth Priors for Neural Radiance Fields from Sparse Input Views](https://arxiv.org/pdf/2112.03288.pdf)
+
+- [ ] [**arXiv 2022** | **[Github](https://github.com/apchenstu/TensoRF)**] [TensoRF: Tensorial Radiance Fields](https://arxiv.org/pdf/2203.09517.pdf)
