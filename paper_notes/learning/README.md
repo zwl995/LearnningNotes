@@ -102,6 +102,8 @@
 
 - [ ] [**CVPR 2022** | **[Github](https://github.com/cvg/nice-slam)**] [NICE-SLAM: Neural Implicit Scalable Encoding for SLAM](https://arxiv.org/pdf/2112.12130.pdf)
 
+- [ ] [**CVPR 2022** | **[Github](https://github.com/amazon-research/small-baseline-camera-tracking)**] [Depth-Guided Structure-from-Motion for Movies and TV Shows](https://assets.amazon.science/b4/43/86551d474ac19789eb1635cc2795/depth-guided-sparse-structure-from-motion-for-movies-and-tv-shows.pdf)
+
 
 #### 3.2 Single View
 
