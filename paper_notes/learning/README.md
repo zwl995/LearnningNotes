@@ -16,6 +16,8 @@
 
 - [ ] [**ECCV 2016** | **Follow-up of ResNet**] [Identity mappings in deep residual networks](https://arxiv.org/pdf/1603.05027.pdf)
 
+- [x] [**BMVC 2016** | **[Github](https://github.com/szagoruyko/wide-residual-networks/tree/master/pretrained)**] [Wide Residual Networks](https://arxiv.org/pdf/1605.07146.pdf)
+
 - [ ] [**2016**] [Layer normalization]()
 
 - [ ] [**NeuIPS 2017** | **Transformer**] [Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf)
@@ -122,6 +124,8 @@
 - [x] [**ECCV 2020** | **[Github](https://github.com/bmild/nerf)**] [NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis](https://arxiv.org/pdf/2003.08934.pdf) [**[Reading Notes(coming soon)]()** | **[Implementation(coming soon)]()**]
 
 - [ ] [**arXiv 2021** | **[Github]()**] [Gradient-SDF: A Semi-Implicit Surface Representation for 3D Reconstruction](https://arxiv.org/pdf/2111.13652.pdf)
+
+- [ ] [**IROS 2021** | **[Github](https://github.com/yenchenlin/iNeRF-public)**] [iNeRF: Inverting Neural Radiance Fields for Pose Estimation](https://arxiv.org/pdf/2012.05877.pdf)
 
 - [ ] [**CVPR 2021** | **[Github](https://github.com/sxyu/pixel-nerf)**] [pixelNeRF: Neural Radiance Fields from One or Few Images](https://arxiv.org/pdf/2012.02190.pdf)
 
