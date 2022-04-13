@@ -9,7 +9,7 @@ class ShallowResidualBlock(nn.Module):
   def __init__(self, in_channels, out_channels, use_conv1D=False, strides=1) -> None:
     super(ShallowResidualBlock, self).__init__()
     if use_conv1D:
-      self.conv1D = nn.Conv2d(in_channels, out_channels, 1)
+      self.conv1D = nn.Conv2d(in_channels, out_channels, kernel_size=1, stride=strides)
     else:
       self.conv1D = None
     self.conv1 = nn.Conv2d(in_channels, out_channels, 3, stride=strides)
@@ -37,7 +37,7 @@ class DeepResidualBlock(nn.Module):
     self.conv3 = nn.Conv2d(out_channels, 4 * out_channels, kernel_size=1)
 
     if use_conv1D == True:
-      self.conv1D = nn.Conv2d(in_channels, 4 * out_channels, 1)
+      self.conv1D = nn.Conv2d(in_channels, 4 * out_channels, kernel_size=1, stride=strides)
     else:
       self.conv1D = None
 

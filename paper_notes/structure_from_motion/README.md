@@ -1,83 +1,72 @@
-# Structure from Motion Papers
-
-## 1. Incremental Structure from Motion
+## 1. Incremental SfM
 - [x] [[3DV 2013] Towards Linear-time Incremental Structure from Motion](http://ccwu.me/vsfm/vsfm.pdf)
 
-第一次提出 ```Retriangulate``` 的概念来尝试解决incremental SfM中的drift.
-由于初始的相机姿态和经过BA之后的姿态可能都不够准，一些正确的匹配在triangulate的时候失败了。而这些正确匹配的累计丢失是造成
-drift的一个主因。
-
-为了解决这个问题，```VSFM```提出对失败的匹配进行 ```re-triangulate(RT)```。```RT```的时候，需要选择相机对。
-
-怎么识别不好的相机姿态: 两个相机之间的公共三维点和匹配点数目的比例太低。这样的相机对被称为```under-recontructed```。
-为了使得相机姿态更稳定，需要对这些```under-reconstructed```的相机进行re-triangulate。为了得到更多的点，冲投影误差的阈值加大。
-从上到下为```Without RT```、```With RT``` :
-![](img/retriangulate.png)
-
----------------------------------------------------------------------------------------------------
 - [x] [[CVPR 2016] Structure-from-Motion Revisited](https://demuc.de/papers/schoenberger2016sfm.pdf)
 
-
----------------------------------------------------------------------------------------------------
 - [x] [[3DV 2017] Batched Incremental Structure-from-Motion](ir.ia.ac.cn/bitstream/173211/19771/1/HainanCui_3DV2017.pdf)
 
-主要贡献点在于```batched camera registration```和```batched tracks selection```。
+- [x] [[ECCV 2018] Progressive Structure from Motion](http://openaccess.thecvf.com/content_ECCV_2018/papers/Alex_Locher_Progressive_Structure_from_ECCV_2018_paper.pdf)
 
-(1) 不同于COLMAP，在对相机进行注册的时候不再考虑使用next view selection的策略，而是把有足够多2D-3D点对的相机批量式(batched)进行注册。
-这样做的原因是: incremental SfM的误差是累积的，更早注册的相机要比后注册的相机姿态更为准确。
 
-(2) batched tracks selection的意思是，在每个相机注册的步骤，不再考虑所有的track，而是仅把track的一部分进行选择并且优化。
-对于大规模重建了来说，track通常是冗余的并且对于BA来说既耗内存也耗时间。为了保证下一个相机注册的成功率，track的选择有三个原则:
-- 包含已标定的相机，来优化它们的姿态
-- 包含将要在下一个步骤中进行标定的相机
-- 更长的track应该优先选择
+## 2. Global SfM
+## 1. Motion Averaging
+- [x] [[CVPR 2001] Combining Two-View Constraints for Motion Estimation](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.19.847&rep=rep1&type=pdf) TODO: take notes 
 
-在进行增量重建的过程中，不使用匹配点而使用track。原因:
-- track的长度通常比较长，使用track能够在相机注册的时候得到更多的候选。
-- track构建的时候，很多错误的匹配已经被筛选出来了。
-- track是feature match的集合，相比feature match来说更可信。
+- [x] [[CVPR 2004] Lie-Algebraic Averaging for Globally Consistent Motion Estimation](http://users.umiacs.umd.edu/~venu/cvpr04final.pdf)
 
-流程如下：
+- [x] [[ACCV 2006] Robustness in Motion Averaging](http://users.umiacs.umd.edu/~venu/accv06final.pdf)
 
-![pipeline](img/pipeline.png)
+- [x] [[CVPR 2018] Very Large-Scale Global SfM by Distributed Motion Averaging](https://www.cs.sfu.ca/~pingtan/Papers/cvpr18sfm.pdf) TODO: take notes from my notebook
 
-#### 1. Batched Seed Selection
+### 1.2 Rotation Averaging
 
-初始对的选取原则：
-(1) 能看到尽可能多的相机
-(2) 宽基线
+- [x] [[IJCV 2013] Rotation Averaging](http://users.cecs.anu.edu.au/~yuchao/files/rotationaveraging-IJCV13.pdf)
 
-##### 细节
-在构造```Epipolar Graph```的时候，先用初始的```EG```中的相对相机姿态通过```rotation averaging(RA)```计算出global的相机姿态。然后通过计算$$acos(||R_{ij} - R_jR_i^T||_F)$$ 来将误差大的边删除，然后相对旋转通过 $$R_{ij}=R_jR_i^T$$重新计算得到。然后，对于EG中的每条边，通过 $\rho_{ij} = min(n_i, n_j)$ 来表示与至相邻的相机密度, 其中$n_i$是相机$i$在EG中相邻相机的个数。最后，得到以 $\rho_{ij}$ 的大小为优先级的候选```seeds```.
+- [x] [[ICCV 2013] Efficient and Robust Large-Scale Rotation Averaging](https://www.cv-foundation.org/openaccess/content_iccv_2013/papers/Chatterjee_Efficient_and_Robust_2013_ICCV_paper.pdf) 
 
-#### 2. Batched Camera Registration
-所有能够看到大于12个三维点的相机都考虑为候选标定相机，然后```RANSAC + P3P```计算初始相机姿态，最后加```bundle adjustment```优化。这时固定三维点和内参，只对外参进行优化。
+- [x] [[TPAMI 2017] Robust Relative Rotation Averaging](http://www.ee.iisc.ac.in/labs/cvl/papers/robustrelrotavg.pdf)
 
-#### 3. Tracks Triangulation and Selection
+- [ ] [[CVPR 2018] Rotation Averaging and Strong Duality](http://openaccess.thecvf.com/content_cvpr_2018/papers/Eriksson_Rotation_Averaging_and_CVPR_2018_paper.pdf)
 
-使用track作为输入，每次选两个相机，使用```RANSAC + Triangulation```来计算三维点。一个较为稳定的三维点应满足:
-- 投影回图像平面的两条射线的家教应该大于 $2^{\degree}$
-- 满足cheirality约束(在相机前方，具有正的深度值)
+## 1.3 Translation Averaging
 
-为了提高效率，不使用所有的track，而是找track的子集，这些track需要对每个相机至少包含 $K$ 次
+- [x] [[ECCV 2014] Robust Global Translations with 1dsfm]()
 
-#### 4. Batched Bundle Adjustment
+- [ ] [[CVPR 2018] Baseline Desensitizing In Translation Averaging](http://openaccess.thecvf.com/content_cvpr_2018/papers/Zhuang_Baseline_Desensitizing_in_CVPR_2018_paper.pdf)
 
-#### 5. Iterative Re-triangulation and Re-selection
-#### 结果
-![](img/result1.png)
-![](img/result2.png)
-![](img/result3.png)
+## 1.4 Further Reading
+- [ ] [[CSTM 1977] Robust Regression Using Iteratively Reweighted Least-Squares](https://www.tandfonline.com/doi/pdf/10.1080/03610927708827533)
 
---------------------------------------------------------------------------------------------------
 
-## 2. Global Structure from Motion
+## 3. Hybrid SfM
 
-## 3. Hierarchical Structure from Motion
-
-## 4. Hybrid Structure from Motion
 - [x] [[ACCV 2014] Divide and Conquer: Efficient Large-Scale Structure from Motion Using Graph Partitioning]()
 
 - [x] [[arXiv 2017] Parallel Structure from Motion from Local Increment to Global Averaging](https://arxiv.org/pdf/1702.08601.pdf)
 
 - [x] [[CVPR 2018] Very Large-scale Global SfM by Distributed Motion Averaging](https://www.cs.sfu.ca/~pingtan/Papers/cvpr18sfm.pdf)
+
+
+## 4. Viewing Graph Papers
+
+- [x] [[ICCV 2003] video google: a text retrieval approach to object matching in videos](http://www.robots.ox.ac.uk/~vgg/publications/papers/sivic03.pdf)
+- [x] [[CVPR 2006] Scalable Recognition with a Vocabulary Tree](https://people.eecs.berkeley.edu/~yang/courses/cs294-6/papers/nister_stewenius_cvpr2006.pdf)
+
+- [x] [[CVPR 2008] Skeletal graphs for efficitent structure from motion](http://www.cs.cornell.edu/~snavely/projects/skeletalset/SkeletalSets_cvpr08.pdf)
+
+- [x] [[ICCV 2009] Build Rome in a Day](https://grail.cs.washington.edu/rome/rome_paper.pdf)
+
+- [x] [[ECCV 2010] Improving the fisher kernel for large-scale image classification](https://www.robots.ox.ac.uk/~vgg/rg/papers/peronnin_etal_ECCV10.pdf)
+
+- [x] [[IJCV 2013] Image Classification with the Fisher vector: theory and practice](https://hal.inria.fr/hal-00830491v2/document)
+
+- [x] [[ICCV 2015] Optimizing the Viewing Graph for Structure-from-Motion](http://cs.ucsb.edu/~holl/pubs/Sweeney-2015-ICCV.pdf) 
+**Brief Comment:** This approach has a strong geometric verification by enforcing loop consistency, while not efficiency and may more suitable for global SfM other than other SfM approaches. Besides, the implementation is trivially.
+
+- [x] [[ECCV 2016] Graph-Based Consistent Matching for Structure-from-Motion](https://home.cse.ust.hk/~tshenaa/files/pub/eccv2016_graph_match.pdf)
+
+- [x] [[3DV  2017] GraphMatch: Efficient Large-Scale Graph Construction for Structure from Motion](http://vfragoso.com/pdfs/graphmatch.pdf)
+
+- [x] [[3DV  2018] Progressive Large-Scale Structure-from-Motion with Orthogonal MSTs]()
+
+- [x] [[ECCV 2018] View-graph Selection Framework for SfM](http://openaccess.thecvf.com/content_ECCV_2018/papers/Rajvi_Shah_View-graph_Selection_Framework_ECCV_2018_paper.pdf)
