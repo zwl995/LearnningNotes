@@ -18,6 +18,10 @@
 
 - [x] [**BMVC 2016** | **[Github](https://github.com/szagoruyko/wide-residual-networks/tree/master/pretrained)**] [Wide Residual Networks](https://arxiv.org/pdf/1605.07146.pdf)
 
+- [ ] [**CVPR 2017** | **ResNeXt**] [Aggregated residual transformations for deep neural networks]()
+
+- [x] [**CVPR 2017**] [Squeeze-and-Excitation Networks](https://www.robots.ox.ac.uk/~vgg/publications/2018/Hu18/hu18.pdf)
+
 - [ ] [**2016**] [Layer normalization]()
 
 - [ ] [**NeuIPS 2017** | **Transformer**] [Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf)
@@ -60,6 +64,12 @@
 - [x] [**EMNLP 2014** | **GRU**] [On the Properties of Neural Machine Translation: Encoder–Decoder Approaches](https://arxiv.org/pdf/1409.1259.pdf)
 
 - [x] [**CoRR 2014** | **GRU**] [Empirical Evaluation of Gated Recurrent Neural Networks on Sequence Modeling](https://arxiv.org/pdf/1412.3555.pdf)
+
+#### 1.4 Data Augmentation
+
+- [ ] [**arXiv 2017** | **[Github](https://github.com/uoguelph-mlrg/Cutout)**] [Improved Regularization of Convolutional Neural Networks with Cutout](https://arxiv.org/pdf/1708.04552.pdf)
+
+- [ ] [**ICLR 2018** | **[Github](https://github.com/facebookresearch/mixup-cifar10)**] [mixup: Beyond Empirical Risk Minimization](https://arxiv.org/pdf/1710.09412.pdf)
 
 ### 2. Optimization in 3D Vision
 
