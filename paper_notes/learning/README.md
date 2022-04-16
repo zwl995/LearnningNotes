@@ -20,7 +20,7 @@
 
 - [ ] [**CVPR 2017** | **ResNeXt**] [Aggregated residual transformations for deep neural networks]()
 
-- [x] [**CVPR 2017**] [Squeeze-and-Excitation Networks](https://www.robots.ox.ac.uk/~vgg/publications/2018/Hu18/hu18.pdf)
+- [x] [**CVPR 2018**] [Squeeze-and-Excitation Networks](https://www.robots.ox.ac.uk/~vgg/publications/2018/Hu18/hu18.pdf)
 
 - [ ] [**2016**] [Layer normalization]()
 
@@ -88,6 +88,10 @@
 
 - [x] [**CVPR 2017** | **[Github](https://github.com/lmb-freiburg/demon)**] [DeMoN: Depth and Motion Network for Learning Monocular Stereo](https://arxiv.org/pdf/1612.02401.pdf)
 
+- [ ] [**CVPR 2018** | **[Github](https://github.com/silviutroscot/CodeSLAM)**] [CodeSLAM - Learning a Compact, Optimisable Representation for Dense Visual SLAM](https://arxiv.org/pdf/1804.00874.pdf)
+
+- [ ] [**ECCV 2018** | **[Github](https://github.com/r0nn13/learn2rec)**] [LS-Net: Learning to Solve Nonlinear Least Squares for Monocular Stereo](https://arxiv.org/pdf/1809.02966.pdf)
+
 - [x] [**ICLR 2019** | **[Github](https://github.com/frobelbest/BANet)**] [BA-NET: DENSE BUNDLE ADJUSTMENT NETWORKS](https://arxiv.org/pdf/1806.04807.pdf)
 
 - [x] [**ICML 2020** | **[Github](https://github.com/princeton-vl/DeepV2D)**] [Deepv2d: Video to depth with differentiable structure from motion](https://arxiv.org/pdf/1812.04605.pdf)
@@ -114,7 +118,7 @@
 
 - [ ] [**CVPR 2022** | **[Github](https://github.com/cvg/nice-slam)**] [NICE-SLAM: Neural Implicit Scalable Encoding for SLAM](https://arxiv.org/pdf/2112.12130.pdf)
 
-- [ ] [**CVPR 2022** | **[Github](https://github.com/amazon-research/small-baseline-camera-tracking)**] [Depth-Guided Structure-from-Motion for Movies and TV Shows](https://assets.amazon.science/b4/43/86551d474ac19789eb1635cc2795/depth-guided-sparse-structure-from-motion-for-movies-and-tv-shows.pdf)
+- [x] [**CVPR 2022** | **[Github](https://github.com/amazon-research/small-baseline-camera-tracking)**] [Depth-Guided Structure-from-Motion for Movies and TV Shows](https://assets.amazon.science/b4/43/86551d474ac19789eb1635cc2795/depth-guidedsparse-structure-from-motion-for-movies-and-tv-shows.pdf)
 
 
 #### 3.2 Single View
