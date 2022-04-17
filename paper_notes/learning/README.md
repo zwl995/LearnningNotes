@@ -95,11 +95,13 @@
 
 - [x] [**ICML 2020** | **[Github](https://github.com/princeton-vl/DeepV2D)**] [Deepv2d: Video to depth with differentiable structure from motion](https://arxiv.org/pdf/1812.04605.pdf)
 
-- [ ] [**CVPR 2020** | **[Github](https://github.com/B1ueber2y/TrianFlow)**] [Towards Better Generalization: Joint Depth-Pose Learning without PoseNet](https://arxiv.org/pdf/2004.01314.pdf)
+- [x] [**CVPR 2020** | **[Github](https://github.com/B1ueber2y/TrianFlow)**] [Towards Better Generalization: Joint Depth-Pose Learning without PoseNet](https://arxiv.org/pdf/2004.01314.pdf)
 
 - [x] [**ECCV 2020 oral** | **[Github](https://github.com/weixk2015/DeepSFM)**] [DeepSFM: Structure From Motion Via Deep Bundle Adjustment](https://arxiv.org/pdf/1912.09697.pdf)
 
 - [ ] [**ECCV 2020** | **[Github](https://github.com/princeton-vl/RAFT)**] [RAFT: Recurrent All Pairs Field Transforms for Optical Flow](https://arxiv.org/pdf/2003.12039.pdf)
+
+- [ ] [**ICRA 2020** | **[Github](https://github.com/Huangying-Zhan/DF-VO)**] [Visual odometry revisited: What should be learnt](https://arxiv.org/pdf/1909.09803.pdf)
 
 - [x] [**CVPR 2021** | **[Github](https://github.com/jytime/Deep-SfM-Revisited)**] [Deep Two-View Structure-from-Motion Revisited](https://arxiv.org/pdf/2104.00556.pdf)
 
@@ -126,7 +128,17 @@
 
 #### 3.2 Single View
 
-***Up-to-date***
+- [ ] [**CVPR 2015** | **[Github](https://github.com/comeonyang/Depth-Estimation-DCNF)**] [Deep Convolutional Neural Fields for Depth Estimation from a Single Image](https://arxiv.org/pdf/1502.07411.pdf)
+
+- [ ] [**ICCV 2015**] [Predicting Depth, Surface Normals and Semantic Labels with a Common Multi-Scale Convolutional Architecture](https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Eigen_Predicting_Depth_Surface_ICCV_2015_paper.pdf)
+
+- [ ] [**CVPR 2017 oral** | **[Github](https://github.com/tinghuiz/SfMLearner)**] [Unsupervised Learning of Depth and Ego-Motion from Video](https://arxiv.org/pdf/1704.07813.pdf)
+
+- [ ] [**CVPR 2018** | **[Github](https://github.com/MightyChaos/LKVOLearner)**] [Learning Depth From Monocular Videos Using Direct Methods](https://openaccess.thecvf.com/content_cvpr_2018/papers/Wang_Learning_Depth_From_CVPR_2018_paper.pdf)
+
+- [ ] [**CVPR 2018** | **[Github](https://github.com/zhengqili/MegaDepth)**] [MegaDepth: Learning Single-View Depth Prediction from Internet Photos](https://openaccess.thecvf.com/content_cvpr_2018/papers/Li_MegaDepth_Learning_Single-View_CVPR_2018_paper.pdf)
+
+- [ ] [**ICCV 2019** | **[Github](https://github.com/google-research/google-research/blob/master/dual_pixels/README.md)**] [Learning single camera depth estimation using dual pixels](https://openaccess.thecvf.com/content_ICCV_2019/papers/Garg_Learning_Single_Camera_Depth_Estimation_Using_Dual-Pixels_ICCV_2019_paper.pdf)
 
 ### 4. Deep Multi-View Stereo
 
