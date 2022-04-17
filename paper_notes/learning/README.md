@@ -8,13 +8,13 @@
 
 - [ ] [**ECCV 2014** | **SPP-Net**] [Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition](https://arxiv.org/pdf/1406.4729.pdf)
 
-- [ ] [**CVPR 2015** | **GoogleNet**] [Going deeper with convolutions](https://arxiv.org/pdf/1409.4842.pdf)
+- [x] [**CVPR 2015** | **GoogleNet**] [Going deeper with convolutions](https://arxiv.org/pdf/1409.4842.pdf)
 
 - [x] [**ICLR 2015** | **VGG**] [VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE-SCALE IMAGE RECOGNITION](https://arxiv.org/pdf/1409.1556.pdf) ([**[Reading Note](backbones/VGG.md) | [Implementation(Up-to-date)]()**])
 
 - [x] [**CVPR 2016** | **ResNet**] [Deep Residual Learning for Image Recognition](https://arxiv.org/pdf/1512.03385.pdf) ([**[Reading Note](backbones/resnet.md) | [Implementation](backbones/src/resnet.py)**])
 
-- [ ] [**ECCV 2016** | **Follow-up of ResNet**] [Identity mappings in deep residual networks](https://arxiv.org/pdf/1603.05027.pdf)
+- [x] [**ECCV 2016** | **Follow-up of ResNet**] [Identity mappings in deep residual networks](https://arxiv.org/pdf/1603.05027.pdf)
 
 - [x] [**BMVC 2016** | **[Github](https://github.com/szagoruyko/wide-residual-networks/tree/master/pretrained)**] [Wide Residual Networks](https://arxiv.org/pdf/1605.07146.pdf)
 
@@ -30,7 +30,6 @@
 
 - [ ] [**CVPR 2022** | **[Github](https://github.com/microsoft/unilm)**] [DeepNet: Scaling Transformers to 1,000 Layers](https://arxiv.org/pdf/2203.00555.pdf)
 
-- [ ] [**ECCV 2020** | **[Github](https://github.com/princeton-vl/RAFT)**] [RAFT: Recurrent All Pairs Field Transforms for Optical Flow](https://arxiv.org/pdf/2003.12039.pdf)
 
 #### 1.1. Vanishing/Exploding gradients
 
@@ -96,7 +95,11 @@
 
 - [x] [**ICML 2020** | **[Github](https://github.com/princeton-vl/DeepV2D)**] [Deepv2d: Video to depth with differentiable structure from motion](https://arxiv.org/pdf/1812.04605.pdf)
 
+- [ ] [**CVPR 2020** | **[Github](https://github.com/B1ueber2y/TrianFlow)**] [Towards Better Generalization: Joint Depth-Pose Learning without PoseNet](https://arxiv.org/pdf/2004.01314.pdf)
+
 - [x] [**ECCV 2020 oral** | **[Github](https://github.com/weixk2015/DeepSFM)**] [DeepSFM: Structure From Motion Via Deep Bundle Adjustment](https://arxiv.org/pdf/1912.09697.pdf)
+
+- [ ] [**ECCV 2020** | **[Github](https://github.com/princeton-vl/RAFT)**] [RAFT: Recurrent All Pairs Field Transforms for Optical Flow](https://arxiv.org/pdf/2003.12039.pdf)
 
 - [x] [**CVPR 2021** | **[Github](https://github.com/jytime/Deep-SfM-Revisited)**] [Deep Two-View Structure-from-Motion Revisited](https://arxiv.org/pdf/2104.00556.pdf)
 
