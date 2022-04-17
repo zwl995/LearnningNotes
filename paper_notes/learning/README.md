@@ -190,4 +190,8 @@
 
 - [ ] [**CVPR 2022** | **[Github]()**] [Dense Depth Priors for Neural Radiance Fields from Sparse Input Views](https://arxiv.org/pdf/2112.03288.pdf)
 
+- [ ] [**CVPR 2022** | **[Github](https://github.com/dunbar12138/DSNeRF)**] [Depth-supervised NeRF: Fewer Views and Faster Training for Free](https://arxiv.org/pdf/2107.02791.pdf)
+
+- [ ] [**CVPR 2022 oral** | **[Github](https://github.com/computational-imaging/bacon)**] [BACON: Band-limited Coordinate Networks for Multiscale Scene Representation](https://arxiv.org/pdf/2112.04645.pdf)
+
 - [ ] [**arXiv 2022** | **[Github](https://github.com/apchenstu/TensoRF)**] [TensoRF: Tensorial Radiance Fields](https://arxiv.org/pdf/2203.09517.pdf)
