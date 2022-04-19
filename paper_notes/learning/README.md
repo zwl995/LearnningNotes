@@ -142,6 +142,10 @@
 
 - [ ] [**ICCV 2019** | **[Github](https://github.com/google-research/google-research/blob/master/dual_pixels/README.md)**] [Learning single camera depth estimation using dual pixels](https://openaccess.thecvf.com/content_ICCV_2019/papers/Garg_Learning_Single_Camera_Depth_Estimation_Using_Dual-Pixels_ICCV_2019_paper.pdf)
 
+- [ ] [**ICCV 2019** | **[Github](https://github.com/nianticlabs/monodepth2)**] [Digging into Self-Supervised Monocular Depth Prediction](https://arxiv.org/pdf/1806.01260.pdf)
+
+- [ ] [**CVPR 2021** | **[Github](https://github.com/nianticlabs/manydepth)**] [The Temporal Opportunist: Self-Supervised Multi-Frame Monocular Depth]()
+
 ### 4. Deep Multi-View Stereo
 
 - [ ] [**ECCV 2018** | **[Github](https://github.com/YoYo000/MVSNet)**] [MVSNet: Depth Inference for Unstructured Multi-view Stereo](https://arxiv.org/pdf/1804.02505.pdf)
@@ -149,6 +153,8 @@
 - [ ] [**CVPR 2019** | **[Github](https://github.com/YoYo000/MVSNet)**] [Recurrent MVSNet for High-resolution Multi-view Stereo Depth Inference](https://arxiv.org/pdf/1902.10556.pdf)
 
 - [ ] [**CVPR 2020** | **[Github](https://github.com/alibaba/cascade-stereo)**] [Cascade Cost Volume for High-Resolution Multi-View Stereo and Stereo Matching](https://arxiv.org/pdf/1912.06378.pdf)
+
+- [ ] [**CVPR 2022** | **[Github](https://github.com/prstrive/UniMVSNet)**] [Rethinking Depth Estimation for Multi-View Stereo: A Unified Representation]()
 
 ### 5. Implicit Surface Reconstruction / View Synthesis
 
