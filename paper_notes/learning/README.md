@@ -85,6 +85,8 @@
 
 #### 3.1 Multi View methods
 
+- [x] [**ICCV 2015** | **[Github](https://github.com/youngguncho/PoseNet-Pytorch)**] [PoseNet: A Convolutional Network for Real-Time 6-DOF Camera Relocalization](https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Kendall_PoseNet_A_Convolutional_ICCV_2015_paper.pdf)
+
 - [x] [**CVPR 2017** | **[Github](https://github.com/lmb-freiburg/demon)**] [DeMoN: Depth and Motion Network for Learning Monocular Stereo](https://arxiv.org/pdf/1612.02401.pdf)
 
 - [ ] [**CVPR 2018** | **[Github](https://github.com/silviutroscot/CodeSLAM)**] [CodeSLAM - Learning a Compact, Optimisable Representation for Dense Visual SLAM](https://arxiv.org/pdf/1804.00874.pdf)
