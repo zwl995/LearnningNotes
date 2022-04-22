@@ -140,6 +140,8 @@
 
 - [ ] [**CVPR 2018** | **[Github](https://github.com/zhengqili/MegaDepth)**] [MegaDepth: Learning Single-View Depth Prediction from Internet Photos](https://openaccess.thecvf.com/content_cvpr_2018/papers/Li_MegaDepth_Learning_Single-View_CVPR_2018_paper.pdf)
 
+- [ ] [**CVPR 2018** | **[Github](https://github.com/yzcjtr/GeoNet)**] [GeoNet: Unsupervised Learning of Dense Depth, Optical Flow and Camera Pose](https://arxiv.org/pdf/1803.02276.pdf)
+
 - [ ] [**ICCV 2019** | **[Github](https://github.com/google-research/google-research/blob/master/dual_pixels/README.md)**] [Learning single camera depth estimation using dual pixels](https://openaccess.thecvf.com/content_ICCV_2019/papers/Garg_Learning_Single_Camera_Depth_Estimation_Using_Dual-Pixels_ICCV_2019_paper.pdf)
 
 - [ ] [**ICCV 2019** | **[Github](https://github.com/nianticlabs/monodepth2)**] [Digging into Self-Supervised Monocular Depth Prediction](https://arxiv.org/pdf/1806.01260.pdf)
@@ -148,13 +150,21 @@
 
 ### 4. Deep Multi-View Stereo
 
-- [ ] [**ECCV 2018** | **[Github](https://github.com/YoYo000/MVSNet)**] [MVSNet: Depth Inference for Unstructured Multi-view Stereo](https://arxiv.org/pdf/1804.02505.pdf)
+- [ ] [**CVPR 2017** | **[Github](https://github.com/kelkelcheng/GC-Net-Tensorflow)**] [End-to-end learning of geometry and context for deep stereo regression](https://openaccess.thecvf.com/content_ICCV_2017/papers/Kendall_End-To-End_Learning_of_ICCV_2017_paper.pdf)
+
+- [x] [**ECCV 2018** | **[Github](https://github.com/YoYo000/MVSNet)**] [MVSNet: Depth Inference for Unstructured Multi-view Stereo](https://arxiv.org/pdf/1804.02505.pdf)
 
 - [ ] [**CVPR 2019** | **[Github](https://github.com/YoYo000/MVSNet)**] [Recurrent MVSNet for High-resolution Multi-view Stereo Depth Inference](https://arxiv.org/pdf/1902.10556.pdf)
 
+- [ ] [**ICLR 2019** | **[Github](https://github.com/sunghoonim/DPSNet)**] [Dpsnet: End-to-end deep plane sweep stereo](https://openreview.net/pdf?id=ryeYHi0ctQ)
+
 - [ ] [**CVPR 2020** | **[Github](https://github.com/alibaba/cascade-stereo)**] [Cascade Cost Volume for High-Resolution Multi-View Stereo and Stereo Matching](https://arxiv.org/pdf/1912.06378.pdf)
 
-- [ ] [**CVPR 2022** | **[Github](https://github.com/prstrive/UniMVSNet)**] [Rethinking Depth Estimation for Multi-View Stereo: A Unified Representation]()
+- [ ] [**CVPR 2022** | **[Github](https://github.com/prstrive/UniMVSNet)**] [Rethinking Depth Estimation for Multi-View Stereo: A Unified Representation](https://arxiv.org/pdf/2201.01501.pdf)
+
+- [ ] [**CVPR 2022** | **[Github](https://github.com/FangjinhuaWang/IterMVS)] [IterMVS: Iterative Probability Estimation for Efficient Multi-View Stereo](https://arxiv.org/pdf/2112.05126.pdf)
+
+- [ ] [**arXiv 2022** | **[Github](https://github.com/JeffWang987/MVSTER)**] [MVSTER: Epipolar Transformer for Efficient Multi-View Stereo](https://arxiv.org/pdf/2204.07346.pdf)
 
 ### 5. Implicit Surface Reconstruction / View Synthesis
 
@@ -175,6 +185,8 @@
 - [ ] [**ICCV 2021** | **[Github](https://github.com/google/mipnerf)**] [Mip-NeRF: A Multiscale Representation for Anti-Aliasing Neural Radiance Fields](https://openaccess.thecvf.com/content/ICCV2021/papers/Barron_Mip-NeRF_A_Multiscale_Representation_for_Anti-Aliasing_Neural_Radiance_Fields_ICCV_2021_paper.pdf)
 
 - [ ] [**ICCV 2021** | **[Github](https://github.com/apchenstu/mvsnerf)**] [MVSNeRF: Fast Generalizable Radiance Field Reconstruction from Multi-View Stereo](https://arxiv.org/pdf/2103.15595.pdf)
+
+- [ ] [**ICCV 2021 oral** | **[Github](https://github.com/MQ66/gnerf)**] [GNeRF: GAN-based Neural Radiance Field without Posed Camera](https://arxiv.org/pdf/2103.15606.pdf)
 
 - [ ] [**ICCV 2021 oral** | **[Github](https://github.com/google-research/google-research/tree/master/snerg)**] [Baking Neural Radiance Fields for Real-Time View Synthesis](https://openaccess.thecvf.com/content/ICCV2021/papers/Hedman_Baking_Neural_Radiance_Fields_for_Real-Time_View_Synthesis_ICCV_2021_paper.pdf)
 
