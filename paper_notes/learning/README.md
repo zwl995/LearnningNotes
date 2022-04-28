@@ -113,6 +113,12 @@
 
 - [x] [**ECCV 2020** | **[Github](https://github.com/mihaidusmanu/local-feature-refinement)** | **[Video](https://youtube.com/watch?v=zBbIFxMGs3A)**] [Multi-View Optimization of Local Feature Geometry](https://arxiv.org/pdf/2003.08348.pdf)
 
+- [ ] [**ECCV 2020** | **[Github](https://github.com/pulak09/NeuRoRA)**] [NeuRoRA: Neural Robust Rotation Averaging](https://arxiv.org/pdf/1912.04485.pdf)
+
+- [ ] [**3DV 2021** | **[Github](https://github.com/yewzijian/MultiReg)**] [Learning Iterative Robust Transformation Synchronization](https://arxiv.org/pdf/2111.00728.pdf)
+
+- [ ] [**CVPR 2021** | **[Github](https://github.com/sfu-gruvi-3dv/msp_rot_avg)**] [End-to-End Rotation Averaging with Multi-Source Propagation](https://openaccess.thecvf.com/content/CVPR2021/papers/Yang_End-to-End_Rotation_Averaging_With_Multi-Source_Propagation_CVPR_2021_paper.pdf)
+
 - [x] [**ICCV 2021 Best Student Paper** | **[Github](https://github.com/cvg/pixel-perfect-sfm)**] [Pixel-Perfect Structure-from-Motion](https://arxiv.org/pdf/2108.08291.pdf)
 
 - [ ] [**3DV 2021** | **[Github](https://github.com/JingwenWang95/DSP-SLAM)**] [DSP-SLAM: Object Oriented SLAM with Deep Shape Priors](https://arxiv.org/pdf/2108.09481.pdf)
@@ -154,7 +160,9 @@
 
 - [x] [**ECCV 2018** | **[Github](https://github.com/YoYo000/MVSNet)**] [MVSNet: Depth Inference for Unstructured Multi-view Stereo](https://arxiv.org/pdf/1804.02505.pdf)
 
-- [ ] [**CVPR 2019** | **[Github](https://github.com/YoYo000/MVSNet)**] [Recurrent MVSNet for High-resolution Multi-view Stereo Depth Inference](https://arxiv.org/pdf/1902.10556.pdf)
+- [ ] [**CVPR 2018** | **[Github](https://github.com/phuang17/DeepMVS)**] [DeepMVS: Learning Multi-view Stereopsis](https://arxiv.org/pdf/1804.00650.pdf)
+
+- [x] [**CVPR 2019** | **[Github](https://github.com/YoYo000/MVSNet)**] [Recurrent MVSNet for High-resolution Multi-view Stereo Depth Inference](https://arxiv.org/pdf/1902.10556.pdf)
 
 - [ ] [**ICLR 2019** | **[Github](https://github.com/sunghoonim/DPSNet)**] [Dpsnet: End-to-end deep plane sweep stereo](https://openreview.net/pdf?id=ryeYHi0ctQ)
 

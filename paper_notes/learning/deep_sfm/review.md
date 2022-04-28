@@ -343,7 +343,32 @@ $$
 
 ### 4.1 Relative Pose Estimation
 
-传统五点法估计相对 pose 的第一步是获取 correspondences, 这一步我们可以通过先找特征点然后再做匹配的方法来得到, 齐次也可以通过 optical flow 来获取. 这篇论文采用的是 deep optical flow 的方法来获取的. deep optical flow 相比传统基于特征点 match 的方法相比在 non-Lambertial, blurry, texture-less 的场景更准确. 有了 correspondences 之后, 就可以通过 RANSAC + 五点法计算 pose 了. 但是这里还有一个问题: dense matches 仍然包含很多 noise matches, 我们怎么去移除这些错误的 match 也很重要. 这篇论文使用了 SIFT 生成 mask, 只有在 mask 里的 optical flow matches 才会使用 RANSAC 来估计 relative pose.
+传统五点法估计相对 pose 的第一步是获取 correspondences, 这一步我们可以通过先找特征点然后再做匹配的方法来得到, 齐次也可以通过 optical flow 来获取. 这篇论文采用的是 deep optical flow 的方法来获取的. deep optical flow 相比传统基于特征点 match 的方法相比在 non-Lambertial, blurry, texture-less 的场景更准确. 有了 correspondences 之后, 就可以通过 RANSAC + 五点法计算 pose 了. 但是这里还有一个问题: dense matches 仍然包含很多 noise matches, 我们怎么去移除这些错误的 match 也很重要. **这篇论文使用了 SIFT 生成 mask, 只有在 mask 里的 optical flow matches 才会使用 RANSAC 来估计 relative pose**.
+
+这里要注意的一点是: pose 仅仅从 optical flow 用五点法估计! 而且论文中提到, 使用 rigid flow supervision 后, "with fine-tuning, the translation errors are largely suppressed, and the rotation errors are notably reduced." 因此, 这里的 pose 精度的提升实际上是来源于 optical flow 算法的精度!　这里看上去是一个比较大的缺陷. 但是, 我们先看一下 fine tune 后的结果:
+
+<center>
+  <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="img/deep_two_view_sfm_flow_finetune.png">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">optical flow 在 rigid flow loss　下 fine tune 后的提升.</div>
+</center>
+
+然后再回到 optical flow 的缺点, 前面提到 dense flow 包含大量噪声, 如果不加 mask 的话, 这样的结果估计出来的 pose 是不准的. 这里这篇论文对比了一系列 mask 方法以及 flow 加过 mask 后的结果:
+<center>
+  <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="img/deep_two_view_sfm_flow_mask.png">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">在 MVS 数据集上验证不同的 mask 对 pose 的提升.</div>
+</center>
 
 ### 4.2 Scale Invariant Depth Estimation
 
