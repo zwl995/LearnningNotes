@@ -69,11 +69,11 @@
 
 ***I will write a note of transformer later...***
 
-- [ ] [**ICLR 2017** | **[Github](https://github.com/ExplorerFreda/Structured-Self-Attentive-Sentence-Embedding)] [A Structured Self-attentive Sentence Embedding](https://arxiv.org/pdf/1703.03130.pdf)
+- [ ] [**ICLR 2017** | **[Github](https://github.com/ExplorerFreda/Structured-Self-Attentive-Sentence-Embedding)**] [A Structured Self-attentive Sentence Embedding](https://arxiv.org/pdf/1703.03130.pdf)
 
 - [x] [**NeuIPS 2017** | **[Github](https://github.com/jadore801120/attention-is-all-you-need-pytorch)**] [Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf)
 
-- [ ] [**ICLR 2021** | **[Github](https://github.com/google-research/vision_transformer)] [An Image Is Worth 16X16 Words: Transformers For Image Recognition At Scale](https://arxiv.org/pdf/2010.11929.pdf)
+- [ ] [**ICLR 2021** | **[Github](https://github.com/google-research/vision_transformer)**] [An Image Is Worth 16X16 Words: Transformers For Image Recognition At Scale](https://arxiv.org/pdf/2010.11929.pdf)
 
 - [ ] [**ICCV 2021 Best Paper** | **[Github](https://github.com/microsoft/Swin-Transformer)**] [Swin Transformer: Hierarchical Vision Transformer using Shifted Windows](https://arxiv.org/pdf/2103.14030.pdf)
 
