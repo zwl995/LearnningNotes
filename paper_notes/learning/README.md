@@ -24,12 +24,6 @@
 
 - [ ] [**2016**] [Layer normalization]()
 
-- [ ] [**NeuIPS 2017** | **Transformer**] [Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf)
-
-- [ ] [**ICCV 2021 Best Paper** | **[Github](https://github.com/microsoft/Swin-Transformer)**] [Swin Transformer: Hierarchical Vision Transformer using Shifted Windows](https://arxiv.org/pdf/2103.14030.pdf)
-
-- [ ] [**CVPR 2022** | **[Github](https://github.com/microsoft/unilm)**] [DeepNet: Scaling Transformers to 1,000 Layers](https://arxiv.org/pdf/2203.00555.pdf)
-
 
 #### 1.1. Vanishing/Exploding gradients
 
@@ -56,7 +50,7 @@
 
 #### 1.3 Recurrent Neural Network
 
-- [ ] [**Neural Computation 1997** | **LSTM**] [Long short-term memory](http://www.bioinf.at/publications/older/2604.pdf)
+- [x] [**Neural Computation 1997** | **LSTM**] [Long short-term memory](http://www.bioinf.at/publications/older/2604.pdf)
 
 - [x] [**EMNLP 2014** | **GRU**] [Learning Phrase Representations using RNN Encoder–Decoder for Statistical Machine Translation](https://arxiv.org/pdf/1406.1078.pdf)
 
@@ -70,18 +64,24 @@
 
 - [ ] [**ICLR 2018** | **[Github](https://github.com/facebookresearch/mixup-cifar10)**] [mixup: Beyond Empirical Risk Minimization](https://arxiv.org/pdf/1710.09412.pdf)
 
-### 2. Optimization in 3D Vision
 
-- [x] [**CVPR 2021** | **[Github](https://github.com/hjwdzh/DeepLM)**] [DeepLM: Large-scale Nonlinear Least Squares on Deep Learning Frameworks using Stochastic Domain Decomposition](https://openaccess.thecvf.com/content/CVPR2021/papers/Huang_DeepLM_Large-Scale_Nonlinear_Least_Squares_on_Deep_Learning_Frameworks_Using_CVPR_2021_paper.pdf)
+### 2. Attention & Transformers
 
-- [ ] [**ICML 2021** | **[Github](https://github.com/johannesbrust/SNLLS)**] [Nonlinear Least Squares for Large-Scale Machine Learning using Stochastic Jacobian Estimates](https://arxiv.org/pdf/2107.05598.pdf)
+- [ ] [**ICLR 2017** | **[Github](https://github.com/ExplorerFreda/Structured-Self-Attentive-Sentence-Embedding)] [A Structured Self-attentive Sentence Embedding](https://arxiv.org/pdf/1703.03130.pdf)
 
-- [ ] [**CVPR 2021** | **[Github](https://github.com/princeton-vl/lietorch)**] [Tangent Space Backpropagation for 3D Transformation Groups](https://openaccess.thecvf.com/content/CVPR2021/papers/Teed_Tangent_Space_Backpropagation_for_3D_Transformation_Groups_CVPR_2021_paper.pdf)
+- [ ] [**NeuIPS 2017** | **[Github](https://github.com/jadore801120/attention-is-all-you-need-pytorch)**] [Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf)
+
+- [ ] [**ICLR 2021** | **[Github](https://github.com/google-research/vision_transformer)] [An Image Is Worth 16X16 Words: Transformers For Image Recognition At Scale](https://arxiv.org/pdf/2010.11929.pdf)
+
+- [ ] [**ICCV 2021 Best Paper** | **[Github](https://github.com/microsoft/Swin-Transformer)**] [Swin Transformer: Hierarchical Vision Transformer using Shifted Windows](https://arxiv.org/pdf/2103.14030.pdf)
+
+- [ ] [**CVPR 2022** | **[Github](https://github.com/microsoft/unilm)**] [DeepNet: Scaling Transformers to 1,000 Layers](https://arxiv.org/pdf/2203.00555.pdf)
+
 
 
 ### 3. Deep Structure from Motion
 
-***Should write a detailed review later.***
+***[My Review](deep_sfm/review.ipynb)***
 
 #### 3.1 Multi View methods
 
@@ -91,7 +91,7 @@
 
 - [ ] [**CVPR 2018** | **[Github](https://github.com/silviutroscot/CodeSLAM)**] [CodeSLAM - Learning a Compact, Optimisable Representation for Dense Visual SLAM](https://arxiv.org/pdf/1804.00874.pdf)
 
-- [ ] [**ECCV 2018** | **[Github](https://github.com/r0nn13/learn2rec)**] [LS-Net: Learning to Solve Nonlinear Least Squares for Monocular Stereo](https://arxiv.org/pdf/1809.02966.pdf)
+- [x] [**ECCV 2018** | **[Github](https://github.com/r0nn13/learn2rec)**] [LS-Net: Learning to Solve Nonlinear Least Squares for Monocular Stereo](https://arxiv.org/pdf/1809.02966.pdf)
 
 - [x] [**ICLR 2019** | **[Github](https://github.com/frobelbest/BANet)**] [BA-NET: DENSE BUNDLE ADJUSTMENT NETWORKS](https://arxiv.org/pdf/1806.04807.pdf)
 
@@ -115,7 +115,7 @@
 
 - [ ] [**ECCV 2020** | **[Github](https://github.com/pulak09/NeuRoRA)**] [NeuRoRA: Neural Robust Rotation Averaging](https://arxiv.org/pdf/1912.04485.pdf)
 
-- [ ] [**3DV 2021** | **[Github](https://github.com/yewzijian/MultiReg)**] [Learning Iterative Robust Transformation Synchronization](https://arxiv.org/pdf/2111.00728.pdf)
+- [x] [**3DV 2021** | **[Github](https://github.com/yewzijian/MultiReg)**] [Learning Iterative Robust Transformation Synchronization](https://arxiv.org/pdf/2111.00728.pdf)
 
 - [ ] [**CVPR 2021** | **[Github](https://github.com/sfu-gruvi-3dv/msp_rot_avg)**] [End-to-End Rotation Averaging with Multi-Source Propagation](https://openaccess.thecvf.com/content/CVPR2021/papers/Yang_End-to-End_Rotation_Averaging_With_Multi-Source_Propagation_CVPR_2021_paper.pdf)
 
@@ -154,13 +154,22 @@
 
 - [ ] [**CVPR 2021** | **[Github](https://github.com/nianticlabs/manydepth)**] [The Temporal Opportunist: Self-Supervised Multi-Frame Monocular Depth]()
 
+#### 3.3 Optimization in 3D Vision
+
+- [x] [**CVPR 2021** | **[Github](https://github.com/hjwdzh/DeepLM)**] [DeepLM: Large-scale Nonlinear Least Squares on Deep Learning Frameworks using Stochastic Domain Decomposition](https://openaccess.thecvf.com/content/CVPR2021/papers/Huang_DeepLM_Large-Scale_Nonlinear_Least_Squares_on_Deep_Learning_Frameworks_Using_CVPR_2021_paper.pdf)
+
+- [ ] [**ICML 2021** | **[Github](https://github.com/johannesbrust/SNLLS)**] [Nonlinear Least Squares for Large-Scale Machine Learning using Stochastic Jacobian Estimates](https://arxiv.org/pdf/2107.05598.pdf)
+
+- [ ] [**CVPR 2021** | **[Github](https://github.com/princeton-vl/lietorch)**] [Tangent Space Backpropagation for 3D Transformation Groups](https://openaccess.thecvf.com/content/CVPR2021/papers/Teed_Tangent_Space_Backpropagation_for_3D_Transformation_Groups_CVPR_2021_paper.pdf)
+
+
 ### 4. Deep Multi-View Stereo
 
 - [ ] [**CVPR 2017** | **[Github](https://github.com/kelkelcheng/GC-Net-Tensorflow)**] [End-to-end learning of geometry and context for deep stereo regression](https://openaccess.thecvf.com/content_ICCV_2017/papers/Kendall_End-To-End_Learning_of_ICCV_2017_paper.pdf)
 
 - [x] [**ECCV 2018** | **[Github](https://github.com/YoYo000/MVSNet)**] [MVSNet: Depth Inference for Unstructured Multi-view Stereo](https://arxiv.org/pdf/1804.02505.pdf)
 
-- [ ] [**CVPR 2018** | **[Github](https://github.com/phuang17/DeepMVS)**] [DeepMVS: Learning Multi-view Stereopsis](https://arxiv.org/pdf/1804.00650.pdf)
+- [x] [**CVPR 2018** | **[Github](https://github.com/phuang17/DeepMVS)**] [DeepMVS: Learning Multi-view Stereopsis](https://arxiv.org/pdf/1804.00650.pdf)
 
 - [x] [**CVPR 2019** | **[Github](https://github.com/YoYo000/MVSNet)**] [Recurrent MVSNet for High-resolution Multi-view Stereo Depth Inference](https://arxiv.org/pdf/1902.10556.pdf)
 
