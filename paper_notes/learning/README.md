@@ -67,9 +67,11 @@
 
 ### 2. Attention & Transformers
 
+***I will write a note of transformer later...***
+
 - [ ] [**ICLR 2017** | **[Github](https://github.com/ExplorerFreda/Structured-Self-Attentive-Sentence-Embedding)] [A Structured Self-attentive Sentence Embedding](https://arxiv.org/pdf/1703.03130.pdf)
 
-- [ ] [**NeuIPS 2017** | **[Github](https://github.com/jadore801120/attention-is-all-you-need-pytorch)**] [Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf)
+- [x] [**NeuIPS 2017** | **[Github](https://github.com/jadore801120/attention-is-all-you-need-pytorch)**] [Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf)
 
 - [ ] [**ICLR 2021** | **[Github](https://github.com/google-research/vision_transformer)] [An Image Is Worth 16X16 Words: Transformers For Image Recognition At Scale](https://arxiv.org/pdf/2010.11929.pdf)
 
@@ -81,7 +83,7 @@
 
 ### 3. Deep Structure from Motion
 
-***[My Review](deep_sfm/review.ipynb)***
+***[My Review of Deep Structure from Motion Literatures](deep_sfm/review.ipynb)***
 
 #### 3.1 Multi View methods
 
