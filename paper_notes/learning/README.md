@@ -175,15 +175,17 @@
 
 - [x] [**CVPR 2019** | **[Github](https://github.com/YoYo000/MVSNet)**] [Recurrent MVSNet for High-resolution Multi-view Stereo Depth Inference](https://arxiv.org/pdf/1902.10556.pdf)
 
+- [x] [**CVPR 2019** | **[Github](https://github.com/callmeray/PointMVSNet)] [Point-based Multi-view Stereo Network](https://arxiv.org/pdf/1908.04422.pdf)
+
 - [ ] [**ICLR 2019** | **[Github](https://github.com/sunghoonim/DPSNet)**] [Dpsnet: End-to-end deep plane sweep stereo](https://openreview.net/pdf?id=ryeYHi0ctQ)
 
 - [ ] [**CVPR 2020** | **[Github](https://github.com/alibaba/cascade-stereo)**] [Cascade Cost Volume for High-Resolution Multi-View Stereo and Stereo Matching](https://arxiv.org/pdf/1912.06378.pdf)
 
 - [ ] [**CVPR 2022** | **[Github](https://github.com/prstrive/UniMVSNet)**] [Rethinking Depth Estimation for Multi-View Stereo: A Unified Representation](https://arxiv.org/pdf/2201.01501.pdf)
 
-- [ ] [**CVPR 2022** | **[Github](https://github.com/FangjinhuaWang/IterMVS)] [IterMVS: Iterative Probability Estimation for Efficient Multi-View Stereo](https://arxiv.org/pdf/2112.05126.pdf)
+- [ ] [**CVPR 2022** | **[Github](https://github.com/FangjinhuaWang/IterMVS)**] [IterMVS: Iterative Probability Estimation for Efficient Multi-View Stereo](https://arxiv.org/pdf/2112.05126.pdf)
 
-- [ ] [**arXiv 2022** | **[Github](https://github.com/JeffWang987/MVSTER)**] [MVSTER: Epipolar Transformer for Efficient Multi-View Stereo](https://arxiv.org/pdf/2204.07346.pdf)
+- [x] [**arXiv 2022** | **[Github](https://github.com/JeffWang987/MVSTER)**] [MVSTER: Epipolar Transformer for Efficient Multi-View Stereo](https://arxiv.org/pdf/2204.07346.pdf)
 
 ### 5. Implicit Surface Reconstruction / View Synthesis
 
@@ -203,7 +205,7 @@
 
 - [ ] [**ICCV 2021** | **[Github](https://github.com/google/mipnerf)**] [Mip-NeRF: A Multiscale Representation for Anti-Aliasing Neural Radiance Fields](https://openaccess.thecvf.com/content/ICCV2021/papers/Barron_Mip-NeRF_A_Multiscale_Representation_for_Anti-Aliasing_Neural_Radiance_Fields_ICCV_2021_paper.pdf)
 
-- [ ] [**ICCV 2021** | **[Github](https://github.com/apchenstu/mvsnerf)**] [MVSNeRF: Fast Generalizable Radiance Field Reconstruction from Multi-View Stereo](https://arxiv.org/pdf/2103.15595.pdf)
+- [x] [**ICCV 2021** | **[Github](https://github.com/apchenstu/mvsnerf)**] [MVSNeRF: Fast Generalizable Radiance Field Reconstruction from Multi-View Stereo](https://arxiv.org/pdf/2103.15595.pdf)
 
 - [ ] [**ICCV 2021 oral** | **[Github](https://github.com/MQ66/gnerf)**] [GNeRF: GAN-based Neural Radiance Field without Posed Camera](https://arxiv.org/pdf/2103.15606.pdf)
 
@@ -227,7 +229,7 @@
 
 - [ ] [**CVPR 2022 oral** | **[Github](https://github.com/google-research/google-research/tree/master/regnerf)**] [RegNeRF: Regularizing Neural Radiance Fields for View Synthesis from Sparse Inputs](https://drive.google.com/file/d/1S_NnmhypZjyMfwqcHg-YbWSSYNWdqqlo/view)
 
-- [ ] [**CVPR 2022** | **[Github]()**] [Dense Depth Priors for Neural Radiance Fields from Sparse Input Views](https://arxiv.org/pdf/2112.03288.pdf)
+- [x] [**CVPR 2022** | **[Github]()**] [Dense Depth Priors for Neural Radiance Fields from Sparse Input Views](https://arxiv.org/pdf/2112.03288.pdf)
 
 - [x] [**CVPR 2022** | **[Github](https://github.com/dunbar12138/DSNeRF)**] [Depth-supervised NeRF: Fewer Views and Faster Training for Free](https://arxiv.org/pdf/2107.02791.pdf)
 
