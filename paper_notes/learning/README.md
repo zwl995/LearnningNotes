@@ -115,7 +115,7 @@
 
 - [x] [**ECCV 2020** | **[Github](https://github.com/mihaidusmanu/local-feature-refinement)** | **[Video](https://youtube.com/watch?v=zBbIFxMGs3A)**] [Multi-View Optimization of Local Feature Geometry](https://arxiv.org/pdf/2003.08348.pdf)
 
-- [ ] [**ECCV 2020** | **[Github](https://github.com/pulak09/NeuRoRA)**] [NeuRoRA: Neural Robust Rotation Averaging](https://arxiv.org/pdf/1912.04485.pdf)
+- [x] [**ECCV 2020** | **[Github](https://github.com/pulak09/NeuRoRA)**] [NeuRoRA: Neural Robust Rotation Averaging](https://arxiv.org/pdf/1912.04485.pdf)
 
 - [x] [**3DV 2021** | **[Github](https://github.com/yewzijian/MultiReg)**] [Learning Iterative Robust Transformation Synchronization](https://arxiv.org/pdf/2111.00728.pdf)
 
@@ -175,7 +175,7 @@
 
 - [x] [**CVPR 2019** | **[Github](https://github.com/YoYo000/MVSNet)**] [Recurrent MVSNet for High-resolution Multi-view Stereo Depth Inference](https://arxiv.org/pdf/1902.10556.pdf)
 
-- [x] [**CVPR 2019** | **[Github](https://github.com/callmeray/PointMVSNet)] [Point-based Multi-view Stereo Network](https://arxiv.org/pdf/1908.04422.pdf)
+- [x] [**CVPR 2019** | **[Github](https://github.com/callmeray/PointMVSNet)**] [Point-based Multi-view Stereo Network](https://arxiv.org/pdf/1908.04422.pdf)
 
 - [ ] [**ICLR 2019** | **[Github](https://github.com/sunghoonim/DPSNet)**] [Dpsnet: End-to-end deep plane sweep stereo](https://openreview.net/pdf?id=ryeYHi0ctQ)
 
@@ -193,7 +193,7 @@
 
 - [ ] [**arXiv 2021** | **[Github]()**] [Gradient-SDF: A Semi-Implicit Surface Representation for 3D Reconstruction](https://arxiv.org/pdf/2111.13652.pdf)
 
-- [ ] [**IROS 2021** | **[Github](https://github.com/yenchenlin/iNeRF-public)**] [iNeRF: Inverting Neural Radiance Fields for Pose Estimation](https://arxiv.org/pdf/2012.05877.pdf)
+- [x] [**IROS 2021** | **[Github](https://github.com/yenchenlin/iNeRF-public)**] [iNeRF: Inverting Neural Radiance Fields for Pose Estimation](https://arxiv.org/pdf/2012.05877.pdf)
 
 - [ ] [**CVPR 2021** | **[Github](https://github.com/sxyu/pixel-nerf)**] [pixelNeRF: Neural Radiance Fields from One or Few Images](https://arxiv.org/pdf/2012.02190.pdf)
 
@@ -204,6 +204,8 @@
 - [x] [**NeurIPS 2021**] [H-NeRF: Neural Radiance Fields for Rendering and Temporal Reconstruction of Humans in Motion](https://openreview.net/pdf?id=s-NI4H4e3Rf)
 
 - [ ] [**ICCV 2021** | **[Github](https://github.com/google/mipnerf)**] [Mip-NeRF: A Multiscale Representation for Anti-Aliasing Neural Radiance Fields](https://openaccess.thecvf.com/content/ICCV2021/papers/Barron_Mip-NeRF_A_Multiscale_Representation_for_Anti-Aliasing_Neural_Radiance_Fields_ICCV_2021_paper.pdf)
+
+- [x] [**ICCV 2021** | **[Github](https://github.com/weiyithu/NerfingMVS)**] [NerfingMVS: Guided Optimization of Neural Radiance Fields for Indoor Multi-view Stereo](https://arxiv.org/pdf/2109.01129.pdf)
 
 - [x] [**ICCV 2021** | **[Github](https://github.com/apchenstu/mvsnerf)**] [MVSNeRF: Fast Generalizable Radiance Field Reconstruction from Multi-View Stereo](https://arxiv.org/pdf/2103.15595.pdf)
 
