@@ -193,35 +193,17 @@
 
 - [ ] [**arXiv 2021** | **[Github]()**] [Gradient-SDF: A Semi-Implicit Surface Representation for 3D Reconstruction](https://arxiv.org/pdf/2111.13652.pdf)
 
-- [x] [**IROS 2021** | **[Github](https://github.com/yenchenlin/iNeRF-public)**] [iNeRF: Inverting Neural Radiance Fields for Pose Estimation](https://arxiv.org/pdf/2012.05877.pdf)
-
 - [ ] [**CVPR 2021** | **[Github](https://github.com/sxyu/pixel-nerf)**] [pixelNeRF: Neural Radiance Fields from One or Few Images](https://arxiv.org/pdf/2012.02190.pdf)
 
-- [x] [**CVPR 2021** | **[Github](https://github.com/princeton-computational-imaging/neural-scene-graphs)**] [Neural Scene Graphs for Dynamic Scenes](http://light.princeton.edu/neural-scene-graphs)
-
-- [x] [**ICCV 2021 oral** | **[Github](https://github.com/autonomousvision/unisurf)**] [UNISURF: Unifying Neural Implicit Surfaces and Radiance Fields for Multi-View Reconstruction](http://www.cvlibs.net/publications/Oechsle2021ICCV.pdf)
-
-- [x] [**NeurIPS 2021**] [H-NeRF: Neural Radiance Fields for Rendering and Temporal Reconstruction of Humans in Motion](https://openreview.net/pdf?id=s-NI4H4e3Rf)
+- [ ] [**ICCV 2021** | **[Github](https://github.com/google/nerfies)**] [Nerfies: Deformable Neural Radiance Fields](https://arxiv.org/pdf/2011.12948.pdf)
 
 - [ ] [**ICCV 2021** | **[Github](https://github.com/google/mipnerf)**] [Mip-NeRF: A Multiscale Representation for Anti-Aliasing Neural Radiance Fields](https://openaccess.thecvf.com/content/ICCV2021/papers/Barron_Mip-NeRF_A_Multiscale_Representation_for_Anti-Aliasing_Neural_Radiance_Fields_ICCV_2021_paper.pdf)
 
-- [x] [**ICCV 2021** | **[Github](https://github.com/weiyithu/NerfingMVS)**] [NerfingMVS: Guided Optimization of Neural Radiance Fields for Indoor Multi-view Stereo](https://arxiv.org/pdf/2109.01129.pdf)
-
 - [x] [**ICCV 2021** | **[Github](https://github.com/apchenstu/mvsnerf)**] [MVSNeRF: Fast Generalizable Radiance Field Reconstruction from Multi-View Stereo](https://arxiv.org/pdf/2103.15595.pdf)
-
-- [ ] [**ICCV 2021 oral** | **[Github](https://github.com/MQ66/gnerf)**] [GNeRF: GAN-based Neural Radiance Field without Posed Camera](https://arxiv.org/pdf/2103.15606.pdf)
 
 - [ ] [**ICCV 2021 oral** | **[Github](https://github.com/google-research/google-research/tree/master/snerg)**] [Baking Neural Radiance Fields for Real-Time View Synthesis](https://openaccess.thecvf.com/content/ICCV2021/papers/Hedman_Baking_Neural_Radiance_Fields_for_Real-Time_View_Synthesis_ICCV_2021_paper.pdf)
 
-- [ ] [**ICCV 2021** | **[Github](https://github.com/creiser/kilonerf)**] [KiloNeRF: Speeding up Neural Radiance Fields with Thousands of Tiny MLPs](https://arxiv.org/abs/2103.13744.pdf)
-
-- [ ] [**arXiv 2021** | **[Github](https://github.com/city-super/citynerf)**] [CityNeRF: Building NeRF at City Scale](https://arxiv.org/pdf/2112.05504.pdf)
-
 - [ ] [**CVPR 2022** | **[Github](https://github.com/Xharlie/pointnerf)**] [Point-NeRF: Point-based Neural Radiance Fields](https://arxiv.org/pdf/2201.08845.pdf)
-
-- [ ] [**CVPR 2022** | **[Official Site](http://waymo.com/research/block-nerf)**] [Block-NeRF: Scalable Large Scene Neural View Synthesis](https://arxiv.org/pdf/2202.05263.pdf)
-
-- [ ] [**CVPR 2022** | **[Github](https://github.com/cmusatyalab/mega-nerf)**] [Mega-NeRF: Scalable Construction of Large-Scale NeRFs for Virtual Fly-Throughs](https://arxiv.org/pdf/2112.10703.pdf)
 
 - [ ] [**CVPR 2022 oral** | **[Github](https://jonbarron.info/mipnerf360/)**] [Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields](https://arxiv.org/pdf/2111.12077.pdf)
 
@@ -231,12 +213,49 @@
 
 - [ ] [**CVPR 2022 oral** | **[Github](https://github.com/google-research/google-research/tree/master/regnerf)**] [RegNeRF: Regularizing Neural Radiance Fields for View Synthesis from Sparse Inputs](https://drive.google.com/file/d/1S_NnmhypZjyMfwqcHg-YbWSSYNWdqqlo/view)
 
-- [x] [**CVPR 2022** | **[Github]()**] [Dense Depth Priors for Neural Radiance Fields from Sparse Input Views](https://arxiv.org/pdf/2112.03288.pdf)
-
-- [x] [**CVPR 2022** | **[Github](https://github.com/dunbar12138/DSNeRF)**] [Depth-supervised NeRF: Fewer Views and Faster Training for Free](https://arxiv.org/pdf/2107.02791.pdf)
-
 - [ ] [**CVPR 2022** | **[Github](https://github.com/limacv/Deblur-NeRF)**] [Deblur-NeRF: Neural Radiance Fields from Blurry Images](https://arxiv.org/pdf/2111.14292.pdf)
 
 - [ ] [**CVPR 2022 oral** | **[Github](https://github.com/computational-imaging/bacon)**] [BACON: Band-limited Coordinate Networks for Multiscale Scene Representation](https://arxiv.org/pdf/2112.04645.pdf)
 
+- [ ] [**CVPR 2022** | **[Github](https://github.com/liuyuan-pal/NeuRay)**] [Neural Rays for Occlusion-aware Image-based Rendering](https://arxiv.org/pdf/2107.13421.pdf)
+
 - [ ] [**arXiv 2022** | **[Github](https://github.com/apchenstu/TensoRF)**] [TensoRF: Tensorial Radiance Fields](https://arxiv.org/pdf/2203.09517.pdf)
+
+#### 5.1 Pose Estimation
+
+- [x] [**IROS 2021** | **[Github](https://github.com/yenchenlin/iNeRF-public)**] [iNeRF: Inverting Neural Radiance Fields for Pose Estimation](https://arxiv.org/pdf/2012.05877.pdf)
+
+- [x] [**arXiv 2021** | **[Github](https://github.com/ActiveVisionLab/nerfmm)**] [NeRF−−: Neural Radiance Fields Without Known Camera Parameters](https://arxiv.org/pdf/2102.07064.pdf)
+
+- [x] [**ICCV 2021 oral** | **[Github](https://github.com/chenhsuanlin/bundle-adjusting-NeRF)**] [BARF: Bundle-Adjusting Neural Radiance Fields](https://chenhsuanlin.bitbucket.io/bundle-adjusting-NeRF/paper.pdf)
+
+- [ ] [**ICCV 2021 oral** | **[Github](https://github.com/MQ66/gnerf)**] [GNeRF: GAN-based Neural Radiance Field without Posed Camera](https://arxiv.org/pdf/2103.15606.pdf)
+
+#### 5.2 Depth Supervised NeRF
+
+- [x] [**ICCV 2021** | **[Github](https://github.com/weiyithu/NerfingMVS)**] [NerfingMVS: Guided Optimization of Neural Radiance Fields for Indoor Multi-view Stereo](https://arxiv.org/pdf/2109.01129.pdf)
+
+- [x] [**CVPR 2022** | **[Github]()**] [Dense Depth Priors for Neural Radiance Fields from Sparse Input Views](https://arxiv.org/pdf/2112.03288.pdf)
+
+- [x] [**CVPR 2022** | **[Github](https://github.com/dunbar12138/DSNeRF)**] [Depth-supervised NeRF: Fewer Views and Faster Training for Free](https://arxiv.org/pdf/2107.02791.pdf)
+
+#### 5.4 Dynamic NeRF
+
+- [x] [**CVPR 2021** | **[Github](https://github.com/princeton-computational-imaging/neural-scene-graphs)**] [Neural Scene Graphs for Dynamic Scenes](http://light.princeton.edu/neural-scene-graphs)
+
+#### 5.5 Unified Representation
+
+- [x] [**ICCV 2021 oral** | **[Github](https://github.com/autonomousvision/unisurf)**] [UNISURF: Unifying Neural Implicit Surfaces and Radiance Fields for Multi-View Reconstruction](http://www.cvlibs.net/publications/Oechsle2021ICCV.pdf)
+
+- [x] [**NeurIPS 2021**] [H-NeRF: Neural Radiance Fields for Rendering and Temporal Reconstruction of Humans in Motion](https://openreview.net/pdf?id=s-NI4H4e3Rf)
+
+#### 5.6 Large Scale NeRF
+
+- [ ] [**ICCV 2021** | **[Github](https://github.com/creiser/kilonerf)**] [KiloNeRF: Speeding up Neural Radiance Fields with Thousands of Tiny MLPs](https://arxiv.org/abs/2103.13744.pdf)
+
+- [ ] [**arXiv 2021** | **[Github](https://github.com/city-super/citynerf)**] [CityNeRF: Building NeRF at City Scale](https://arxiv.org/pdf/2112.05504.pdf)
+
+- [ ] [**CVPR 2022** | **[Official Site](http://waymo.com/research/block-nerf)**] [Block-NeRF: Scalable Large Scene Neural View Synthesis](https://arxiv.org/pdf/2202.05263.pdf)
+
+- [ ] [**CVPR 2022** | **[Github](https://github.com/cmusatyalab/mega-nerf)**] [Mega-NeRF: Scalable Construction of Large-Scale NeRFs for Virtual Fly-Throughs](https://arxiv.org/pdf/2112.10703.pdf)
+
