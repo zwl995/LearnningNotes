@@ -235,7 +235,7 @@
 
 - [x] [**ICCV 2021** | **[Github](https://github.com/weiyithu/NerfingMVS)**] [NerfingMVS: Guided Optimization of Neural Radiance Fields for Indoor Multi-view Stereo](https://arxiv.org/pdf/2109.01129.pdf)
 
-- [x] [**CVPR 2022** | **[Github]()**] [Dense Depth Priors for Neural Radiance Fields from Sparse Input Views](https://arxiv.org/pdf/2112.03288.pdf)
+- [x] [**CVPR 2022** | **[Github](https://github.com/barbararoessle/dense_depth_priors_nerf)**] [Dense Depth Priors for Neural Radiance Fields from Sparse Input Views](https://arxiv.org/pdf/2112.03288.pdf)
 
 - [x] [**CVPR 2022** | **[Github](https://github.com/dunbar12138/DSNeRF)**] [Depth-supervised NeRF: Fewer Views and Faster Training for Free](https://arxiv.org/pdf/2107.02791.pdf)
 
