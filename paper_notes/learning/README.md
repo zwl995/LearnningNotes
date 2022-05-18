@@ -247,7 +247,7 @@
 
 #### 5.6 Large Scale NeRF
 
-- [ ] [**ICCV 2021** | **[Github](https://github.com/creiser/kilonerf)**] [KiloNeRF: Speeding up Neural Radiance Fields with Thousands of Tiny MLPs](https://arxiv.org/abs/2103.13744.pdf)
+- [x] [**ICCV 2021** | **[Github](https://github.com/creiser/kilonerf)**] [KiloNeRF: Speeding up Neural Radiance Fields with Thousands of Tiny MLPs](https://arxiv.org/abs/2103.13744.pdf)
 
 - [ ] [**arXiv 2021** | **[Github](https://github.com/city-super/citynerf)**] [CityNeRF: Building NeRF at City Scale](https://arxiv.org/pdf/2112.05504.pdf)
 
@@ -260,3 +260,5 @@
 - [x] [**ICCV 2021** | **[Github](https://github.com/apchenstu/mvsnerf)**] [MVSNeRF: Fast Generalizable Radiance Field Reconstruction from Multi-View Stereo](https://arxiv.org/pdf/2103.15595.pdf)
 
 - [x] [**CVPR 2022** | **[Github](https://github.com/Xharlie/pointnerf)**] [Point-NeRF: Point-based Neural Radiance Fields](https://arxiv.org/pdf/2201.08845.pdf)
+
+- [ ] [**arXiv 2022** | **[Github](https://github.com/princeton-vl/SNP)**] [View Synthesis with Sculpted Neural Points](https://arxiv.org/pdf/2205.05869.pdf)
