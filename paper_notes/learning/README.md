@@ -135,6 +135,9 @@
 
 - [x] [**CVPR 2022** | **[Github](https://github.com/amazon-research/small-baseline-camera-tracking)**] [Depth-Guided Structure-from-Motion for Movies and TV Shows](https://assets.amazon.science/b4/43/86551d474ac19789eb1635cc2795/depth-guidedsparse-structure-from-motion-for-movies-and-tv-shows.pdf)
 
+- [ ] [**RAL 2022** | **[Github](https://github.com/utiasSTARS/tightly-coupled-SfM)**] [On the Coupling of Depth and Egomotion Networks for Self-Supervised Structure from Motion]()
+
+- [ ] [**CVPR 2022** | **[Github](https://github.com/sfu-gruvi-3dv/RAGO)**] [RAGO: Recurrent Graph Optimizer For Multiple Rotation Averaging](https://github.com/sfu-gruvi-3dv/RAGO/blob/main/paper/04166.pdf)
 
 #### 3.2 Single View
 
@@ -191,8 +194,6 @@
 
 - [x] [**ECCV 2020** | **[Github](https://github.com/bmild/nerf)**] [NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis](https://arxiv.org/pdf/2003.08934.pdf) [**[Reading Notes(coming soon)]()**]
 
-- [ ] [**NeurIPS 2020** | **[Github](https://github.com/tancik/fourier-feature-networks)**] [Fourier Features Let Networks Learn High Frequency Functions in Low Dimensional Domains](https://arxiv.org/pdf/2006.10739.pdf)
-
 - [x] [**CVPR 2021** | **[Github](https://github.com/sxyu/pixel-nerf)**] [pixelNeRF: Neural Radiance Fields from One or Few Images](https://arxiv.org/pdf/2012.02190.pdf)
 
 - [x] [**ICCV 2021** | **[Github](https://github.com/google/nerfies)**] [Nerfies: Deformable Neural Radiance Fields](https://arxiv.org/pdf/2011.12948.pdf)
@@ -217,7 +218,21 @@
 
 - [ ] [**arXiv 2022** | **[Github](https://github.com/apchenstu/TensoRF)**] [TensoRF: Tensorial Radiance Fields](https://arxiv.org/pdf/2203.09517.pdf)
 
-#### 5.1 Pose Estimation
+#### 5.0 Survey/Overview
+
+- [ ] [**EG 2022**] [Neural fields in visual computing and beyond](https://arxiv.org/pdf/2111.11426.pdf)
+
+- [ ] [**EG 2022**] [Advances in Neural Rendering]()
+
+#### 5.1 Fourier Features
+
+- [x] [**NeurIPS 2020** | **[Github](https://github.com/tancik/fourier-feature-networks)**] [Fourier Features Let Networks Learn High Frequency Functions in Low Dimensional Domains](https://arxiv.org/pdf/2006.10739.pdf)
+
+- [ ] [**WACV 2022** | **[Github]()**] [Seeing Implicit Neural Representations as Fourier Series](https://openaccess.thecvf.com/content/WACV2022/papers/Benbarka_Seeing_Implicit_Neural_Representations_As_Fourier_Series_WACV_2022_paper.pdf)
+
+- [ ] [**arXiv 2022**] [Generalised Implicit Neural Representations](https://arxiv.org/pdf/2205.15674.pdf)
+
+#### 5.2 Pose Estimation
 
 - [x] [**IROS 2021** | **[Github](https://github.com/yenchenlin/iNeRF-public)**] [iNeRF: Inverting Neural Radiance Fields for Pose Estimation](https://arxiv.org/pdf/2012.05877.pdf)
 
@@ -227,7 +242,7 @@
 
 - [ ] [**ICCV 2021 oral** | **[Github](https://github.com/MQ66/gnerf)**] [GNeRF: GAN-based Neural Radiance Field without Posed Camera](https://arxiv.org/pdf/2103.15606.pdf)
 
-#### 5.2 Depth Supervised NeRF
+#### 5.3 Depth Supervised NeRF
 
 - [x] [**ICCV 2021** | **[Github](https://github.com/weiyithu/NerfingMVS)**] [NerfingMVS: Guided Optimization of Neural Radiance Fields for Indoor Multi-view Stereo](https://arxiv.org/pdf/2109.01129.pdf)
 
