@@ -135,9 +135,9 @@
 
 - [x] [**CVPR 2022** | **[Github](https://github.com/amazon-research/small-baseline-camera-tracking)**] [Depth-Guided Structure-from-Motion for Movies and TV Shows](https://assets.amazon.science/b4/43/86551d474ac19789eb1635cc2795/depth-guidedsparse-structure-from-motion-for-movies-and-tv-shows.pdf)
 
-- [ ] [**RAL 2022** | **[Github](https://github.com/utiasSTARS/tightly-coupled-SfM)**] [On the Coupling of Depth and Egomotion Networks for Self-Supervised Structure from Motion]()
+- [x] [**RAL 2022** | **[Github](https://github.com/utiasSTARS/tightly-coupled-SfM)**] [On the Coupling of Depth and Egomotion Networks for Self-Supervised Structure from Motion]()
 
-- [ ] [**CVPR 2022** | **[Github](https://github.com/sfu-gruvi-3dv/RAGO)**] [RAGO: Recurrent Graph Optimizer For Multiple Rotation Averaging](https://github.com/sfu-gruvi-3dv/RAGO/blob/main/paper/04166.pdf)
+- [x] [**CVPR 2022** | **[Github](https://github.com/sfu-gruvi-3dv/RAGO)**] [RAGO: Recurrent Graph Optimizer For Multiple Rotation Averaging](https://github.com/sfu-gruvi-3dv/RAGO/blob/main/paper/04166.pdf)
 
 #### 3.2 Single View
 
