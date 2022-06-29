@@ -129,7 +129,7 @@
 
 - [ ] [**CVPR 2021** | **[Github](https://github.com/zju3dv/NeuralRecon)**] [NeuralRecon: Real-Time Coherent 3D Reconstruction from Monocular Video](https://arxiv.org/pdf/2104.00681.pdf)
 
-- [ ] [**CVPR 2022** | **[Github](https://github.com/facebookresearch/banmo)**] [BANMo: Building Animatable 3D Neural Models from Many Casual Videos](https://arxiv.org/pdf/2112.12761.pdf)
+- [x] [**CVPR 2022** | **[Github](https://github.com/facebookresearch/banmo)**] [BANMo: Building Animatable 3D Neural Models from Many Casual Videos](https://arxiv.org/pdf/2112.12761.pdf)
 
 - [ ] [**CVPR 2022** | **[Github](https://github.com/cvg/nice-slam)**] [NICE-SLAM: Neural Implicit Scalable Encoding for SLAM](https://arxiv.org/pdf/2112.12130.pdf)
 
