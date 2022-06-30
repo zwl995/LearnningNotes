@@ -240,7 +240,7 @@
 
 - [x] [**ICCV 2021 oral** | **[Github](https://github.com/chenhsuanlin/bundle-adjusting-NeRF)**] [BARF: Bundle-Adjusting Neural Radiance Fields](https://chenhsuanlin.bitbucket.io/bundle-adjusting-NeRF/paper.pdf)
 
-- [ ] [**ICCV 2021 oral** | **[Github](https://github.com/MQ66/gnerf)**] [GNeRF: GAN-based Neural Radiance Field without Posed Camera](https://arxiv.org/pdf/2103.15606.pdf)
+- [x] [**ICCV 2021 oral** | **[Github](https://github.com/MQ66/gnerf)**] [GNeRF: GAN-based Neural Radiance Field without Posed Camera](https://arxiv.org/pdf/2103.15606.pdf)
 
 #### 5.3 Depth Supervised NeRF
 
