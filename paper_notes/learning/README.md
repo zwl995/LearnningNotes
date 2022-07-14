@@ -129,7 +129,7 @@
 
 - [ ] [**CVPR 2021** | **[Github](https://github.com/zju3dv/NeuralRecon)**] [NeuralRecon: Real-Time Coherent 3D Reconstruction from Monocular Video](https://arxiv.org/pdf/2104.00681.pdf)
 
-- [ ] [**CVPR 2022** | **[Github](https://github.com/facebookresearch/banmo)**] [BANMo: Building Animatable 3D Neural Models from Many Casual Videos](https://arxiv.org/pdf/2112.12761.pdf)
+- [x] [**CVPR 2022** | **[Github](https://github.com/facebookresearch/banmo)**] [BANMo: Building Animatable 3D Neural Models from Many Casual Videos](https://arxiv.org/pdf/2112.12761.pdf)
 
 - [ ] [**CVPR 2022** | **[Github](https://github.com/cvg/nice-slam)**] [NICE-SLAM: Neural Implicit Scalable Encoding for SLAM](https://arxiv.org/pdf/2112.12130.pdf)
 
@@ -247,7 +247,7 @@
 
 - [x] [**ICCV 2021 oral** | **[Github](https://github.com/chenhsuanlin/bundle-adjusting-NeRF)**] [BARF: Bundle-Adjusting Neural Radiance Fields](https://chenhsuanlin.bitbucket.io/bundle-adjusting-NeRF/paper.pdf)
 
-- [ ] [**ICCV 2021 oral** | **[Github](https://github.com/MQ66/gnerf)**] [GNeRF: GAN-based Neural Radiance Field without Posed Camera](https://arxiv.org/pdf/2103.15606.pdf)
+- [x] [**ICCV 2021 oral** | **[Github](https://github.com/MQ66/gnerf)**] [GNeRF: GAN-based Neural Radiance Field without Posed Camera](https://arxiv.org/pdf/2103.15606.pdf)
 
 #### 5.4 Depth Supervised NeRF
 
@@ -273,7 +273,7 @@
 
 - [ ] [**arXiv 2021** | **[Github](https://github.com/city-super/citynerf)**] [CityNeRF: Building NeRF at City Scale](https://arxiv.org/pdf/2112.05504.pdf)
 
-- [ ] [**CVPR 2022** | **[Official Site](http://waymo.com/research/block-nerf)**] [Block-NeRF: Scalable Large Scene Neural View Synthesis](https://arxiv.org/pdf/2202.05263.pdf)
+- [x] [**CVPR 2022** | **[Official Site](http://waymo.com/research/block-nerf)**] [Block-NeRF: Scalable Large Scene Neural View Synthesis](https://arxiv.org/pdf/2202.05263.pdf)
 
 - [ ] [**CVPR 2022** | **[Github](https://github.com/cmusatyalab/mega-nerf)**] [Mega-NeRF: Scalable Construction of Large-Scale NeRFs for Virtual Fly-Throughs](https://arxiv.org/pdf/2112.10703.pdf)
 
